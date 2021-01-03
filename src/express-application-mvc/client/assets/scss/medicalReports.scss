@@ -1,0 +1,453 @@
+body{
+    background-color: #F5F5F5;
+    position: relative;
+    #add_report_section{
+        z-index: 1000;
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        display: none;
+        top: 0rem;
+        left: 0rem;
+        background-color: rgba(0,0,0,.5);
+        .add_report_box{
+            background-color: #F5F5F5;
+            padding: 1rem 0.5rem;
+            margin: 1rem;
+            .submit_section{
+                margin-top: 1rem;
+                padding: 0rem 0.5rem;
+               display: flex;
+                div{
+                    display: block;
+                    width: 33.33%;
+                }
+                button{
+                    width: auto;
+                    padding: 0.5rem;
+                    border-radius: 4px;
+                }
+                #cancel_btn{
+                    background-color: #FF6347;
+                    color: white;
+                    display: block;
+                    margin:0rem auto;
+                    font-weight: 100;
+                    font-size: 0.8rem;
+                    
+                }
+                #done_btn{
+                    background-color: #4297C9;
+                    color: white;
+                    display: block;
+                    margin-left: auto;
+                    font-weight: 100;
+                    font-size: 0.8rem;
+
+                }
+            }
+            .report_details{
+               padding: 1rem 0.5rem;
+               border-bottom: 1px solid #dddfe2;
+               #name,#title{
+                   margin-bottom: 0.5rem;
+               }
+               input{
+                   width: 90%;
+                   padding: 0.75rem 5%;
+               }
+            }
+            .report_type_section{
+                padding: 1rem 0.5rem;
+                border-bottom: 1px solid #dddfe2;
+                h3{
+                    color: #4297C9;
+                    font-size: 1.2rem;
+                }
+                .report_type{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-gap: 0.5rem;
+                    div{
+                        text-align: center;
+                        input{
+                            display: none;
+                        }
+                        label{
+                            cursor: pointer;
+                            display: flex;
+                            flex-direction: column;
+                            i{
+                                font-size: 1.2rem;
+                                color: #808080;
+                                padding: 1rem 0rem;
+                            }
+                            span{
+                                color: #808080;
+                                font-size: 1rem;
+                                padding-bottom: 1rem;
+                            }
+                        }
+                        input:checked+label{
+                            background-color: #9cc0da;
+                        }
+                    }
+                    div:hover{
+                        background-color: #ADD8E6;
+                    }
+                }
+            }
+            .add_report_photo{
+                padding: 1rem 0.5rem;
+                background-color: #D3D3D3;
+                display: inline-flex;
+                    flex-wrap: wrap;
+                    ul{
+                        
+                        display: inline-flex;
+                        flex-wrap: wrap;
+                        li{
+                            margin: 0rem 0.5rem;
+                            margin-bottom: 0.5rem;
+                            width: 5.5rem;
+                            height: 5.5rem;
+                            img{
+                            object-fit: cover;
+                            width: 100%;
+                            height: 100%;
+                            }
+                        }
+                    }
+                div{
+                    justify-content: center;
+                    background-color: #404040;
+                    label{display: flex;
+                        width: 5.5rem;
+                            height: 5.5rem;
+                        flex-direction: column;
+
+                        input{
+                            display: none;
+                        }
+                        i{
+                            font-size: 1.2rem;
+                            padding-bottom: 1rem;
+                            padding-top: 1rem;
+                            text-align: center;
+                            color: white;
+                        }
+                        h4{
+                            font-size: 1rem;
+                            text-align: center;
+                            color: white;
+                            font-weight: 100;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.web_dashboard{
+    display: none;
+}
+section{
+    padding: 1rem;
+    background-color: #F5F5F5;
+    .container_box{
+        background-color: white;
+        border-radius: 1rem;
+        padding: 1rem;
+        .dashboard{
+            h1{
+                text-align: center;
+            }
+            .mobile_dashboard{
+                align-items: center;
+                margin-bottom: 1rem;
+                display: flex;
+                h3{
+                    padding-bottom: 0rem;
+                    flex:1;
+                    text-align: center;
+                    color: #4297C9;
+                    i{
+                        padding-right: 0.5rem;
+                    }
+                }
+            }
+        }
+        .medicalReports{
+            padding: 1rem 0.5rem;
+            border: 1px solid #dddfe2;
+            &_header{
+                display: flex;
+                align-items: center;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #dddfe2;
+                h1{
+                    padding: 0rem;
+                }
+                button{
+                    width: auto;
+                    padding: 0.5rem 0.25rem;
+                    font-size: 0.9rem;
+                    background-color: #4297C9;
+                    display: block;
+                    margin-left: auto;
+                }
+            }
+            ul{
+                margin-top: 1rem;
+                li{
+                    padding: 0.5rem;
+                    background-color: #F5F5F5;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:768px){
+    
+    section{
+        padding: 2.5rem;
+        .container_box{
+            padding: 2rem;
+            .mobile_dashboard{
+                    i{
+                        font-size: 1.3rem;
+                        text-align: center;
+                        flex: 1;
+                    }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1024px){
+    body{
+       position: relative;
+        #add_report_section{
+            .add_report_box{
+                position: absolute;
+                width: 28rem;
+                overflow-y: auto;
+                top:50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                height: auto;
+                .add_report_photo{
+                    width: 26rem;
+                    margin-left: 0.5rem;
+                    padding: 0.5rem;
+                }
+                .submit_section{
+                    div{
+                        display: block;
+                        width: 50%;
+                    }
+                    button{
+                        width: auto;
+                    }
+                }
+                .report_type_section{
+                    .report_type{
+                        grid-gap: 1rem;
+                        div{
+                            label{
+                                i{
+                                    font-size: 1.2rem;
+                                }
+                                span{
+                                    font-size: 0.9rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .add_report_photo{
+                    div{
+                        
+                        label{
+                            i{
+                                font-size: 1.2rem;
+                            }
+                            h4{
+                                font-size: 0.9rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .web_dashboard{display: block;}
+    section{
+        padding: 4rem;
+        background-color: white;
+        box-shadow: inset 0rem 0.5rem 1rem -0.5rem #dddfe2;
+        .container_box{
+            min-height: 71vh;
+            display: grid;
+            grid-template-columns: 3fr 10fr;
+            grid-gap: 3rem;
+            border-radius: 0px;
+            padding: 0rem;
+            .dashboard{
+                .mobile_dashboard{
+                    display: none;
+                }
+                h2{
+                    text-align: left;
+                    padding-bottom: 3rem;
+                }
+                .web_dashboard{
+                    a{
+                        align-items: center;
+                        h4,h3{
+                            display: flex;
+                            padding: 1rem 0rem;
+                            font-size: 1.2rem;
+                            
+                            i{
+                                color: #4297C9;
+                                padding-right: 0.5rem;
+                            }
+                        }
+                        h3{
+                            color: #4297C9;
+                        }
+                        h4:hover,h3:hover{
+                            background-color: #dddfe2;
+                            padding-left: 0.5rem;
+                            border-left: 4px solid #4297C9;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .medicalReports{
+                border: 0px;
+                padding: 0rem;
+                &_header{
+                    h2{
+                        padding: 0rem;
+                    }
+                    button{
+                        font-size: 0.9rem;
+                        padding:0.75rem;
+                        font-weight: 900;
+                        border-radius: 0.25rem;
+                    }
+                }
+                ul{
+                    background-color: #F5F5F5;
+                    padding-top: 1.5rem;
+                    .confirmation_form{
+                        display: none;
+                        background-color: white;
+                        position: absolute;
+                        top:0rem;
+                        left: 0rem;
+                        z-index: 1000;
+                        width: 100vw;
+                        overflow: hidden;
+                        position: fixed;
+                        height: 100vh;
+                        background-color: rgba(0,0,0,.4);
+                        .confirmation_form_content{
+                            background-color: white;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                            width: 35rem;
+                            h2{
+                                padding: 1rem;
+                                padding-bottom: 0.5rem;
+                                border-bottom: 1px solid #80808F;
+                            }
+                            h3{
+                                font-size: 1.3rem;
+                                color: #80808F;
+                                padding: 0.5rem 1rem;
+                                border-bottom: 1px solid #80808F;
+                            }
+                            .confirmation_box{
+                                padding: 0.5rem 1rem;
+                                padding-bottom: 1.3rem;
+                                display: flex;
+                                .no{
+                                   button{
+                                    margin-left: auto;
+                                    width: auto;
+                                    padding: 0.5rem 1rem;
+                                    border-radius: 4px;
+                                    font-size: 1rem;
+                                    font-weight: 900;
+                                    letter-spacing: 1px;
+                                    background-color: #4297C9;
+                                   }
+                                }
+                                .yes{
+                                    flex: 1;
+                                    margin-right: 1rem;
+                                    button{
+                                        display: block;
+                                        margin-left: auto;
+                                        border-radius: 4px;
+                                        background-color: #FF6347;
+                                    width: auto;
+                                    padding: 0.5rem 1rem;
+                                    font-size: 1rem;
+                                    font-weight: 900;
+                                    letter-spacing: 1px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    li{
+                        padding: 0rem 1rem 0.5rem 1rem;
+                        .report_box{
+                            align-items: center;
+                            padding: 0.5rem 1rem;
+                            border: 1px solid #80808F;
+                            border-radius: 10px;
+                            display: grid;
+                            grid-template-columns: 2fr 6fr 2fr;
+                            grid-column-gap: 1rem;
+                            .date{
+                                background-color: white;
+                                border-radius: 10px;
+                                padding: 1rem 0rem;
+                                text-align: center;
+                                justify-content: center;
+                                cursor: pointer;
+                                h3{
+                                    padding: 0rem;
+                                    font-size: 1.2rem;
+                                }
+                            }
+                            .reportSignatures{
+                                h3{
+                                    font-size: 1rem;
+                                    color: #80808F;
+                                }
+                            }
+                            .delete-btn{
+                                font-size: 0.8rem;
+                                background-color: #4297C9;
+                                padding: 0.75rem .5rem;
+                                width: auto;
+                                margin-left: auto;
+                                border-radius: 0.25rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

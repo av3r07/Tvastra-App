@@ -1,0 +1,566 @@
+.bannerPanel {
+  display: none;
+}
+
+@font-face {
+  font-family: "lightfont";
+  src: url("../fonts/lightfont.otf");
+}
+
+.nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav h4 {
+  text-align: left;
+  font-size: 1rem;
+}
+
+.nav form select {
+  display: block;
+  margin-left: auto;
+  padding: 0.75rem 0rem 0.75rem 1rem;
+  border: 0px;
+  background-color: #D3D3D3;
+  font-size: 1rem;
+}
+
+.nav form select:focus {
+  outline: none;
+}
+
+.nav form select option {
+  background-color: white;
+  font-size: 0.9rem;
+}
+
+.doctorsPanel {
+  padding-top: 0rem;
+}
+
+.doctorsPanel .filters {
+  display: none;
+}
+
+.doctorsPanel .doctors-list .doctor {
+  margin-bottom: 1rem;
+  border: 1px solid #999;
+}
+
+.doctorsPanel .doctors-list .doctor .doctorBox {
+  text-align: left;
+}
+
+.doctorsPanel .doctors-list .doctor .doctorBox h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0rem;
+  padding-left: 2rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  color: #4297C9;
+}
+
+.doctorsPanel .doctors-list .doctor .doctorBox h3::before {
+  position: absolute;
+  background-color: #4297C9;
+  content: "";
+  height: 2px;
+  top: 50%;
+  -webkit-transform: translate(0rem, -50%);
+          transform: translate(0rem, -50%);
+  width: 1.8rem;
+  left: 0rem;
+}
+
+.doctorsPanel .doctors-list .doctor .doctorBox ul {
+  padding-left: 2rem;
+}
+
+.doctorsPanel .doctors-list .doctor .doctorBox ul li {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 1rem;
+}
+
+.doctorsPanel .doctors-list .doctor .doctorBox ul li i {
+  padding-right: 0.75rem;
+  color: #4297C9;
+  font-size: 1rem;
+}
+
+.doctorsPanel .doctors-list .doctor .doctorBox button {
+  width: auto;
+  display: block;
+  padding: 0.5rem 1rem;
+  margin: 0rem auto 1rem auto;
+}
+
+.doctorsPanel .doctors-list .doctor .doctor-image {
+  padding: 0rem;
+  margin: 0rem;
+  height: 350px;
+}
+
+.doctorsPanel .doctors-list .doctor .doctor-image img {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .bannerPanel {
+    text-align: left;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    display: block;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(156, 191, 218, 0.8)), to(rgba(156, 191, 218, 0.8))), url("../images/back.png");
+    background: linear-gradient(rgba(156, 191, 218, 0.8), rgba(156, 191, 218, 0.8)), url("../images/back.png");
+    background-size: cover;
+  }
+  .bannerPanel h4 {
+    font-size: 1.6rem;
+  }
+  .bannerPanel h4 span {
+    text-decoration: underline;
+    font-size: 1.6rem;
+    font-weight: 900;
+  }
+  .nav h4 {
+    font-size: 1.2rem;
+  }
+  .doctorsPanel {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[14];
+        grid-template-columns: repeat(14, 1fr);
+        grid-template-areas: "fil fil fil fil doc doc doc doc doc doc doc doc doc doc";
+    grid-gap: 2rem;
+  }
+  .doctorsPanel .filters {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: fil;
+    display: block;
+  }
+  .doctorsPanel .filters #selected-filters {
+    text-align: left;
+    padding: 1rem 0rem;
+  }
+  .doctorsPanel .filters #selected-filters li {
+    font-size: 0.7rem;
+    font-weight: 100;
+    margin-bottom: 0.2rem;
+    display: inline-block;
+    border-radius: 1rem;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid #999;
+  }
+  .doctorsPanel .filters button {
+    color: black;
+    background-color: #D3D3D3;
+    font-weight: 900;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    text-align: left;
+  }
+  .doctorsPanel .filters .filter-list {
+    text-align: left;
+    border-bottom: 1px solid #999;
+    padding-bottom: 1rem;
+  }
+  .doctorsPanel .filters .filter-list span {
+    font-size: .7rem;
+    font-weight: 900;
+    color: #4297C9;
+    padding-left: 2rem;
+  }
+  .doctorsPanel .filters .filter-list .filter-head {
+    margin: 1rem 0rem 0rem 1rem;
+    padding: 0rem;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -ms-grid;
+    display: grid;
+    line-height: 120%;
+    -ms-grid-columns: 80% 10%;
+        grid-template-columns: 80% 10%;
+    font-size: 1rem;
+    color: #2A2D3E;
+  }
+  .doctorsPanel .filters .filter-list .filter-head i {
+    color: #4297C9;
+  }
+  .doctorsPanel .filters .filter-list .filter-head::after {
+    position: absolute;
+    content: "";
+    width: .8rem;
+    top: 50%;
+    right: 0%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    height: 4px;
+    background-color: #D3D3D3;
+  }
+  .doctorsPanel .filters .filter-list ul {
+    margin: 1rem 1rem 1rem 0rem;
+  }
+  .doctorsPanel .filters .filter-list ul li {
+    display: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+  }
+  .doctorsPanel .filters .filter-list ul li:nth-child(1), .doctorsPanel .filters .filter-list ul li:nth-child(2), .doctorsPanel .filters .filter-list ul li:nth-child(3), .doctorsPanel .filters .filter-list ul li:nth-child(4), .doctorsPanel .filters .filter-list ul li:nth-child(5), .doctorsPanel .filters .filter-list ul li:nth-child(6) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .doctorsPanel .filters .filter-list ul label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+  .doctorsPanel .filters .filter-list ul input {
+    margin: 0rem;
+    padding: 0rem;
+    width: auto;
+    margin-right: 0.5rem;
+    height: 0.7rem;
+    width: 0.7rem;
+  }
+  .doctorsPanel .doctors-list {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 10;
+    grid-area: doc;
+  }
+  .doctorsPanel .doctors-list .doctor .doctorBox {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[10];
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-areas: "div div div div div div div img img img";
+  }
+  .doctorsPanel .doctors-list .doctor .doctor-image {
+    -ms-grid-row: 1;
+    -ms-grid-column: 8;
+    -ms-grid-column-span: 3;
+    grid-area: img;
+    height: 100%;
+  }
+  .doctorsPanel .doctors-list .doctor .doctor-image img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .doctorsPanel .doctors-list .doctor .doctor-info {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 7;
+    grid-area: div;
+  }
+  .doctorsPanel .doctors-list .doctor .doctor-info button {
+    padding: 0.5rem 1.5rem;
+    margin-left: 0%;
+    margin-top: 1rem;
+    margin-left: 2rem;
+  }
+  .doctorsPanel .doctors-list .doctor .doctor-info ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+  }
+  .doctorsPanel .doctors-list .doctor .doctor-info ul li i {
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .bannerPanel {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+  .bannerPanel h4 {
+    font-size: 2rem;
+  }
+  .bannerPanel h4 span {
+    font-size: 2rem;
+  }
+  .nav {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav h4 {
+    font-size: 1.5rem;
+  }
+  .nav form input::-webkit-input-placeholder {
+    font-size: 1rem;
+  }
+  .nav form input:-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  .nav form input::-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  .nav form input::placeholder {
+    font-size: 1rem;
+  }
+  .doctorsPanel {
+        grid-template-areas: "fil fil fil doc doc doc doc doc doc doc doc doc doc doc";
+  }
+  .doctorsPanel .filters .filter-list span {
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+  .doctorsPanel .doctors-list {
+    margin-left: 4rem;
+  }
+  .doctorsPanel .doctors-list .doctorPageLinks {
+    margin-top: 1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .doctorsPanel .doctors-list .doctorPageLinks .activePage {
+    color: white;
+    background-color: #4297C9;
+    padding: 0.3rem;
+    border-radius: 6px;
+    margin-right: 0.3rem;
+  }
+  .doctorsPanel .doctors-list .doctorPageLinks .notActivePage {
+    color: #4297C9;
+    border-radius: 6px;
+    border: 1px solid #4297C9;
+    padding: 0.3rem;
+    margin-right: 0.3rem;
+  }
+  .doctorsPanel .doctors-list .doctor {
+    padding-left: 1rem;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox {
+    display: none;
+    margin-left: -1rem;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .shift {
+    display: -ms-grid;
+    display: grid;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #999;
+    -ms-grid-columns: 1.5fr 9fr;
+        grid-template-columns: 1.5fr 9fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .shift h4 {
+    padding: 0%;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .shift h4 i {
+    padding-right: 0.5rem;
+    color: #2A2D3E;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .shift button {
+    width: auto;
+    background-color: #4297C9;
+    margin: 0rem auto;
+    display: block;
+    font-size: 0.9rem;
+    padding: 0.75rem;
+    border-radius: 6px;
+    -webkit-box-shadow: 5px 5px 5px #D3D3D3;
+            box-shadow: 5px 5px 5px #D3D3D3;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .shift ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .shift ul li {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .shift ul .violet {
+    color: purple;
+    border: 1px solid purple;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .shift ul .indigo {
+    color: indigo;
+    border: 1px solid indigo;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .shift ul .blue {
+    color: blue;
+    border: 1px solid blue;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .shift ul .green {
+    color: green;
+    border: 1px solid green;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .shift ul .yellow {
+    color: #b4b433;
+    border: 1px solid #b4b433;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .shift ul .orange {
+    color: orange;
+    border: 1px solid orange;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .shift ul .red {
+    color: red;
+    border: 1px solid red;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .hospitals {
+    padding-top: 0.5rem;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .hospitals h5 {
+    color: green;
+    font-size: 1rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .hospitals .violet {
+    color: purple;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .hospitals .indigo {
+    color: indigo;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .hospitals .blue {
+    color: blue;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .hospitals .green {
+    color: green;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .hospitals .yellow {
+    color: #b4b433;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .hospitals .orange {
+    color: orange;
+  }
+  .doctorsPanel .doctors-list .doctor .subScheduleBox .hospitals .red {
+    color: red;
+  }
+  .doctorsPanel .doctors-list .doctor .scheduleBox {
+    display: none;
+    margin: 2rem 3rem 1.5rem 2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .doctorsPanel .doctors-list .doctor .scheduleBox i {
+    font-size: .7rem;
+    color: #4297C9;
+    background-color: #D3D3D3;
+    padding: 0.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .doctorsPanel .doctors-list .doctor .scheduleBox ul {
+    margin: 0rem 4rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+  }
+  .doctorsPanel .doctors-list .doctor .scheduleBox ul li {
+    padding-bottom: 0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .doctorsPanel .doctors-list .doctor .scheduleBox ul li h3, .doctorsPanel .doctors-list .doctor .scheduleBox ul li h5 {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0%;
+  }
+  .doctorsPanel .doctors-list .doctor .scheduleBox ul li h5 {
+    color: #4297C9;
+  }
+  .doctorsPanel .doctors-list .doctor .scheduleBox ul li h3 {
+    color: #999;
+  }
+  .doctorsPanel .doctors-list .doctor .scheduleBox ul li:hover {
+    border-bottom: 1px solid #999;
+    cursor: pointer;
+  }
+  .doctorsPanel .doctors-list .doctor .scheduleBox ul li:nth-child(4), .doctorsPanel .doctors-list .doctor .scheduleBox ul li:nth-child(5), .doctorsPanel .doctors-list .doctor .scheduleBox ul li:nth-child(6), .doctorsPanel .doctors-list .doctor .scheduleBox ul li:nth-child(7) {
+    display: none;
+  }
+  .doctorsPanel .doctors-list .doctor .doctor-image {
+    height: 300px;
+  }
+  .doctorsPanel .doctors-list .doctor .doctor-info h3 {
+    margin-top: 2.5rem;
+    padding-left: 1rem;
+  }
+  .doctorsPanel .doctors-list .doctor .doctor-info h3::before {
+    margin-left: -1rem;
+  }
+  .doctorsPanel .doctors-list .doctor .doctor-info button {
+    padding: .5rem 2rem;
+    font-size: 0.8rem;
+    font-weight: 100;
+    margin-left: 1rem;
+  }
+  .doctorsPanel .doctors-list .doctor .doctor-info ul {
+    padding-top: 1rem;
+    padding-left: 1rem;
+  }
+  .doctorsPanel .doctors-list .doctor .doctor-info ul li {
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+  }
+  .doctorsPanel .doctors-list .doctor .doctor-info ul li i {
+    font-size: 1.2rem;
+  }
+}
+/*# sourceMappingURL=doctor.css.map */

@@ -1,0 +1,134 @@
+.signupPanel {
+  position: relative;
+  background-color: #9cbfda;
+  height: 140vh;
+}
+
+.signupPanel .copyright {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 0rem;
+  bottom: 1rem;
+  color: black;
+  font-size: 0.7rem;
+}
+
+.signupPanel .signupForm {
+  position: absolute;
+  max-width: 25rem;
+  left: 50%;
+  top: 60%;
+  -webkit-transform: translate(-50%, -60%);
+          transform: translate(-50%, -60%);
+  width: 90%;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 10px black;
+          box-shadow: 0px 0px 10px black;
+  background-color: white;
+}
+
+.signupPanel .signupForm h3 {
+  padding: 1rem 0rem 0rem 0rem;
+  color: #4297C9;
+}
+
+.signupPanel .signupForm form {
+  padding: 0rem 1rem;
+}
+
+.signupPanel .signupForm form .location {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-column-gap: 0.5rem;
+}
+
+.signupPanel .signupForm form input {
+  margin-bottom: 0.5rem;
+}
+
+.signupPanel .signupForm form #isdoctor {
+  width: auto;
+  margin: 0rem;
+}
+
+.signupPanel .signupForm form .isdoctor {
+  margin-top: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.signupPanel .signupForm form label h3 {
+  font-weight: 900;
+  margin-left: 0.5rem;
+  color: #4297C9;
+  font-size: 1rem;
+  padding: 0rem;
+}
+
+.signupPanel .signupForm form .signup-btn {
+  width: 100%;
+  position: relative;
+  margin-bottom: 1rem;
+  letter-spacing: 3px;
+}
+
+.signupPanel .signupForm form .signup-btn i {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  -webkit-transform: translate(-5%, -50%);
+          transform: translate(-5%, -50%);
+}
+
+.signupPanel .signupForm form h4 {
+  padding-bottom: 1rem;
+  padding-top: 0rem;
+  font-size: 0.7rem;
+}
+
+.signupPanel .signupForm form h4 a {
+  color: #4297C9;
+  font-weight: 900;
+  font-size: 0.7rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .signupPanel .signupForm {
+    width: 25rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .signupPanel {
+    height: 130vh;
+    position: relative;
+  }
+  .signupPanel .copyright {
+    font-size: 0.8rem;
+  }
+  .signupPanel .signupForm {
+    max-width: 30rem;
+    width: 30rem;
+  }
+  .signupPanel .signupForm h3 {
+    padding: 1.5rem 0rem 0.5rem 0rem;
+  }
+  .signupPanel .signupForm form h4 {
+    font-size: 0.8rem;
+  }
+  .signupPanel .signupForm form h4 a {
+    font-size: 0.8rem;
+  }
+  .signupPanel .signupForm form label h3 {
+    font-size: 1.1rem;
+  }
+}
+/*# sourceMappingURL=signup.css.map */

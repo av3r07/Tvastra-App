@@ -1,0 +1,75 @@
+.queryPanel {
+  background-color: #9cbfda;
+  text-align: center;
+  padding: 7rem 2rem 1rem 2rem;
+}
+
+.queryPanel .queryForm {
+  -webkit-box-shadow: 0px 0px 10px black;
+          box-shadow: 0px 0px 10px black;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.queryPanel .queryForm h3 {
+  padding: 1rem 0rem 0rem 0rem;
+  color: #0173b2;
+}
+
+.queryPanel .queryForm form {
+  padding: 0rem 1rem;
+}
+
+.queryPanel .queryForm form input, .queryPanel .queryForm form textarea {
+  margin-bottom: 1rem;
+}
+
+.queryPanel .queryForm form #submit-btn {
+  width: 100%;
+  position: relative;
+  margin-bottom: 1rem;
+  letter-spacing: 3px;
+}
+
+.queryPanel .queryForm form #submit-btn i {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  -webkit-transform: translate(-5%, -50%);
+          transform: translate(-5%, -50%);
+}
+
+.queryPanel .queryForm form h4 {
+  padding-bottom: 1rem;
+  padding-top: 0rem;
+}
+
+.queryPanel .queryForm form h4 a {
+  color: #0173b2;
+  font-weight: 900;
+}
+
+.queryPanel h4 {
+  padding-top: 7rem;
+  font-weight: 900;
+  color: black;
+}
+
+@media only screen and (min-width: 768px) {
+  .queryPanel {
+    padding: 7rem 15rem 1.5rem 15rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .queryPanel {
+    padding: 7rem 30rem 2rem 30rem;
+  }
+  .queryPanel .queryForm h3 {
+    padding: 2rem 0rem 1rem 0rem;
+  }
+  .queryPanel .queryForm form {
+    padding: 0rem 2rem;
+  }
+}
+/*# sourceMappingURL=query.css.map */

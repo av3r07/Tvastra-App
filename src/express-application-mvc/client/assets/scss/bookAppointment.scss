@@ -1,0 +1,132 @@
+
+.appointmentPanel {
+	background-color: #9cbfda;
+	height: 170vh;
+	position: relative;
+	.copyright{
+		position: absolute;
+		padding-bottom: 0rem;
+		font-size: 0.7rem;
+		width: 100%;
+		text-align: center;
+		bottom: 1rem;
+	}
+	.appointmentForm {
+		position: absolute;
+		top: 60%;
+		width: 90%;
+		max-width: 25rem;
+		left: 50%;
+		transform: translate(-50%,-60%);
+		text-align: center;
+		box-shadow: 0px 0px 10px black;
+		background-color: white;
+		h3 {
+			padding: 1rem 0rem 0rem 0rem;
+			color: #4297C9;
+		}
+		form {
+			text-align: left;
+			padding: 0rem 1rem;
+			div {
+				margin-bottom: 1.5rem;
+				h2 {
+					font-size: 1rem;
+					font-weight: 100;
+					padding-bottom: 0.5rem;
+				}
+			}
+			textarea {
+				width: 90%;
+				padding: 1rem 5%;
+				&:focus {
+					outline-color: #9cbfda;
+				}
+			}
+			#file{
+				input[value]{
+					font-size: 0.8rem;
+				}
+			}
+			#radio {
+				div {
+					display: inline-flexbox;
+					align-items: center;
+					margin-bottom: 0rem;
+					margin-bottom: 0.5rem;
+					input {
+						width: auto;
+						height: auto;
+						background-color:  #4297C9;
+						padding: 0%;
+						margin: 0px;
+					}
+					label {
+						padding-left: 0.5rem;
+						font-weight: 900;
+						font-size: 0.8rem;
+					}
+				}
+			}
+			.book-btn {
+				width: 100%;
+				position: relative;
+				margin-bottom: 2rem;
+				letter-spacing: 3px;
+				i {
+					position: absolute;
+					top: 50%;
+					right: 5%;
+					transform: translate(-5%, -50%);
+				}
+			}
+		}
+	}
+	h4 {
+		padding-top: 7rem;
+		font-weight: 900;
+		color: black;
+	}
+}
+@media only screen and (min-width: 768px) {
+	.appointmentPanel {
+		.appointmentForm{
+			width: 25rem;
+		}
+	}
+}
+@media only screen and (min-width: 1024px) {
+	.appointmentPanel {
+		height: 150vh;
+		.copyright{
+			font-size: 0.8rem;
+		}
+		.appointmentForm {
+			max-width: 30rem;
+			width: 30rem;
+			form {
+				padding: 0rem 1rem;
+				div {
+					h2 {
+						font-size: 1.1rem;
+					}
+				}
+				#file{
+					input[value]{
+						font-size: 0.9rem;
+					}
+				}
+				#radio {
+					div{
+						label { 
+							font-size: 0.9rem;
+						}
+					}
+				}
+			}
+			h3 {
+				padding: 1.5rem 0rem 0.5rem 0rem;
+			}
+		}
+	}
+} 

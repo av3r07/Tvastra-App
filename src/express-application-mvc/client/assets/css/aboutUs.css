@@ -1,0 +1,215 @@
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+}
+
+.bannerPanel {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/aboutUs_hero.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/aboutUs_hero.jpeg");
+}
+
+.bannerPanel div {
+  padding-top: 120px;
+}
+
+.bannerPanel div h1, .bannerPanel div p {
+  color: white;
+  text-align: center;
+}
+
+.contentPanel div {
+  text-align: center;
+}
+
+.contentPanel #doctor {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.checkupPanel {
+  background-color: black;
+}
+
+.checkupPanel video {
+  display: none;
+}
+
+.checkupPanel h2, .checkupPanel h5 {
+  color: white;
+}
+
+.checkupPanel p {
+  color: #999;
+}
+
+.checkupPanel .aboutPanel .checkupContent button {
+  width: 11rem;
+  background-color: #0173b2;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+}
+
+.checkupPanel .aboutPanel .assets div {
+  border-radius: 5px;
+  padding: 1.5rem 0rem;
+  margin-bottom: 1rem;
+  border: 1px solid #999;
+}
+
+.checkupPanel .aboutPanel .assets div h5 {
+  color: #999;
+  padding-bottom: 0rem;
+}
+
+.checkupPanel .aboutPanel .assets .asset-6 {
+  margin-bottom: 0rem;
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+  .bannerPanel {
+    height: 350px;
+  }
+  .bannerPanel div {
+    padding-top: 150px;
+  }
+  .contentPanel {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 59% 39%;
+        grid-template-columns: 59% 39%;
+    grid-column-gap: 2%;
+  }
+  .contentPanel div {
+    text-align: left;
+  }
+  .checkupPanel .aboutPanel .checkupContent {
+    text-align: left;
+  }
+  .checkupPanel .aboutPanel .checkupContent button {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+  .checkupPanel .aboutPanel .assets {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "a1 a2 a3" "a4 a5 a6";
+    grid-gap: .5rem;
+  }
+  .checkupPanel .aboutPanel .assets .asset-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: a1;
+  }
+  .checkupPanel .aboutPanel .assets .asset-2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: a2;
+  }
+  .checkupPanel .aboutPanel .assets .asset-3 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: a3;
+  }
+  .checkupPanel .aboutPanel .assets .asset-4 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: a4;
+  }
+  .checkupPanel .aboutPanel .assets .asset-5 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: a5;
+  }
+  .checkupPanel .aboutPanel .assets .asset-6 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: a6;
+  }
+  .checkupPanel .aboutPanel .assets div {
+    margin-bottom: 0rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+    line-height: 2.4rem;
+  }
+  .bannerPanel {
+    height: 400px;
+  }
+  .bannerPanel div {
+    padding-top: 170px;
+  }
+  .contentPanel {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 35%;
+        grid-template-columns: 50% 35%;
+    grid-column-gap: 15%;
+  }
+  .contentPanel #doctor {
+    width: 70%;
+    margin-top: 0rem;
+  }
+  .checkupPanel {
+    background-color: white;
+    height: 550px;
+    padding: 0rem;
+    position: relative;
+  }
+  .checkupPanel video {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block;
+    height: 550px;
+  }
+  .checkupPanel .aboutPanel {
+    top: 0%;
+    position: absolute;
+    height: 422px;
+    z-index: 1;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 47.5% 47.5%;
+        grid-template-columns: 47.5% 47.5%;
+    grid-column-gap: 5%;
+  }
+  .checkupPanel .aboutPanel .checkupContent {
+    height: 422px;
+  }
+  .checkupPanel .aboutPanel .checkupContent button {
+    width: 15rem;
+    margin-bottom: 0rem;
+  }
+  .checkupPanel .aboutPanel .assets {
+    height: 422px;
+    text-align: center;
+  }
+  .checkupPanel .aboutPanel .assets div {
+    padding: 3rem 0%;
+  }
+}
+/*# sourceMappingURL=about-Us.css.map */

@@ -1,0 +1,613 @@
+@-webkit-keyframes fade {
+  from {
+    opacity: .1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dots {
+  display: none;
+}
+
+#t-shape {
+  display: none;
+}
+
+#imageWorkList {
+  display: none;
+}
+
+.searchPanel {
+  background-color: #9cbfda;
+}
+
+.searchPanel h1 {
+  color: #2a2d3e;
+}
+
+.searchPanel input {
+  margin-bottom: 0.5rem;
+  border-radius: 0px;
+  border: 0px;
+}
+
+.searchPanel button {
+  margin-top: 0.75rem;
+  width: auto;
+  padding: 0.6rem 2rem;
+}
+
+.searchPanel div {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.searchPanel div input {
+  margin-bottom: 0rem;
+}
+
+.searchPanel div .fa-map-marker {
+  position: absolute;
+  top: 50%;
+  left: 0.25rem;
+  -webkit-transform: translate(0rem, -50%);
+          transform: translate(0rem, -50%);
+}
+
+.searchPanel div .fa-crosshairs {
+  position: absolute;
+  top: 50%;
+  right: 0.25rem;
+  -webkit-transform: translate(0rem, -50%);
+          transform: translate(0rem, -50%);
+}
+
+.searchPanel div i {
+  color: #2a2d3e;
+  font-size: 0.9rem;
+}
+
+.workPanel li {
+  border: 2px solid #999;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.workPanel li h5 {
+  padding: 0.75rem 0rem 0.75rem 1rem;
+  color: #999;
+}
+
+.workPanel #active {
+  border: 2px solid #4297C9;
+}
+
+.workPanel #active h5 {
+  color: #2a2d3e;
+}
+
+.workPanel #active #number {
+  color: #4297C9;
+}
+
+.workPanel .imageWorkList-mobile {
+  border: 0px;
+  padding: 1rem;
+  display: block;
+}
+
+.workPanel .imageWorkList-mobile img {
+  width: 100%;
+  height: 17rem;
+}
+
+.workPanel .imageWorkList-mobile h5 {
+  color: #2a2d3e;
+}
+
+.workPanel .imageWorkList-mobile p {
+  padding-bottom: 0rem;
+}
+
+.doctorsPanel {
+  background-color: #2a2d3e;
+}
+
+.doctorsPanel h2 {
+  color: white;
+}
+
+.doctorsPanel p {
+  color: white;
+  font-weight: 100;
+}
+
+.doctorsPanel .doctorsList .doctor-slide {
+  display: none;
+  overflow: hidden;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.doctorsPanel .doctorsList .doctor-slide .doctors div {
+  margin-bottom: 1rem;
+  background-color: white;
+  padding-bottom: 1rem;
+  text-align: left;
+  border-bottom: .25rem solid #9cbfda;
+}
+
+.doctorsPanel .doctorsList .doctor-slide .doctors div img {
+  width: 100%;
+  height: 20rem;
+  padding-bottom: 1rem;
+}
+
+.doctorsPanel .doctorsList .doctor-slide .doctors div h3 {
+  position: relative;
+  color: #4297C9;
+  padding-left: 2rem;
+  font-size: 1.5rem;
+}
+
+.doctorsPanel .doctorsList .doctor-slide .doctors div h3::before {
+  position: absolute;
+  content: "";
+  background-color: #4297C9;
+  height: .125rem;
+  width: 1.8rem;
+  left: 0%;
+  top: 25%;
+  -webkit-transform: translate(0%, -25%);
+          transform: translate(0%, -25%);
+}
+
+.doctorsPanel .doctorsList .doctor-slide .doctors div div {
+  border: 0px;
+  margin: 0rem;
+  padding: 0rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+
+.cardsPanel .card div {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.cardsPanel .card div img {
+  width: 100%;
+  height: 22rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cardsPanel .card div div {
+  width: 100%;
+  height: 22rem;
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  z-index: 1;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#2a2d3e), to(rgba(42, 45, 62, 0)));
+  background-image: linear-gradient(to top, #2a2d3e, rgba(42, 45, 62, 0));
+}
+
+.cardsPanel .card div div h4 {
+  font-size: 1rem;
+  position: absolute;
+  color: white;
+  letter-spacing: 1px;
+  bottom: 1.5rem;
+  left: 1rem;
+}
+
+.cardsPanel .card div div span {
+  letter-spacing: 1px;
+  position: absolute;
+  font-size: 0.8rem;
+  color: white;
+  font-weight: 100;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.servicePanel {
+  background-color: #F3F3F3;
+}
+
+.servicePanel .serviceList {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  text-align: center;
+}
+
+.servicePanel .serviceList div {
+  border-radius: 20px;
+  background-color: white;
+  padding: 0.5rem 0rem;
+}
+
+.servicePanel .serviceList div h3 {
+  font-size: .8rem;
+  color: #525659;
+  letter-spacing: 1px;
+}
+
+@media only screen and (min-width: 768px) {
+  .searchPanel ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 3fr 5fr 2fr;
+        grid-template-columns: 3fr 5fr 2fr;
+    grid-column-gap: 2px;
+  }
+  .searchPanel ul li button {
+    margin-top: 0rem;
+    width: 100%;
+    padding: 0.7rem 0rem;
+  }
+  .workPanel .workList {
+    padding-top: 1rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    grid-column-gap: 3rem;
+  }
+  .workPanel .workList ul li h5 {
+    padding: 1rem 0rem 1rem 1rem;
+  }
+  .workPanel .workList ul .imageWorkList-mobile {
+    display: none;
+  }
+  .workPanel #imageWorkList #imageWorkList_image img {
+    width: 100%;
+    height: 350px;
+  }
+  .doctorsPanel .doctorsList .doctor-slide .doctors {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .doctorsPanel .doctorsList .doctor-slide .doctors div {
+    margin-bottom: 0rem;
+  }
+  .cardsPanel .card {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    grid-gap: 10px;
+  }
+  .cardsPanel .card div {
+    margin-bottom: 0rem;
+  }
+  .servicePanel .serviceList {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    grid-gap: 1rem;
+  }
+  .servicePanel .serviceList div {
+    padding: .5rem 0rem;
+  }
+  .servicePanel .serviceList div h3 {
+    font-size: .9rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .dots {
+    display: block;
+  }
+  #t-shape {
+    display: block;
+  }
+  .searchPanel {
+    padding: 7.5rem 4rem 7.8rem 4rem;
+    background: url("https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img1.jpg");
+    background-size: cover;
+  }
+  .searchPanel p {
+    padding-right: 50%;
+  }
+  .searchPanel ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 20% 37% 15%;
+        grid-template-columns: 20% 37% 15%;
+    grid-column-gap: 2px;
+  }
+  .searchPanel ul #search-container {
+    position: relative;
+  }
+  .searchPanel ul #search-container #search-results {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    border-radius: 1rem;
+  }
+  .searchPanel ul #search-container #search-results li {
+    cursor: pointer;
+    background-color: #dddfe25d;
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: 900;
+    color: #2a2d3e;
+    padding: 1rem 2rem;
+  }
+  .searchPanel ul #search-container #search-results li:hover {
+    background-color: #dddfe2;
+    border-left: 5px solid #4297C9;
+  }
+  .searchPanel ul li button {
+    padding: 1rem 0rem;
+  }
+  .searchPanel ul li input {
+    padding: 1rem  1.5rem;
+  }
+  .searchPanel ul li .fa-map-marker {
+    left: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .searchPanel ul li .fa-crosshairs {
+    font-size: 1.2rem;
+    right: 0.5rem;
+  }
+  .workPanel .workList {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 4fr 6fr;
+        grid-template-columns: 4fr 6fr;
+    grid-column-gap: 0rem;
+  }
+  .workPanel .workList ul li {
+    padding-right: 2rem;
+  }
+  .workPanel .workList ul li h5 {
+    padding: 2.5rem 0rem 2.5rem 2rem;
+  }
+  .workPanel .workList #imageWorkList {
+    margin-left: 10rem;
+    text-align: center;
+  }
+  .workPanel .workList #imageWorkList #imageWorkList_image img {
+    width: 100%;
+    height: 100%;
+    max-height: 650px;
+  }
+  .doctorsPanel {
+    position: relative;
+  }
+  .doctorsPanel .doctorsList .doctor-slide {
+    -webkit-transition: 5s all ease-out;
+    transition: 5s all ease-out;
+  }
+  .doctorsPanel .doctorsList .doctor-slide .doctors {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "doc1 doc2 doc3 doc4";
+  }
+  .doctorsPanel .doctorsList .doctor-slide .doctors #doctor-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: doc1;
+  }
+  .doctorsPanel .doctorsList .doctor-slide .doctors #doctor-1 img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 25rem;
+  }
+  .doctorsPanel .doctorsList .doctor-slide .doctors #doctor-2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: doc2;
+  }
+  .doctorsPanel .doctorsList .doctor-slide .doctors #doctor-2 img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 25rem;
+  }
+  .doctorsPanel .doctorsList .doctor-slide .doctors #doctor-3 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: doc3;
+  }
+  .doctorsPanel .doctorsList .doctor-slide .doctors #doctor-3 img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 25rem;
+  }
+  .doctorsPanel .doctorsList .doctor-slide .doctors #doctor-4 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+    grid-area: doc4;
+  }
+  .doctorsPanel .doctorsList .doctor-slide .doctors #doctor-4 img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 25rem;
+  }
+  .doctorsPanel .dots {
+    padding-top: 1.5rem;
+    padding-left: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .doctorsPanel .dots .fas {
+    cursor: pointer;
+    color: #999;
+    border-radius: 50%;
+    font-size: .6rem;
+    margin-right: .3rem;
+  }
+  .doctorsPanel .dots .active {
+    font-size: 0.6rem;
+    color: #2a2d3e;
+    border-radius: 50%;
+    border: 2px solid #4297C9;
+  }
+  .cardsPanel .dots_treatment {
+    padding-top: 1.5rem;
+    padding-left: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cardsPanel .dots_treatment .fas {
+    cursor: pointer;
+    color: #999;
+    border-radius: 50%;
+    font-size: .6rem;
+    margin-right: .3rem;
+  }
+  .cardsPanel .dots_treatment .active {
+    font-size: 0.6rem;
+    color: white;
+    border-radius: 50%;
+    border: 2px solid #4297C9;
+  }
+  .cardsPanel .card {
+    height: 700px;
+    display: none;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[10];
+        grid-template-rows: repeat(10, 1fr);
+        grid-template-areas: "card1 card2 card3" "card1 card2 card3" "card1 card2 card3" "card4 card2 card3" "card4 card2 card6" "card4 card5 card6" "card4 card5 card6" "card4 card5 card6" "card4 card5 card6" "card4 card5 card6";
+  }
+  .cardsPanel .card div {
+    height: 100%;
+  }
+  .cardsPanel .card div img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .cardsPanel .card div div {
+    height: 100%;
+  }
+  .cardsPanel .card #card-1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    grid-area: card1;
+  }
+  .cardsPanel .card #card-2 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 5;
+    -ms-grid-column: 2;
+    grid-area: card2;
+  }
+  .cardsPanel .card #card-3 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 4;
+    -ms-grid-column: 3;
+    grid-area: card3;
+  }
+  .cardsPanel .card #card-4 {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 7;
+    -ms-grid-column: 1;
+    grid-area: card4;
+  }
+  .cardsPanel .card #card-5 {
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 5;
+    -ms-grid-column: 2;
+    grid-area: card5;
+  }
+  .cardsPanel .card #card-6 {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 6;
+    -ms-grid-column: 3;
+    grid-area: card6;
+  }
+  .servicePanel .serviceList {
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "service1 service2 service3 service4 service5 service6";
+    grid-gap: .5rem;
+  }
+  .servicePanel .serviceList #service-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: service1;
+  }
+  .servicePanel .serviceList #service-2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: service2;
+  }
+  .servicePanel .serviceList #service-3 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: service3;
+  }
+  .servicePanel .serviceList #service-4 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+    grid-area: service4;
+  }
+  .servicePanel .serviceList #service-5 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    grid-area: service5;
+  }
+  .servicePanel .serviceList #service-6 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 6;
+    grid-area: service6;
+  }
+  .servicePanel .serviceList div {
+    padding: 2rem 0rem;
+    border-radius: 0px;
+  }
+  .servicePanel .serviceList div h3 {
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=homePage.css.map */

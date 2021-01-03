@@ -1,0 +1,177 @@
+.web_dashboard {
+  display: none;
+}
+
+section {
+  padding: 1rem;
+  background-color: #F2F2F8;
+}
+
+section .container_box {
+  background-color: #F2F2F8;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+section .container_box .dashboard h1 {
+  text-align: center;
+}
+
+section .container_box .dashboard .mobile_dashboard {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section .container_box .dashboard .mobile_dashboard h3 {
+  padding-bottom: 0rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  color: #4297C9;
+}
+
+section .container_box .dashboard .mobile_dashboard h3 i {
+  padding-right: 0.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  section {
+    padding: 2.5rem;
+  }
+  section .container_box {
+    padding: 2rem;
+  }
+  section .container_box .mobile_dashboard i {
+    font-size: 1.3rem;
+    text-align: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .web_dashboard {
+    display: block;
+  }
+  section {
+    padding: 4rem;
+    -webkit-box-shadow: inset 0rem 0.5rem 1rem -0.5rem #dddfe2;
+            box-shadow: inset 0rem 0.5rem 1rem -0.5rem #dddfe2;
+  }
+  section .container_box {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 3fr 11fr;
+        grid-template-columns: 3fr 11fr;
+    grid-gap: 3rem;
+    border-radius: 0px;
+    padding: 0rem;
+  }
+  section .container_box .dashboard .mobile_dashboard {
+    display: none;
+  }
+  section .container_box .dashboard h1 {
+    text-align: left;
+    padding-bottom: 3rem;
+  }
+  section .container_box .dashboard .web_dashboard a h4, section .container_box .dashboard .web_dashboard a h3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1rem 0rem;
+    font-size: 1.5rem;
+  }
+  section .container_box .dashboard .web_dashboard a h4 i, section .container_box .dashboard .web_dashboard a h3 i {
+    color: #4297C9;
+    padding-right: 0.5rem;
+  }
+  section .container_box .dashboard .web_dashboard a h3 {
+    color: #4297C9;
+  }
+  section .container_box .dashboard .web_dashboard a h4:hover, section .container_box .dashboard .web_dashboard a h3:hover {
+    background-color: #dddfe2;
+    padding-left: 0.5rem;
+    border-left: 4px solid #4297C9;
+    cursor: pointer;
+  }
+  section .container_box .appointments {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 3rem 1rem;
+  }
+  section .container_box .appointments .notCompletedAppointment li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #F2F2F8;
+    border: 1px solid #cfcccc;
+    padding: 1rem;
+    border-radius: .3rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  section .container_box .appointments .notCompletedAppointment li h5 {
+    font-size: 1rem;
+    color: #80808F;
+    padding: 0rem;
+  }
+  section .container_box .appointments .notCompletedAppointment li h3 {
+    font-size: 1rem;
+    color: #4297C9;
+    padding: 0rem;
+  }
+  section .container_box .appointments .notCompletedAppointment li .appointmentDate {
+    background-color: #fff;
+    padding: 2.3rem 1rem;
+    margin-right: 4rem;
+  }
+  section .container_box .appointments .notCompletedAppointment li .appointmentDate h5 {
+    color: #2A2D3E;
+  }
+  section .container_box .appointments .notCompletedAppointment li .appointmentInfo h5 {
+    padding-top: 0.3rem;
+  }
+  section .container_box .appointments .notCompletedAppointment li .appointmentInfo button {
+    width: auto;
+    margin-top: 0.3rem;
+    padding: 0.3rem 0.5rem;
+    font-weight: 900;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: #a19f9f;
+    border-radius: 4px;
+  }
+  section .container_box .appointments .notCompletedAppointment li .confirmationBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  section .container_box .appointments .notCompletedAppointment li .confirmationBox div button, section .container_box .appointments .notCompletedAppointment li .confirmationBox form button {
+    width: auto;
+    display: block;
+    margin-left: auto;
+    background-color: #4297C9;
+    padding: 0.5rem 2rem;
+    font-weight: 900;
+    border-radius: 0.25rem;
+  }
+  section .container_box .appointments .notCompletedAppointment li .confirmationBox .rescheduleForm {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin-right: 1rem;
+  }
+}
+/*# sourceMappingURL=appointment.css.map */

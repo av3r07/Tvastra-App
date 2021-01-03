@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('links') %>   
+        <link rel="stylesheet" href="../assets/scss/rescheduleAppointment.css">
+    </head>
+    <body>
+        <%- include('headerMain') %>
+        <div class="container appointmentSection">
+            <div class="appointmentBox">
+                <div class="doctorInfo">
+                    <h3><%= user.appointmentDetails.doctorName %></h3>
+                    <ul>
+                        <li><i class="fa fa-certificate"></i>Date: <%= user.appointmentDetails.date %></li>
+                        <li><i class="fas fa-award"></i>Hospital: <%= user.appointmentDetails.hospital %></li>
+                        <li><i class="fa fa-clock"></i>From: <%= user.appointmentDetails.time %></li>
+                    </ul>
+                </div>
+                <div class="reschedul-btn">
+                    <button type="button" onclick="showAppointmentBox('<%= user.appointmentDetails.doctor %>','<%= user.appointmentDetails._id %>')">Reschedule Appointment</button>
+                </div>
+                <div class="scheduleBox" id="scheduleBox">
+                    <i class="fas fa-chevron-left" onclick="moveLeft()"></i>
+                    <ul id="ul"></ul>
+                    <i class="fas fa-chevron-right" onclick="moveRight()"></i>
+                </div>
+                <div class="subScheduleBox" id="subScheduleBox">
+                    <div class="shift">
+                        <h4><i class="fas fa-sun"></i>Morning</h4>
+                        <ul id="morning"></ul>
+                    </div>
+                    <div class="shift">
+                        <h4><i class="fas fa-sun"></i>Afternoon</h4>
+                        <ul id="afternoon"></ul>
+                    </div>
+                    <div class="shift">
+                        <h4><i class="fas fa-sun"></i>Evening</h4>
+                        <ul id="evening"></ul>
+                    </div>
+                    <div class="hospitals" id="hospital"></div>
+                </div>
+                 </div>
+            </div>
+        </div>
+        <div class="container footerHead">
+            <div><h2>Need Help?</h2>
+            <p>Just let us know. We will be happy to assist you.</p></div>
+            <Button onclick="location.href='/query'">Submit your query</Button>
+        </div>
+        <%- include('footer') %>
+        <script>
+                async function showAppointmentBox(param,appointment){
+                const scheduleBox = document.getElementById("scheduleBox");
+                const ul = document.getElementById("ul");
+                if(scheduleBox.style.display == "flex"){
+                    ul.innerHTML = "";
+                    scheduleBox.style.display = "none";
+                }
+                else{
+                    scheduleBox.style.display = "flex";
+                    const jsonData =  await fetch("/showDoctorScehdule/"+param,{method:"put"});
+                        const data = await jsonData.json();  
+                for(var i = 0;i<7;i++){
+                    var li = document.createElement("li");
+                    li.setAttribute("onclick","showSubScheduleBox('"+param+"','"+i+"','"+appointment+"')");
+                    const h3 = document.createElement("h3");
+                    const h5 = document.createElement("h5");
+                    h5.innerHTML = data[i]+" slots available";
+                    if(i==0)
+                    h3.innerHTML = "Today";
+                    else if(i==1)
+                    h3.innerHTML = "Tommorow";
+                    else{
+                        var date = ""+ new Date(new Date().getTime()+(i)*24*60*60*1000);
+                        h3.innerHTML = date.substring(0,15);
+                    }
+                    li.appendChild(h3);
+                    li.appendChild(h5);
+                    ul.appendChild(li);
+                }
+                }
+                }
+
+            async function showSubScheduleBox(param,n,appointment){
+                const jsonData = await fetch("/showSubSchedule/"+param+"/"+n,{method:"put"});
+                const data = await jsonData.json();
+                var slots_in_mins = data[0];
+                var slots = data[1];
+                var hospitalDaily = data[2];
+                var slotsId = data[3];
+                var hospital = [];
+                var colour = ["violet","green","red","blue","yellow","indigo","orange"];
+                for(var i=0;i<hospitalDaily.length;i++){
+                    var flag = false;
+                    for(var j=0;j<hospital.length;j++){
+                        if(hospitalDaily[i] == hospital[j])
+                        flag = true;
+                    }
+                    if(flag == false)
+                    hospital.push(hospitalDaily[i]);
+                }
+                const ul = document.getElementById("ul");
+                const slotsDay = ul.querySelectorAll("li");
+                const date = ""+ new Date(new Date().getTime()+parseInt(n)*24*60*60*1000);
+                const appoinmentDate = date.substring(0,15);
+                const subScheduleBox = document.getElementById("subScheduleBox");
+                const morning = document.getElementById("morning");
+                const evening = document.getElementById("evening");
+                const afternoon = document.getElementById("afternoon");
+                const hospitals = document.getElementById("hospital");
+                const classNames = subScheduleBox.classList.toString();
+                const shownSchedule = parseInt(classNames.charAt(classNames.length-1));
+                if(subScheduleBox.style.display == "block" && shownSchedule == n){
+                    subScheduleBox.setAttribute("class","subScheduleBox");
+                    subScheduleBox.style.display = "none";
+                    morning.innerHTML = "";
+                    afternoon.innerHTML = "";
+                    evening.innerHTML = "";
+                    hospitals.innerHTML = "";
+                    for(var k =0 ;k<7;k++){
+                        slotsDay[k].style.borderBottom = "";
+                    }
+                }
+                else{
+                    morning.innerHTML = "";
+                    afternoon.innerHTML = "";
+                    evening.innerHTML = "";
+                    hospitals.innerHTML = "";
+                    subScheduleBox.style.display = "block";
+                    subScheduleBox.setAttribute("class","subScheduleBox");
+                    subScheduleBox.classList.add(n);
+                    if(slots_in_mins.length>0){
+                        for(var i=0;i<slots_in_mins.length;i++){
+                    var li = document.createElement("li");
+                    var url = "/bookDoctorAppointment/"+appointment+"/"+param+"/"+slotsId[i]+"/"+appoinmentDate;
+                    li.setAttribute("onclick","location.href='"+url+"'");
+                    for(var j=0;j<hospital.length;j++)
+                    if(hospitalDaily[i] == hospital[j])
+                    li.setAttribute("class", colour[j%7]);
+                    li.innerHTML = slots[i];
+                    if(slots_in_mins[i]<720)
+                    morning.appendChild(li);
+                    else if(slots_in_mins[i]>=720 && slots_in_mins[i]<1080)
+                    afternoon.appendChild(li);
+                    else
+                    evening.appendChild(li);
+                }
+                for(var i=0;i<hospital.length;i++){
+                    var h5 = document.createElement("h5");
+                    h5.innerHTML = hospital[i];
+                    h5.setAttribute("class", colour[i%7])
+                    hospitals.appendChild(h5);
+                }
+                    }
+                    else{
+                        const h5 = document.createElement("h5");
+                        h5.innerHTML = "none";
+                        const button = document.createElement("button");
+                        button.setAttribute("onclick","getNextAvailableSlot('"+param+"','"+n+"')")
+                        button.innerHTML = "Go To Next Available Slot";
+                        afternoon.appendChild(button);
+                        hospitals.appendChild(h5);
+                    }
+                    for(var k =0 ;k<7;k++){
+                        if(k==parseInt(n))
+                        slotsDay[k].style.borderBottom = "3px solid #4297C9";
+                        else
+                        slotsDay[k].style.borderBottom = "";
+                    }
+                }
+            }
+
+            
+   async function getNextAvailableSlot(param,n){
+       const jsonData = await fetch("/getNextAvailableSlot/"+param+"/"+n,{method:"put"});
+       const data = await jsonData.json();
+       if(parseInt(data)!=0)
+       showSubScheduleBox(param,parseInt(data));
+   }
+
+
+function moveLeft(){
+            const right = document.getElementById("ul");
+            const list =right.querySelectorAll("li");
+            var c=0;
+            for(var i=0;i<list.length-2;i++)
+            {
+                if(list[i].style.display == "flex"){
+                c=i+1;
+                break;}
+            }            
+            if((c+2)<7){
+                for(var i=0;i<list.length;i++){
+                    if(i!=c && i!=c+1 && i!=c+2)
+                    list[i].style.display = "none";
+                    else 
+                    list[i].style.display = "flex";
+                }
+            }
+        }
+
+
+function moveRight(){
+            const ul = document.getElementById("ul");
+            const list = ul.querySelectorAll("li");
+            var c=0;
+            for(var i=0;i<list.length-2;i++)
+            {
+                if(list[i].style.display == "flex" && list[i+1].style.display == "flex" && list[i+2].style.display == "flex")
+                c=i-1;
+            }
+            if(c>=0){
+                for(var i=0;i<list.length;i++){
+                    if(i==c || i==c+1 || i==c+2)
+                    list[i].style.display = "flex";
+                    else 
+                    list[i].style.display = "none";
+                }
+            }
+        }
+        </script>
+    </body>
+    </html>
+    

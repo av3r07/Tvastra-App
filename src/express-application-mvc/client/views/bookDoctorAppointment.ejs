@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('links') %>
+        <link rel="stylesheet" href="../assets/scss/bookDoctorAppointment.css">
+    </head>
+    <body>
+        <%- include('headerMain') %>
+        <div class="container appointmentPanel">
+            <div class="scheduleBox">
+                <div class="scheduleBox_header">
+                    <h3>In Clinic Appointment</h3>
+                </div>
+                <div class="scheduleBox_info">
+                    <h4><i class="far fa-calendar-plus"></i><%= user.appointmentDate %></h4>
+                    <h4><i class="far fa-clock"></i><%= user.appointmentTime %></h4>
+                    <a href="/doctor">Change Date and Time</a>
+                    <div class="doctorInfo">
+                        <div class="doctorImage"><img src="../assets/uploads/<%= user.appointmentDoctor.image %>" alt=""></div>
+                        <div class="doctorDetails">
+                            <span><%= user.appointmentDoctor.name %></span>
+                            <span><%= user.appointmentHospital %></span>
+                            <span><%= user.appointmentDoctor.doctorData.specializations %></span>
+                            <span><%= user.appointmentDoctor.doctorData.qualifications %></span>
+                        </div>
+                    </div>                    
+                    <div class="hospital_logo">
+                        <img src="../assets/images/Hospital-512 (1).webp" alt="">
+                        <span><%= user.appointmentHospital %></span>
+                    </div>
+                </div>
+            </div>
+            <div class="patientBox">
+                <div class="patientBox_header">
+                    <h2>Patient Details</h2>
+                </div>
+                <h3>This appointment is for</h3>
+                <div class="patientBox_select">
+                    <label for="self" style="margin-bottom: 0.5rem;"><input type="radio" name="patientCategory" id="self" checked>Self</label>
+                    <label for="notSelf"><input type="radio" name="patientCategory" id="notSelf">Someone else</label>
+                </div>
+                <h3>Please provide the following information</h3>
+                <form action="/appointmentConfirmation" method="POST">
+                    <h5>Patients Full Name</h5>
+                    <input type="text" value="<%= user.name %>" name="patientName" id="patientName" readonly>
+                    <h5>Mobile Number</h5>
+                    <input type="text" value="<%= user.mobile %>" name="mobile" readonly> 
+                    <h5>Patient's Mobile Number</h5>
+                    <input type="text" value="<%= user.mobile %>" name="patientMobile" id="patientMobile" readonly>
+                    <h5>Patient's Email</h5>
+                    <input type="email" name="patientEmail" value="<%= user.email %>" id="patientEmail" readonly>
+                    <button>Book Appointment</button>
+                </form>
+            </div>
+        </div>
+        <%- include('footer') %>
+        <script>
+            var self = document.getElementById("self");
+            var notSelf = document.getElementById("notSelf");
+            self.addEventListener('click',()=>{
+                if(self.checked == true){
+                    document.getElementById("patientName").setAttribute("readonly",true);
+                    document.getElementById("patientEmail").setAttribute("readonly",true);
+                    document.getElementById("patientMobile").setAttribute("readonly",true);
+                }
+            });
+            notSelf.addEventListener('click',()=>{
+                if(notSelf.checked == true){
+                    document.getElementById("patientMobile").removeAttribute("readonly");
+                    document.getElementById("patientName").removeAttribute("readonly");
+                    document.getElementById("patientEmail").removeAttribute("readonly");
+                }
+            });
+        </script>
+    </body>
+</html>

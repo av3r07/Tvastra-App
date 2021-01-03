@@ -1,0 +1,105 @@
+.bannerPanel {
+  height: 300px;
+  position: relative;
+}
+
+.bannerPanel img {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bannerPanel div {
+  padding-top: 120px;
+  text-align: center;
+}
+
+.bannerPanel div h1 {
+  color: white;
+}
+
+.bannerPanel div span {
+  color: white;
+  font-weight: 100;
+}
+
+.aboutPanel ul h3 {
+  color: #4297C9;
+  padding-bottom: 0rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.aboutPanel ul i {
+  color: #4297C9;
+  padding-bottom: 0rem;
+  text-align: left;
+}
+
+.aboutPanel ul li p {
+  padding: 1rem;
+  background-color: #E5F1F7;
+  font-weight: 100;
+  border-top: 1px dashed #2a2d3e;
+  border-bottom: 1px dashed #2a2d3e;
+}
+
+.aboutPanel ul li div {
+  padding: 1rem 0rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 90% 10%;
+      grid-template-columns: 90% 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aboutPanel ul li div .fa-chevron-down {
+  font-size: .6rem;
+  text-align: right;
+  padding: .4rem;
+  margin-left: auto;
+  background-color: #E5F1F7;
+  border-radius: 50%;
+}
+
+.aboutPanel ul li div .fa-chevron-up {
+  display: none;
+  font-size: .6rem;
+  text-align: right;
+  padding: .4rem;
+  margin-left: auto;
+  background-color: #E5F1F7;
+  border-radius: 50%;
+}
+
+@media only screen and (min-width: 768px) {
+  .aboutPanel ul li .fa-chevron-down {
+    font-size: .7rem;
+  }
+  .aboutPanel ul li .fa-chevron-up {
+    font-size: .7rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .bannerPanel div {
+    text-align: left;
+    padding-left: 6rem;
+    padding-top: 100px;
+  }
+  .aboutPanel ul li h3 {
+    font-size: 1.3rem;
+  }
+  .aboutPanel ul li .fa-chevron-down {
+    font-size: .8rem;
+  }
+  .aboutPanel ul li .fa-chevron-up {
+    font-size: .8rem;
+  }
+}
+/*# sourceMappingURL=FAQ.css.map */

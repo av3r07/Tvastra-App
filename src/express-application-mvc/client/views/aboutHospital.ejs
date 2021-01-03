@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/scss/theme.css">
+    <link rel="stylesheet" href="../assets/scss/aboutHospital.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <%- include("headerMain") %>
+    <div class="bannerPanel">
+        <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/contactUs.png" alt="">
+        <div><h1>About Apollo Hospital</h1>
+        <h4>Home/Hospital Profile</h4></div>
+    </div>
+    <div class="aboutPanel">
+        <div class="book">
+            <img src="../assets/images/about-hospital.png" alt="">
+            <button>Call Now</button>
+        </div>       
+            <ul>
+                <h2>Apollo Hospital</h2>
+            <ol>
+                <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Delhi Mathura Road, Sarita Vihar, Delhi 110076</p>
+                </li>
+                <li>
+                    <i class="fa fa-bed" aria-hidden="true"></i>
+                    <p>113 beds</p>
+                </li>
+            </ol>
+            <p>Apollo Hospitals has emerged as Asia’s foremost integrated healthcare services provider and has a robust presence across the healthcare ecosystem, including Hospitals, Pharmacies, Primary Care & Diagnostic Clinics and several retail health models. The Group also has Telemedicine facilities across several countries, Health Insurance Services, Global Projects Consultancy, Medical Colleges, Medvarsity for E-Learning, Colleges of Nursing and Hospital Management and a Research Foundation. In addition, ‘ASK Apollo’ - an online consultation portal and Apollo Home Health provide the care continuum.</p>
+                <li class="list">
+                    <div><i class="fas fa-award"></i>
+                    <h3>Specialization</h3>
+                    <i class="fas fa-chevron-down info-down" onclick="showInfo(1)"></i>
+                    <i class="fas fa-chevron-up info-up" onclick="hideInfo(1)"></i></div>
+                </li>
+                <li class="list">
+                    <div><i class="fas fa-stethoscope"></i>
+                    <h3>Famous Treatments</h3>
+                    <i class="fas fa-chevron-down info-down" onclick="showInfo(2)"></i>
+                    <i class="fas fa-chevron-up info-up" onclick="hideInfo(2)"></i></div>
+                </li>
+                <li class="list">
+                    <div><i class="fas fa-hospital"></i>
+                    <h3>Infrastructure</h3>
+                    <i class="fas fa-chevron-down info-down" onclick="showInfo(3)"></i>
+                    <i class="fas fa-chevron-up info-up" onclick="hideInfo(3)"></i></div>
+                </li>
+                <li class="list">
+                    <div><i class="fas fa-map-marker-alt"></i>
+                    <h3>Complete Address</h3>
+                    <i class="fas fa-chevron-down info-down" onclick="showInfo(4)"></i>
+                    <i class="fas fa-chevron-up info-up" onclick="hideInfo(4)"></i></div>
+                </li>
+                <li class="list">
+                    <div><i class="fa fa-h-square" aria-hidden="true"></i>
+                    <h3>Hospital Packages</h3>
+                    <i class="fas fa-chevron-down info-down" onclick="showInfo(5)"></i>
+                    <i class="fas fa-chevron-up info-up" onclick="hideInfo(5)"></i></div>
+                </li>
+                <li class="list">
+                    <div><i class="fas fa-rupee-sign"></i>
+                    <h3>Hospital Charges</h3>
+                    <i class="fas fa-chevron-down info-down" onclick="showInfo(6)"></i>
+                    <i class="fas fa-chevron-up info-up" onclick="hideInfo(6)"></i></div>
+                </li>
+                <li class="list">
+                    <div><i class="fa fa-id-card" aria-hidden="true"></i>
+                    <h3>Membership</h3>
+                    <i class="fas fa-chevron-down info-down" onclick="showInfo(7)"></i>
+                    <i class="fas fa-chevron-up info-up" onclick="hideInfo(7)"></i></div>
+                </li>
+           </ul>
+</div>
+<script src="../assets/scripts/questionInfo.js"></script>
+        <div class="container footerHead">
+            <div><h2>Need Help?</h2>
+            <p>Just let us know. We will be happy to assist you.</p></div>
+            <Button onclick="location.href='/query'">Submit your query</Button>
+        </div>
+        <%- include("footer") %>
+</body>
+</html>

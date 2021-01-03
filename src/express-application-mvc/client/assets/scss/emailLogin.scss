@@ -1,0 +1,152 @@
+.loginPanel {
+	background-color: #9cbfda;
+		height: 100vh;
+		position: relative;
+		.copyright{
+			text-align: center;
+			width: 100%;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 1rem;
+			h4 {
+				padding-bottom: 0rem;
+				font-size: 0.7rem;
+				font-weight: 900;
+				color: black;
+			}
+		}
+	.loginForm {
+		width: 90%;
+		position: absolute;
+		max-width: 20rem;
+		top: 60%;
+		left: 50%;
+		transform: translate(-50%,-60%);
+		text-align: center;
+		box-shadow: 0px 0px 10px black;
+		background-color: white;
+		h3 {
+			padding: 1rem 0rem 0rem 0rem;
+			color: #4297C9;
+		}
+		form {
+			padding: 0rem 1rem;
+			#email {
+				margin-bottom: 0.5rem;
+			}
+			.password_input {
+				margin-bottom: 0.5rem;
+				position: relative;
+				.far {
+					position: absolute;
+					cursor: pointer;
+					right: 5%;
+					top: 50%;
+					transform: translate(-5%, -50%);
+					color: #4297C9;
+				}
+				.fa-eye-slash {
+					display: block;
+					font-weight: 900;
+				}
+				.fa-eye {
+					display: none;
+				}
+			}
+			.login_way {
+				display: flex;
+				flex-direction: row;
+				margin-bottom: 1rem;
+				a {
+					font-size: 0.7rem;
+					color:#4297C9;
+				}
+				#forgot {
+					margin-left: auto;
+					background: transparent;
+					color: #4297C9;
+					font-weight: 900;
+					font-size: 0.7rem;
+					cursor: pointer;
+					padding: 0rem;
+					height: auto;
+					text-align: left;
+					width: auto;
+				}
+			}
+			.login-btn {
+				width: 100%;
+				position: relative;
+				margin-bottom: 1rem;
+				letter-spacing: 3px;
+				i {
+					position: absolute;
+					top: 50%;
+					right: 5%;
+					transform: translate(-5%, -50%);
+				}
+			}
+			h4 {
+				font-size: 0.7rem;
+				padding-bottom: 1rem;
+				padding-top: 0rem;
+				a {
+					color:#4297C9;
+					font-weight: 900;
+					font-size: 0.7rem;
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width: 768px) {
+	.loginPanel {
+		.loginForm{
+			width: 20rem;
+		}
+
+	}
+}
+@media only screen and (min-width: 1024px) {
+	
+	.loginPanel { 
+				.copyright{
+			h4{
+				padding: 0rem;
+				font-size: 0.8rem;
+			}
+		}
+		.loginForm {
+			max-width: 25rem;
+			width: 25rem;
+			h3{
+				padding: 1.5rem 0rem 0.5rem 0rem;
+			}
+			form {
+				padding: 0rem 1rem;
+				.login_way {
+					margin-top: 1rem;
+					margin-bottom: 2rem;
+					a {
+						font-size: 0.8rem;
+					}
+					#forgot {
+						font-size: 0.8rem;
+					}
+				}
+				.password_input {
+					.far {
+						font-size: 1.2rem;
+					}
+				}
+				h4 {
+					font-size: 0.8rem;
+					a {
+						font-size: 0.8rem;
+					}
+				}
+			}
+		}
+	}
+}

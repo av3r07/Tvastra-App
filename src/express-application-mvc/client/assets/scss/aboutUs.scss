@@ -1,0 +1,207 @@
+h1 {
+	font-size: 1.8rem;
+}
+h2 {
+	font-size: 1.5rem;
+	line-height: 1.7rem;
+}
+.bannerPanel {
+	width: 100%;
+	height: 300px;
+	background-size: cover;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/aboutUs_hero.jpeg");
+	div {
+		padding-top: 90px;
+		h1 {
+			color: white;
+			text-align: center;
+		}
+		p { 
+			color: white;
+			font-weight: 100;
+			text-align: center;
+		}
+	}
+}
+.contentPanel {
+	div {
+		text-align: center;
+	}
+	#doctor {
+		width: 100%;
+		margin-top: 1rem;
+	}
+}
+.checkupPanel {
+	background-color: black;
+	video {
+		display: none;
+	}
+	h2 {
+		color: white;
+	}
+	h4 {
+		color:#999;
+		padding-bottom: 0rem;
+		font-weight: 100;
+		font-size: 0.6rem;
+		
+	}
+	p {
+		color: #999;
+	}
+	.aboutPanel {
+		.checkupContent {
+			button {
+				padding: 0.65rem 1rem;
+				width: auto;
+				border-radius: 4px;
+				background-color: #0173b2;
+				margin-bottom: 1.5rem;
+			}
+		}
+		.assets {
+			div {
+				border-radius: 5px;
+				padding: 1.5rem 0rem;
+				margin-bottom: 1rem;
+				border: 1px solid #999;
+				h5 {
+					color: #999;
+					padding-bottom: 0rem;
+				}
+			}
+			.asset-6 {
+				margin-bottom: 0rem;
+			}
+		}
+	}
+}
+@media only screen and (min-width: 768px) {
+	h1 {
+		font-size: 2.2rem;
+	}
+	h2 {
+		font-size: 1.8rem;
+		line-height: 2rem;
+	}
+	.bannerPanel {
+		height: 350px;
+		div {
+			padding-top: 150px;
+		}
+	}
+	.contentPanel {
+		display: grid;
+		grid-template-columns: 6fr 4fr;
+		grid-column-gap: 2rem;
+		div {
+			text-align: left;
+		}
+		#doctor{
+			height: 100%;
+			max-height: 350px;
+			width: auto;
+			
+		}
+	}
+	.checkupPanel {
+		.aboutPanel {
+			.checkupContent {
+				text-align: left;
+				button {
+					margin-top: 2rem;
+					margin-bottom: 3rem;
+				}
+			}
+			.assets {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: repeat(2, 1fr);
+				grid-template-areas: "a1 a2 a3" "a4 a5 a6";
+				grid-gap: .5rem;
+				.asset-1 {
+					grid-area: a1;
+				}
+				.asset-2 {
+					grid-area: a2;
+				}
+				.asset-3 {
+					grid-area: a3;
+				}
+				.asset-4 {
+					grid-area: a4;
+				}
+				.asset-5 {
+					grid-area: a5;
+				}
+				.asset-6 {
+					grid-area: a6;
+				}
+				div {
+					margin-bottom: 0rem;
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width: 1024px) {
+	h1 {
+		font-size: 2.8rem;
+	}
+	h2 {
+		font-size: 2.2rem;
+		line-height: 2.4rem;
+	}
+	.bannerPanel {
+		height: 400px;
+		div {
+			padding-top: 170px;
+		}
+	}
+	.contentPanel {
+		display: -ms-grid;
+		display: grid;
+		grid-template-columns: 50% 35%;
+		grid-column-gap: 15%;
+		#doctor {
+			width: auto;
+			margin-top: 0rem;
+			height: 400px;
+		}
+	}
+	.checkupPanel {
+		background-color: white;
+		padding: 0rem;
+		position: relative;
+		video {
+			position: absolute;
+			width: 100%;
+			height: 600px;
+			object-fit: cover;
+			display: block;
+		}
+		.aboutPanel {
+			padding: 4rem;
+			z-index: 1;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 2rem;
+			.checkupContent {
+				width: 100%;
+				button {
+					padding: 0.75rem 1.5rem;
+				}
+			}
+			.assets {
+				text-align: center;
+				div {
+					padding: 4rem 0%;
+					h4{
+						font-size: 0.9rem;
+					}
+				}
+			}
+		}
+	}
+}

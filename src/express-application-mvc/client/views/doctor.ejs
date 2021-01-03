@@ -1,0 +1,379 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/scss/theme.css">
+    <link rel="stylesheet" href="../assets/scss/doctor.css">
+</head>
+<body> 
+    <%- include("headerMain")%>
+    <div class="container bannerPanel">
+        <%- include("toaster") %>
+        <h4>Cardiac Surgeons in
+        <span>Delhi</span></h4></div>      
+        <div class="container nav">
+            <h4>Home / Doctor List</h4>
+            <form action="/sortDoctor" method="POST">
+                <select name="sort" id="sort" onchange="this.form.submit()">
+                    <option value="" disabled selected>Sort By</option>
+                    <option value="name-asc">Name(Assc)</option>
+                    <option value="name-desc">Name(Desc)</option>
+                    <option value="fees-asc">Average Fees(Assc)</option>
+                    <option value="fees-desc">Average Fees(Desc)</option>
+                    <option value="experience-asc">Experience(Assc)</option>
+                    <option value="experience-desc">Experience(Desc)</option>
+                </select>
+            </form>
+        </div>
+        
+        <div class="container doctorsPanel">
+            <div class="filters">
+                <button>Filter By</button>
+                <ul id="selected-filters">
+                    <% for(var i=0; i< user.filter.length; i++){ %>
+                        <li><%= user.filter[i] %></li>
+                        <% } %>
+                </ul>                
+                <form action="/doctorFilter" method="POST">
+                <div class="filter-list">
+                    <h4 class="filter-head">Location<i class="fa fa-search" aria-hidden="true"></i></h4>
+                  <ul> 
+                    <% for(var i = 0; i< user.doctorFilterCityList.length; i++){ 
+                        var flag = false;
+                        for(var j=0; j< user.filter.length; j++){
+                            if(user.filter[j] == user.doctorFilterCityList[i]){ 
+                                flag = true;}}
+                                if(flag == true){ %>
+                    <li>
+                            <input type="checkbox" id="<%= user.doctorFilterCityList[i] %>" name="city[]" value="<%= user.doctorFilterCityList[i] %>" onchange="this.form.submit()" checked>
+                            <label for="<%= user.doctorFilterCityList[i] %>"><%= user.doctorFilterCityList[i] %></label>
+                    </li>
+                    <%} else { %>
+                        <li>
+                            <input type="checkbox" id="<%= user.doctorFilterCityList[i] %>" name="city[]" value="<%= user.doctorFilterCityList[i] %>" onchange="this.form.submit()">
+                            <label for="<%= user.doctorFilterCityList[i] %>"><%= user.doctorFilterCityList[i] %></label>
+                    </li>
+                    <% }} %>
+                </ul>
+                    <span>+ Show More</span>
+            </div>
+                <div class="filter-list">
+                    
+                  <h4 class="filter-head">Treatment <i class="fa fa-search" aria-hidden="true"></i></h4>
+                  <ul>  
+                    <li><input type="checkbox" id="treat1" onclick="input_show(7)"><label for="treat1">Multi Organ Transplant</label></li>
+                    <li><input type="checkbox" id="treat2" onclick="input_show(8)"><label for="treat2">Orthopadic Surgery</label></li>
+                    <li><input type="checkbox" id="treat3" onclick="input_show(9)"><label for="treat3">Infertility Treatment</label></li>
+                    <li><input type="checkbox" id="treat4" onclick="input_show(10)"><label for="treat4">Dentisry</label></li>
+                    <li><input type="checkbox" id="treat5" onclick="input_show(11)"><label for="treat5">Cardiology</label></li>
+                    <li><input type="checkbox" id="treat6" onclick="input_show(12)"><label for="treat6"">Cancer</label></li></ul>
+                    <span>+ Show More</span>
+                </div>
+                <div class="filter-list">
+                    
+                    <h4 class="filter-head">Hospitals <i class="fa fa-search" aria-hidden="true"></i></h4>
+                    <ul id="hospitalFilterList">
+                        <% for(var i = 0; i< user.doctorFilterHospitalList.length; i++){ 
+                            var flag = false;
+                            for(var j=0; j< user.filter.length; j++){
+                                if(user.filter[j] == user.doctorFilterHospitalList[i]){ 
+                                    flag = true;}}
+                                    if(flag == true){ %>
+                        <li>
+                                <input type="checkbox" id="<%= user.doctorFilterHospitalList[i] %>" name="hospitals[]" value="<%= user.doctorFilterHospitalList[i] %>" onchange="this.form.submit()" checked>
+                                <label for="<%= user.doctorFilterHospitalList[i] %>"><%= user.doctorFilterHospitalList[i] %></label>
+                        </li>
+                        <%} else { %>
+                            <li>
+                                <input type="checkbox" id="<%= user.doctorFilterHospitalList[i] %>" name="hospitals[]" value="<%= user.doctorFilterHospitalList[i] %>" onchange="this.form.submit()">
+                                <label for="<%= user.doctorFilterHospitalList[i] %>"><%= user.doctorFilterHospitalList[i] %></label>
+                        </li>
+                        <% }} %>
+                    </ul>
+                    <span id="hospitalSpan" onclick="show('hospitalFilterList','hospitalSpan')">+ Show More</span>
+                </div>
+                <div class="filter-list">
+                    
+                    <h4 class="filter-head">Years of Experience<i class="fa fa-search" aria-hidden="true"></i></h4>
+                    <ul> 
+                        <% for(var i=30; i>= 5; i=i-5){ %>
+                            <li>
+                                    <input type="checkbox" id="exp<%= i %>" onchange="this.form.submit()">
+                                    <label for="exp<%= i %>"><%= i %>+</label>
+                            </li>    
+                            <%}%>        
+                    </ul>
+                    <span>+ Show More</span>
+                </div>
+                </form>
+            </div>
+            <div class="doctors-list">
+            
+                <% for(var i = 0; i < user.doctorsPage.length; i++){ %>
+                    <div class="doctor"> 
+                        <div class="doctorBox">
+                        <div class="doctor-info">
+                        <a href="/doctorProfile/<%= user.doctorsPage[i]._id %>"><h3><%= user.doctorsPage[i].name %></h3></a>
+                        <ul>
+                            <li><i class="fas fa-award"></i><%= user.doctorsPage[i].doctorData.specializations %></li>
+                            <li><i class="fa fa-graduation-cap" aria-hidden="true"></i><%= user.doctorsPage[i].doctorData.qualifications %></li>
+                            <li><i class="fa fa-clock-o" aria-hidden="true"></i><%= user.doctorsPage[i].doctorData.experience %>+ years of experience</li>
+                            <li><i class="fa fa-hospital-o" aria-hidden="true"></i><%= user.doctorsPage[i].doctorData.hospitals %></li>
+                            <li><i class="fa fa-map-marker" aria-hidden="true"></i><%= user.doctorsPage[i].city %></li>
+                            <li><i class="fas fa-rupee-sign"></i><%= user.doctorsPage[i].doctorData.fees %></li>
+                        </ul>
+                        <button type="button" onclick="showAppointmentBox('<%= user.doctorsPage[i]._id %>')">Book an appoinment</button></div>
+                        <div class="doctor-image">
+                            <a href="/doctorProfile/<%= user.doctorsPage[i]._id %>"><img src="../assets/uploads/<%= user.doctorsPage[i].image %>"></a>
+                        </div></div>
+                        <div class="scheduleBox" id="scheduleBox<%= user.doctorsPage[i]._id %>">
+                            <i class="fas fa-chevron-left" onclick="moveLeft('<%= user.doctorsPage[i]._id %>')"></i>
+                            <ul id="ul<%= user.doctorsPage[i]._id %>"></ul>
+                            <i class="fas fa-chevron-right" onclick="moveRight('<%= user.doctorsPage[i]._id %>')"></i>
+                        </div>
+                        <div class="subScheduleBox" id="subScheduleBox<%= user.doctorsPage[i]._id %>">
+                            <div class="shift">
+                                <h4><i class="fas fa-sun"></i>Morning</h4>
+                                <ul id="<%= user.doctorsPage[i]._id %>morning"></ul>
+                            </div>
+                            <div class="shift">
+                                <h4><i class="fas fa-sun"></i>Afternoon</h4>
+                                <ul id="<%= user.doctorsPage[i]._id %>afternoon"></ul>
+                            </div>
+                            <div class="shift">
+                                <h4><i class="fas fa-sun"></i>Evening</h4>
+                                <ul id="<%= user.doctorsPage[i]._id %>evening"></ul>
+                            </div>
+                            <div class="hospitals" id="<%= user.doctorsPage[i]._id %>hospital"></div>
+                        </div>
+                         </div> 
+                    <% } %>
+                    <div class="doctorPageLinks">
+                        <% var  n = user.doctorList.length;
+                        if(n<=2)
+                        n=0;
+                        if(n%2>0)
+                        n=parseInt(n/2)+1;
+                        else
+                        n=parseInt(n/2);
+                        var c = 1;
+                        while(c <= n){
+                            if(user.currentDoctorsPage == c){%>
+                            <a href="/doctor/<%= c %>" class="activePage"><%= c %></a>
+                            <%}else{%>
+                                <a href="/doctor/<%= c %>" class="notActivePage"><%= c %></a>
+                            <% } c++; } %>
+                    </div>
+            </div>
+    </div>
+    <script src="../assets/scripts/filter.js"></script>
+    <div class="container footerHead"> 
+        <div><h2>Need Help?</h2>
+        <p>Just let us know. We will be happy to assist you.</p></div>
+        <Button onclick="location.href='/query'">Submit your enquiry</Button>
+    </div>
+    <%- include("footer") %> 
+    <script>
+        function show(list,elem){
+            var elem = document.getElementById(elem);
+            var ul = document.getElementById(list);
+            var list = ul.querySelectorAll("li");
+            if(elem.innerHTML == "- Show Less"){
+                elem.innerHTML = "+ Show More";
+                elem.style.colour = "#4297C9";
+                for(var i=0;i<list.length;i++){
+                    if(i>5){
+                        list[i].style.display = "none";
+                    }
+                }
+            }
+            else{
+                elem.innerHTML = "- Show Less";
+                elem.style.colour = "#fff";
+                for(var i=0;i<list.length;i++){
+                    if(i>5){
+                        list[i].style.display = "flex";
+                    }
+                }
+            }
+        }
+
+async function showAppointmentBox(param){
+   const scheduleBox = document.getElementById("scheduleBox"+param);
+   const ul = document.getElementById("ul"+param);
+   if(scheduleBox.style.display == "flex"){
+    ul.innerHTML = "";
+       scheduleBox.style.display = "none";
+   }
+   else{
+       scheduleBox.style.display = "flex";
+       const jsonData =  await fetch("/showDoctorScehdule/"+param,{method:"put"});
+        const data = await jsonData.json();  
+   for(var i = 0;i<7;i++){
+       var li = document.createElement("li");
+       li.setAttribute("onclick","showSubScheduleBox('"+param+"','"+i+"')");
+       const h3 = document.createElement("h3");
+       const h5 = document.createElement("h5");
+       h5.innerHTML = data[i]+" slots available";
+       if(i==0)
+       h3.innerHTML = "Today";
+       else if(i==1)
+       h3.innerHTML = "Tommorow";
+       else{
+           var date = ""+ new Date(new Date().getTime()+(i)*24*60*60*1000);
+           h3.innerHTML = date.substring(0,15);
+       }
+       li.appendChild(h3);
+       li.appendChild(h5);
+       ul.appendChild(li);
+   }
+   }
+   }
+
+
+   async function showSubScheduleBox(param,n){
+       const jsonData = await fetch("/showSubSchedule/"+param+"/"+n,{method:"put"});
+       const data = await jsonData.json();
+       var slots_in_mins = data[0];
+       var slots = data[1];
+       var hospitalDaily = data[2];
+       var slotsId = data[3];
+       var hospital = [];
+       var colour = ["violet","green","red","blue","yellow","indigo","orange"];
+       for(var i=0;i<hospitalDaily.length;i++){
+           var flag = false;
+           for(var j=0;j<hospital.length;j++){
+               if(hospitalDaily[i] == hospital[j])
+               flag = true;
+           }
+           if(flag == false)
+           hospital.push(hospitalDaily[i]);
+       }
+       const ul = document.getElementById("ul"+param);
+       const slotsDay = ul.querySelectorAll("li");
+       const date = ""+ new Date(new Date().getTime()+parseInt(n)*24*60*60*1000);
+        const appoinmentDate = date.substring(0,15);
+       const subScheduleBox = document.getElementById("subScheduleBox"+param);
+       const morning = document.getElementById(param+"morning");
+       const evening = document.getElementById(param+"evening");
+       const afternoon = document.getElementById(param+"afternoon");
+       const hospitals = document.getElementById(param+"hospital");
+       const classNames = subScheduleBox.classList.toString();
+       const shownSchedule = parseInt(classNames.charAt(classNames.length-1));
+       if(subScheduleBox.style.display == "block" && shownSchedule == n){
+        subScheduleBox.setAttribute("class","subScheduleBox");
+        subScheduleBox.style.display = "none";
+           morning.innerHTML = "";
+           afternoon.innerHTML = "";
+           evening.innerHTML = "";
+           hospitals.innerHTML = "";
+           for(var k =0 ;k<7;k++){
+               slotsDay[k].style.borderBottom = "";
+           }
+       }
+       else{
+        morning.innerHTML = "";
+           afternoon.innerHTML = "";
+           evening.innerHTML = "";
+           hospitals.innerHTML = "";
+        subScheduleBox.style.display = "block";
+        subScheduleBox.setAttribute("class","subScheduleBox");
+        subScheduleBox.classList.add(n);
+           if(slots_in_mins.length>0){
+            for(var i=0;i<slots_in_mins.length;i++){
+           var li = document.createElement("li");
+           var url = "/bookDoctorAppointment/"+param+"/"+slotsId[i]+"/"+appoinmentDate;
+           li.setAttribute("onclick","location.href='"+url+"'");
+           for(var j=0;j<hospital.length;j++)
+           if(hospitalDaily[i] == hospital[j])
+           li.setAttribute("class", colour[j%7]);
+           li.innerHTML = slots[i];
+           if(slots_in_mins[i]<720)
+           morning.appendChild(li);
+           else if(slots_in_mins[i]>=720 && slots_in_mins[i]<1080)
+           afternoon.appendChild(li);
+           else
+           evening.appendChild(li);
+       }
+       for(var i=0;i<hospital.length;i++){
+           var h5 = document.createElement("h5");
+           h5.innerHTML = hospital[i];
+           h5.setAttribute("class", colour[i%7])
+           hospitals.appendChild(h5);
+       }
+           }
+           else{
+               const h5 = document.createElement("h5");
+               h5.innerHTML = "none";
+               const button = document.createElement("button");
+               button.setAttribute("onclick","getNextAvailableSlot('"+param+"','"+n+"')")
+               button.innerHTML = "Go To Next Available Slot";
+               afternoon.appendChild(button);
+               hospitals.appendChild(h5);
+           }
+           for(var k =0 ;k<7;k++){
+               if(k==parseInt(n))
+               slotsDay[k].style.borderBottom = "3px solid #4297C9";
+               else
+               slotsDay[k].style.borderBottom = "";
+           }
+       }
+   }
+
+   async function getNextAvailableSlot(param,n){
+       const jsonData = await fetch("/getNextAvailableSlot/"+param+"/"+n,{method:"put"});
+       const data = await jsonData.json();
+       if(parseInt(data)!=0)
+       showSubScheduleBox(param,parseInt(data));
+   }
+
+
+function moveLeft(param){
+            const right = document.getElementById("ul"+param);
+            const list =right.querySelectorAll("li");
+            var c=0;
+            for(var i=0;i<list.length-2;i++)
+            {
+                if(list[i].style.display == "flex"){
+                c=i+1;
+                break;}
+            }            
+            if((c+2)<7){
+                for(var i=0;i<list.length;i++){
+                    if(i!=c && i!=c+1 && i!=c+2)
+                    list[i].style.display = "none";
+                    else 
+                    list[i].style.display = "flex";
+                }
+            }
+        }
+
+
+function moveRight(param){
+            const ul = document.getElementById("ul"+param);
+            const list = ul.querySelectorAll("li");
+            var c=0;
+            for(var i=0;i<list.length-2;i++)
+            {
+                if(list[i].style.display == "flex" && list[i+1].style.display == "flex" && list[i+2].style.display == "flex")
+                c=i-1;
+            }
+            if(c>=0){
+                for(var i=0;i<list.length;i++){
+                    if(i==c || i==c+1 || i==c+2)
+                    list[i].style.display = "flex";
+                    else 
+                    list[i].style.display = "none";
+                }
+            }
+        }
+
+
+        
+    </script>
+</body>
+</html>

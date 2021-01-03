@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('links') %>
+    <link rel="stylesheet" href="../assets/scss/tagify.css">
+    <link rel="stylesheet" href="../assets/scss/addDoctorDetails.css">
+</head>
+<body>
+    
+    <div class="addDoctorDetailsPanel"> 
+        <%- include("headerMain")%>  
+        <%- include("toaster") %>
+        <div class="addDoctorDetailsForm">
+            <h3>Welcome</h3>
+            <hr>
+            <p>Complete your profile to access the site.</p>
+            <form action="/addDoctorDetails" method="POST" enctype="multipart/form-data">
+                <h2 style="padding-top: 0%;">Describe Yourself</h2>
+                <textarea name="description" id="" cols="30" rows="10" placeholder="How do you describe Yourself..." required></textarea>
+                <h2>Upload Your Profile Picture</h2>
+                <input type="file" name="doctorImage" id="doctorImage" value="Choose File">
+                <h2>Your Hospitals</h2>
+                <input type="text" name="hospitals" id="hospitals" required>
+                <h2>Achievements</h2>
+                <input type="text" name="achievements" id="achievements">
+                <h2>Years of Experience</h2>
+                <input type="number" min="0" name="experience" id="experience" placeholder="Your years of experience(in number)" required>
+                <h2>Qualifications</h2>
+                <input type="text" name="qualifications" id="qualifications" required>
+                <h2>Awards(if any)</h2>
+                <input type="text" name="awards" id="awards">
+                <h2>Yours Specializations</h2>
+                <input type="text" id="specializations" name="specializations" required>
+                <h2>Treatments</h2>
+                <input type="text" id="treatments" name="treatments" required>
+                <h2>Yours Avg Fees(in INR)</h2>
+                <input type="text" id="fees" name="fees"required>
+                <Button class="submit-btn" type="submit">SUBMIT<i class="fa fa-arrow-right" aria-hidden="true"></i></Button>
+            </form> 
+        </div>
+        <h4 class="copyright">All Rights Reserved. &copy; tvastra 2018</h4>
+    </div>
+    <script src="../assets/scripts/tagify.min.js"></script>
+    <script>
+        var hospitals = document.querySelector("input[name=hospitals]");
+        var tagify = new Tagify(hospitals);
+        var achievements = document.querySelector("input[name=achievements]");
+        var tagify = new Tagify(achievements);
+        var awards = document.querySelector("input[name=awards]");
+        var tagify = new Tagify(awards);
+        var specializations = document.querySelector("input[name=specializations]");
+        var tagify = new Tagify(specializations);
+        var qualifications = document.querySelector("input[name=qualifications]");
+        var tagify = new Tagify(qualifications);
+        var treatments = document.querySelector("input[name=treatments]");
+        var tagify = new Tagify(treatments);
+
+        function tagifyConvert() {
+      const speciality = document.querySelector("#specializations");
+      const qualification = document.querySelector("#qualifications");
+      const hospital = document.querySelector("#hospitals");
+      const achievement = document.querySelector("#achievements");
+      const awards = document.querySelector("#awards");
+      const treatments = document.querySelector("#treatments");
+      treatments.value = (JSON.parse(speciality.value)).map(({ value }) => value);
+      speciality.value = (JSON.parse(speciality.value)).map(({ value }) => value);
+      qualification.value = (JSON.parse(speciality.value)).map(({ value }) => value);
+      hospital.value = (JSON.parse(treatments.value)).map(({ value }) => value);
+      achievement.value = (JSON.parse(speciality.value)).map(({ value }) => value);
+      awards.value = (JSON.parse(treatments.value)).map(({ value }) => value);
+    }
+
+    </script>
+</body>
+</html>
+

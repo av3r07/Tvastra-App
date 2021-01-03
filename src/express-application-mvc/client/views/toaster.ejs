@@ -1,0 +1,44 @@
+<% if(messageType==="Failure"){%>
+    <div id="toaster-block" class="fail">
+        <i class="fas fa-times-circle"></i>
+        <div class="msg-block">
+            <h3>Failure</h3>
+            <h4 id="message"><%=message%></h4>
+        </div>
+        <i class="fas fa-times" id="close"></i>
+    </div>
+    <%}else if(messageType="Success"){%>
+        <div id="toaster-block" class="pass">
+            <i class="fas fa-check-circle"></i>
+            <div class="msg-block">
+                <h3>Success</h3>
+                <h4 id="message"><%=message%></h4>
+            </div>
+            <i class="fas fa-times" id="close"></i>
+        </div>
+        <%}%>
+
+        <script>
+            const toaster = document.getElementById("toaster-block");
+            const exit = document.getElementById("close");
+            const msg = document.getElementById("message");
+            if(msg.innerHTML == "")
+            {
+                toaster.style.display = "none";
+            }
+            else
+            {
+                toaster.style.display = "flex";
+                function display(){
+                    toaster.style.display = "none";
+                }
+                setTimeout(display,2000);
+            }
+                function clearToaster(){
+                    const data = fetch("/clearToaster",{method:"put"});
+                }
+                setTimeout(clearToaster,2000);
+            exit.addEventListener("click",function(){
+                toaster.style.display = "none";
+            })
+        </script>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('links') %>   
+        <link rel="stylesheet" href="../assets/scss/medicalReports.css">
+    </head>
+    <body> 
+        <div id="add_report_section">
+            <div class="add_report_box">
+                <form action="/add_medical_report" method="POST" enctype="multipart/form-data">
+                <div class=" add_report_photo">
+                    <ul id="view_report_images"></ul>
+                    <div>
+                        <label for="reportImage"><input type="file" name="reportImage" id="reportImage" multiple><i class="fas fa-plus"></i><h4>Add Photo</h4></label>
+                        </div>
+                </div>
+                <div class="report_details">
+                    <input type="text" name="title" id="title" placeholder="Title">
+                    <input type="text" name="name" id="name" value="<%= user.name %>">
+                    <input type="date" name="date" id="date" placeholder="">
+                </div>
+                <div class="report_type_section">
+                    <h3>Type of Report</h3>
+                    <div class="report_type">
+                        <div>
+                            <input type="radio" name="typeOfReport" id="report" value="report">
+                            <label for="report">
+                                <i class="fas fa-file-alt"></i>
+                            <span>Report</span>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" name="typeOfReport" id="prescription" value="prescription">
+                            <label for="prescription">
+                                <i class="fas fa-file-alt"></i>
+                            <span>Prescription</span>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" name="typeOfReport" id="invoice" value="invoice">
+                            <label for="invoice">
+                                <i class="fas fa-file-alt"></i>
+                            <span>Invoice</span>
+                            </label>
+                        </div>
+                    </div>
+                </div> 
+                <div class="submit_section">
+                    <div></div>
+                    <button id="cancel_btn" type="button" onclick="hideReportBox()">Cancel</button>
+                    <button id="done_btn" type="submit">Done</button>
+                </div>
+                </form>
+            </div></div>
+            
+        <%- include('headerMain') %>
+        <section>
+            <div class="container_box">
+                <%- include('toaster') %>
+            <div class="dashboard">
+                <h2>Dashboard</h2>
+                <% if(user.isDoctor == "user"){ %> 
+                    <div class="mobile_dashboard">
+                        <i class="fas fa-chevron-left"></i>
+                        <h3><i class="fas fa-user-edit"></i>Medical Reports</h3>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="web_dashboard">
+                        <a href="/profile"><h4><i class="fas fa-user-edit"></i>Profile</h4></a>
+                        <a href="/appointment"><h4><i class="fas fa-list"></i>Appoinments</h4></a>
+                        <a href="/medicalReports"><h3><i class="fas fa-file-alt"></i>Medical Reports</h3></a>
+                        <a href="/settings"><h4><i class="fas fa-users-cog"></i>Settings</h4></a>
+                    </div>
+                    <% }else{ %>
+                        <div class="mobile_dashboard">
+                            <i class="fas fa-chevron-left"></i>
+                            <h3><i class="fas fa-user-edit"></i>Medical Reports</h3>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="web_dashboard">
+                            <a href="/profile"><h4><i class="fas fa-user-edit"></i>Profile</h4></a>
+                            <a href="/appointment"><h4><i class="fas fa-list"></i>Appoinments</h4></a>
+                            <a href="/createSchedule"><h4><i class="fas fa-pen-fancy"></i>Create/Edit Schedule</h4></a>
+                            <a href="/medicalReports"><h3><i class="fas fa-file-alt"></i>Medical Reports</h3></a>
+                            <a href="/settings"><h4><i class="fas fa-users-cog"></i>Settings</h4></a>
+                        </div>   
+                        <% } %>
+            </div>
+            <div class="medicalReports">
+                <div class="medicalReports_header">
+                    <h2>Medical Records</h2>
+                    <button id="add_btn">Add Record</button>
+                </div>
+                <ul> 
+                    <% for(let i = 0; i < user.medicalReportData.length; i++) {  
+                        var date=new Date(user.medicalReportData[i].dateOfReport);
+                        var dayName=date.toString().split(" ")[0];
+                        date=date.toString().split(" ")[2]+ " "+date.toString().split(" ")[1]; %>
+                    <li>
+                        <div class="report_box">
+                            <div class="date"  onclick="location.href='/showReport/<%= user.medicalReportData[i]._id %>'"><h3><%=date %></h3></div>
+                        <div class="reportSignatures">
+                            <h3 style="color: #4297C9;padding-bottom: 0.35rem;"><%= user.medicalReportData[i].title %></h3>
+                            <h3 style="padding-bottom: 0.35rem;"><%= user.medicalReportData[i].name %></h3>
+                            <h3 style="padding: 0%;"><%= user.medicalReportData[i].typeOfReport %></h3>
+                        </div>
+                        <button class="delete-btn" type="submit" onclick="deleteConfirmationBox('<%= user.medicalReportData[i]._id %>')">Delete</button>
+                        </div>
+                    </li>
+                    <form action="/deleteReport/<%= user.medicalReportData[i]._id %>" id="confirmation_form_<%= user.medicalReportData[i]._id %>" class="confirmation_form" method="POST">
+                        <div class="confirmation_form_content">
+                            <h2>Delete Report?</h2>
+                        <h3>Are you sure you want to delete your report?</h3>
+                        <div class="confirmation_box">
+                            <div class="yes"><button type="submit" >Yes</button></div>
+                            <div class="no"><button type="button" onclick="deleteConfirmationBox('<%= user.medicalReportData[i]._id %>')">No</button></div>
+                        </div>
+                        </div>
+                    </form>
+                    <% } %>
+                </ul>
+            </div>
+    </div>
+        </section>
+        <%- include('footer') %>
+        <script>
+            var add = document.getElementById("add_btn");
+            const report_box = document.getElementById("add_report_section");
+            
+            const reportImages = document.getElementById("reportImage");
+            reportImages.addEventListener("change",()=>{
+                const ul = document.getElementById("view_report_images");
+                view_report_images.innerHTML = "";
+                for(var i=0; i<reportImages.files.length; i++){
+                    var src =URL.createObjectURL(reportImages.files[i]);
+                    var li = document.createElement("li");
+                    var img = document.createElement("img");
+                    img.setAttribute("src",src);
+                    li.appendChild(img);
+                    ul.appendChild(li);
+                }
+            })
+
+ 
+add.addEventListener("click",()=>{
+    report_box.style.display = "block";
+});
+
+function hideReportBox(){
+    report_box.style.display = "none";
+}
+function deleteConfirmationBox(param){
+    const confirm = document.getElementById("confirmation_form_"+param);
+    if(confirm.style.display == "block")
+    confirm.style.display = "none";
+    else
+    confirm.style.display = "block";
+}
+
+        </script>
+    </body>
+    </html>
+    

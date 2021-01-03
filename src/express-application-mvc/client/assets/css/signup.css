@@ -1,0 +1,89 @@
+.signupPanel {
+  background-color: #9cbfda;
+  text-align: center;
+  padding: 7rem 2rem 1rem 2rem;
+}
+
+.signupPanel .signupForm {
+  -webkit-box-shadow: 0px 0px 10px black;
+          box-shadow: 0px 0px 10px black;
+  background-color: white;
+}
+
+.signupPanel .signupForm h3 {
+  padding: 1rem 0rem 0rem 0rem;
+  color: #0173b2;
+}
+
+.signupPanel .signupForm form {
+  padding: 0rem 1rem;
+}
+
+.signupPanel .signupForm form .location {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1rem;
+}
+
+.signupPanel .signupForm form input {
+  margin-bottom: 1rem;
+}
+
+.signupPanel .signupForm form .signup-btn {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+  letter-spacing: 3px;
+}
+
+.signupPanel .signupForm form .signup-btn i {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  -webkit-transform: translate(-5%, -50%);
+          transform: translate(-5%, -50%);
+}
+
+.signupPanel .signupForm form h4 {
+  padding-bottom: 1rem;
+  padding-top: 0rem;
+}
+
+.signupPanel .signupForm form h4 a {
+  color: #0173b2;
+  font-weight: 900;
+}
+
+.signupPanel h4 {
+  padding-top: 7rem;
+  font-weight: 900;
+  color: black;
+}
+
+@media only screen and (min-width: 768px) {
+  .signupPanel {
+    padding: 7rem 12rem 1.5rem 12rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .signupPanel {
+    position: relative;
+    padding: 7rem 27.5rem 2rem 27.5rem;
+  }
+  .signupPanel .signupForm h3 {
+    padding: 2rem 0rem 1rem 0rem;
+  }
+  .signupPanel .signupForm form {
+    padding: 0rem 2rem;
+  }
+  .signupPanel .signupForm form h4 {
+    font-size: 0.9rem;
+  }
+  .signupPanel .signupForm form h4 a {
+    font-size: 0.9rem;
+  }
+}
+/*# sourceMappingURL=signup.css.map */

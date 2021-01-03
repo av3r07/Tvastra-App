@@ -1,0 +1,374 @@
+.bannerPanel {
+  display: none;
+}
+
+.nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav h4 {
+  text-align: left;
+  font-size: 1rem;
+}
+
+.nav form select {
+  display: block;
+  margin-left: auto;
+  padding: 0.75rem 0rem 0.75rem 1rem;
+  border: 0px;
+  background-color: #D3D3D3;
+  font-size: 1rem;
+}
+
+.nav form select:focus {
+  outline: none;
+}
+
+.nav form select option {
+  background-color: white;
+  font-size: 0.9rem;
+}
+
+.hospitalPanel {
+  padding-top: 0rem;
+}
+
+.hospitalPanel .filters {
+  display: none;
+}
+
+.hospitalPanel .hospitalList .hospital {
+  margin-bottom: 1rem;
+  border: 1px solid #999;
+}
+
+.hospitalPanel .hospitalList .hospital .hospital-info {
+  text-align: left;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.hospitalPanel .hospitalList .hospital .hospital-info h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  color: #4297C9;
+}
+
+.hospitalPanel .hospitalList .hospital .hospital-info h3::before {
+  position: absolute;
+  background-color: #4297C9;
+  content: "";
+  height: 2px;
+  top: 50%;
+  -webkit-transform: translate(0rem, -50%);
+          transform: translate(0rem, -50%);
+  width: 1.8rem;
+  left: -2rem;
+}
+
+.hospitalPanel .hospitalList .hospital .hospital-info ul {
+  padding-left: 0rem;
+}
+
+.hospitalPanel .hospitalList .hospital .hospital-info ul li {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 1rem;
+}
+
+.hospitalPanel .hospitalList .hospital .hospital-info ul li i {
+  padding-right: 0.75rem;
+  color: #4297C9;
+  font-size: 1rem;
+}
+
+.hospitalPanel .hospitalList .hospital .hospital-info ol li {
+  margin-bottom: .5rem;
+  font-size: .65rem;
+  display: inline-block;
+  padding: .5rem;
+  border: 1px solid #999;
+  border-radius: 1rem;
+}
+
+.hospitalPanel .hospitalList .hospital .hospital-info button {
+  width: auto;
+  display: block;
+  padding: 0.5rem 3rem;
+  margin: 0.5rem auto 1rem auto;
+}
+
+.hospitalPanel .hospitalList .hospital .hospital-image {
+  margin: 0rem;
+  padding: 0rem;
+  height: 300px;
+}
+
+.hospitalPanel .hospitalList .hospital .hospital-image img {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .bannerPanel {
+    text-align: left;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    display: block;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(156, 191, 218, 0.8)), to(rgba(156, 191, 218, 0.8))), url("../images/back.png");
+    background: linear-gradient(rgba(156, 191, 218, 0.8), rgba(156, 191, 218, 0.8)), url("../images/back.png");
+    background-size: cover;
+  }
+  .bannerPanel h4 {
+    font-size: 1.6rem;
+  }
+  .bannerPanel h4 span {
+    text-decoration: underline;
+    font-size: 1.6rem;
+    font-weight: 900;
+  }
+  .nav h4 {
+    font-size: 1.2rem;
+  }
+  .hospitalPanel {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[14];
+        grid-template-columns: repeat(14, 1fr);
+        grid-template-areas: "fil fil fil fil hosp hosp hosp hosp hosp hosp hosp hosp hosp hosp";
+    grid-gap: 2rem;
+  }
+  .hospitalPanel .filters {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: fil;
+    display: block;
+  }
+  .hospitalPanel .filters #selected-filters {
+    text-align: left;
+    padding: 1rem 0rem;
+  }
+  .hospitalPanel .filters #selected-filters li {
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    padding: 0.4rem;
+    margin-right: 0.3rem;
+    border-radius: 1rem;
+    border: 1px solid #999;
+  }
+  .hospitalPanel .filters button {
+    color: black;
+    background-color: #D3D3D3;
+    font-weight: 900;
+    padding: 0.75rem 7.5%;
+    width: 100%;
+    text-align: left;
+  }
+  .hospitalPanel .filters .filter-list {
+    text-align: left;
+    border-bottom: 1px solid #999;
+    padding-bottom: 1rem;
+  }
+  .hospitalPanel .filters .filter-list span {
+    font-size: .7rem;
+    font-weight: 900;
+    color: #4297C9;
+    padding-left: 2rem;
+  }
+  .hospitalPanel .filters .filter-list .filter-head {
+    margin: 1rem 0rem 0rem 1rem;
+    padding: 0rem;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -ms-grid;
+    display: grid;
+    line-height: 120%;
+    -ms-grid-columns: 80% 10%;
+        grid-template-columns: 80% 10%;
+    font-size: 1rem;
+    color: #2A2D3E;
+  }
+  .hospitalPanel .filters .filter-list .filter-head i {
+    color: #4297C9;
+  }
+  .hospitalPanel .filters .filter-list .filter-head::after {
+    position: absolute;
+    content: "";
+    width: .8rem;
+    top: 50%;
+    right: 0%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    height: 4px;
+    background-color: #D3D3D3;
+  }
+  .hospitalPanel .filters .filter-list ul {
+    margin: 1rem 1rem 1rem 0rem;
+  }
+  .hospitalPanel .filters .filter-list ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+  }
+  .hospitalPanel .filters .filter-list ul label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+  }
+  .hospitalPanel .filters .filter-list ul input {
+    margin: 0rem;
+    padding: 0rem;
+    width: auto;
+    margin-right: 1rem;
+  }
+  .hospitalPanel .hospitalList {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 10;
+    grid-area: hosp;
+  }
+  .hospitalPanel .hospitalList .hospital {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[10];
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-areas: "div div div div div div div img img img";
+  }
+  .hospitalPanel .hospitalList .hospital .hospital-image {
+    -ms-grid-row: 1;
+    -ms-grid-column: 8;
+    -ms-grid-column-span: 3;
+    grid-area: img;
+    height: 100%;
+  }
+  .hospitalPanel .hospitalList .hospital .hospital-image img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .hospitalPanel .hospitalList .hospital .hospital-info {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 7;
+    grid-area: div;
+  }
+  .hospitalPanel .hospitalList .hospital .hospital-info button {
+    margin-left: 0%;
+    margin-top: 1rem;
+  }
+  .hospitalPanel .hospitalList .hospital .hospital-info ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+  }
+  .hospitalPanel .hospitalList .hospital .hospital-info ul li {
+    line-height: 1.2rem;
+  }
+  .hospitalPanel .hospitalList .hospital .hospital-info ul li i {
+    padding-right: 1rem;
+  }
+  .hospitalPanel .hospitalList .hospital .hospital-info ol li {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .bannerPanel {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+  .bannerPanel h4 {
+    font-size: 2rem;
+  }
+  .bannerPanel h4 span {
+    font-size: 2rem;
+  }
+  .nav {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav h4 {
+    font-size: 1.5rem;
+  }
+  .nav form input {
+    width: 7rem;
+  }
+  .nav form input::-webkit-input-placeholder {
+    font-size: 1rem;
+  }
+  .nav form input:-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  .nav form input::-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  .nav form input::placeholder {
+    font-size: 1rem;
+  }
+  .hospitalPanel {
+        grid-template-areas: "fil fil fil hosp hosp hosp hosp hosp hosp hosp hosp hosp hosp hosp";
+  }
+  .hospitalPanel .filters .filter-list span {
+    font-size: 0.8rem;
+  }
+  .hospitalPanel .hospitalList .hospital {
+    padding-left: 1rem;
+  }
+  .hospitalPanel .hospitalList .hospital .hospital-info h3 {
+    margin-top: 2.5rem;
+  }
+  .hospitalPanel .hospitalList .hospital .hospital-info h3::before {
+    left: -3rem;
+    width: 2.8rem;
+  }
+  .hospitalPanel .hospitalList .hospital .hospital-info button {
+    padding: .7rem 4rem;
+    font-size: 0.85rem;
+    font-weight: 100;
+    margin: 2rem 0rem;
+  }
+  .hospitalPanel .hospitalList .hospital .hospital-info ol li {
+    font-size: 0.8rem;
+  }
+  .hospitalPanel .hospitalList .hospital .hospital-info ul {
+    padding-top: 1rem;
+  }
+  .hospitalPanel .hospitalList .hospital .hospital-info ul li i {
+    font-size: 1.5rem;
+  }
+}
+/*# sourceMappingURL=hospital.css.map */

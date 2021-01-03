@@ -1,0 +1,311 @@
+.web_dashboard{
+    display: none;
+}
+section{
+    padding: 1rem;
+    background-color: #F5F5F5;
+    .container_box{
+        background-color: white;
+        border-radius: 1rem;
+        padding: 1rem;
+        .dashboard{
+            h1{
+                text-align: center;
+            }
+            .mobile_dashboard{
+                align-items: center;
+                margin-bottom: 1rem;
+                display: flex;
+                h3{
+                    padding-bottom: 0rem;
+                    flex:1;
+                    text-align: center;
+                    color: #4297C9;
+                    i{
+                        padding-right: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:768px)
+{
+    section{
+        padding: 2.5rem;
+        .container_box{
+            padding: 2rem;
+            .mobile_dashboard{
+                    i{
+                        font-size: 1.3rem;
+                        text-align: center;
+                        flex: 1;
+                    }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1024px){
+    .web_dashboard{display: block;}
+    body{
+        position: relative;
+        #schedule_form{
+            display: none;
+            position: fixed;
+            background-color: rgba(0,0,0,.4);
+            width: 100vw;
+            height: 100vh;
+            top:0%;
+            left: 0%;
+            z-index: 1000;
+            form{
+                position: absolute;;
+                max-height: 100vh;
+                top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 28rem;
+            background-color: white;
+            padding:1rem ; 
+        h3{
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #dddfe2;
+            text-align: center;
+            color: #4297C9;
+        }    
+        .buttons{
+            display: flex;
+            padding-top: 1rem;
+            #cancel{
+                width: auto;
+                font-weight: 900;
+                font-size: 0.8rem;
+                padding: 0.5rem;
+                margin-right: auto;
+                background-color: #4297C9;
+                border-radius: 4px;
+            }
+            #create{
+                border-radius: 4px;
+                width: auto;
+                font-weight: 900;
+                font-size: 0.8rem;
+                background-color: #4297C9;
+                padding: 0.5rem;
+                margin-left: auto;
+            }
+        }
+        .schedule_form_inputs{
+            padding-top: 1rem;
+            border-bottom: 1px solid #dddfe2;
+            h3{
+                padding-bottom: 0.5rem;
+                font-size: 1.2rem;
+                text-align: left;
+                color: #2a2d3e;
+                border: 0rem;
+            }
+            input{
+                margin-bottom: 0.5rem;
+                font-size: 0.9rem;
+                padding: 0.5rem 5%; 
+            }
+            #days{
+                padding: 0rem;
+            }
+            select{
+                margin-bottom: 0.5rem;
+                font-size: 0.9rem;
+                    cursor: pointer;
+                    overflow: auto;
+                    padding: 0.5rem 5%;
+                    font-weight: 900;
+                    width: 100%;
+                border:1px solid #dddfe2;
+                -webkit-appearance: none;
+                option{
+                    font-size: 0.9rem;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                    padding: 0.25rem 1rem;
+                    font-weight: 900;
+                }
+                &:focus{
+                    outline-color:#4297C9;
+                }
+            }
+        }      
+     }
+        }
+    }
+    #new_schedule_btn{
+        font-size: 1rem;
+        background-color: #4297C9;
+        width: auto;
+        border-radius: 50%;
+        padding:0.75rem;
+       margin-left: 3rem;
+        margin-top: 2rem;
+        &:hover{
+            background-color:#9CC0DA ;
+        }
+    }
+    section{
+        padding: 4rem;
+        background-color: white;
+        box-shadow: inset 0rem 0.5rem 1rem -0.5rem #dddfe2;
+        .container_box{
+            min-height: 66vh;
+            display: grid;
+            grid-template-columns: 3fr 10fr;
+            grid-gap: 3rem;
+            border-radius: 0px;
+            padding: 0rem;
+            .dashboard{
+                .mobile_dashboard{
+                    display: none;
+                }
+                h1{
+                    text-align: left;
+                    padding-bottom: 3rem;
+                }
+                .web_dashboard{
+                    position: relative;
+                    a{
+                        h4,h3{
+                            align-items: center;
+                            display: flex;
+                            padding: 1rem 0rem;
+                            font-size: 1.2rem;
+                            i{
+                                color: #4297C9;
+                                padding-right: 0.5rem;
+                            }
+                        }
+                        h3{
+                            color: #4297C9;
+                        }
+                        h4:hover,h3:hover{
+                            background-color: #dddfe2;
+                            padding-left: 0.5rem;
+                            border-left: 4px solid #4297C9;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            #disabled{
+                background-color: #dddfe2;
+            }
+            .schedulePanel{
+                overflow-y: auto;
+                height: 75.5vh;
+                .sub_schedule_panel{
+                    display: none;
+                    flex-wrap: wrap;
+                    &_notbooked{
+                        background-color: #fff;
+                        margin-top: 1rem;
+                        margin-right: 0.5rem;
+                        padding: 0.35rem;
+                        border: 3px solid #008000;
+                            align-items: center;
+                            justify-content: center;
+                            label{
+                                font-weight: 700;
+                                font-size: 0.7rem;
+                                input{
+                                    position: relative;
+                                    margin: 0rem;
+                                    padding: 0rem;
+                                    width: auto;
+                                    margin-left: 0.25rem;
+                                    border: 0rem;
+                                }
+                                
+                        }                        
+                    }
+                    &_booked{
+                        margin-top: 1rem;
+                        margin-right: 0.5rem;
+                        padding: 0.35rem;
+                        border: 3px solid red;
+                            align-items: center;
+                            background-color: #fff;
+                            justify-content: center;
+                            label{
+                                font-weight: 700;
+                                font-size: 0.7rem;
+                                input{
+                                    position: relative;
+                                    margin: 0rem;
+                                    padding: 0rem;
+                                    width: auto;
+                                    margin-left: 0.25rem;
+                                    border: 0rem;
+                                }
+                                
+                        }                        
+                    }
+                }
+                &_items{
+                    padding: 1rem;
+                    margin-bottom: 1rem;
+                    border: 1px solid #dddfe2;
+                }
+                &_list{
+                    h3{
+                        padding-bottom: 0rem;
+                        font-size: 1.2rem;
+                        color: #4297C9;
+                    }
+                        &_action{
+                            display: flex;
+                            
+                            align-items: center;
+                            button{
+                                background-color: #4297C9;
+                                width: auto;
+                                font-size: 0.8rem;
+                                padding: 0.75rem 0.5rem;
+                                border-radius: 4px;
+                            }
+                            .remove_btn{
+                                margin-left: auto;
+                                display: block;
+                            }
+                            #view_btn{
+                                margin:0rem 0.5rem;
+                            }                            
+                        }
+                    
+                    display: grid;
+                    grid-template-columns: 1fr 2fr 3fr;
+                    grid-gap: 0.5rem;
+                    align-items: center;
+                    input{
+                        width: auto;
+                        padding: 0%;
+                        display: block;
+                        margin: 0% auto;
+                    }
+                    &_info{
+                        justify-content: center;
+                        text-align: center;
+                        h3{
+                            color: black;
+                            padding-bottom: 0.5rem;
+                        }
+                        span{
+                            letter-spacing: 2px;
+                            font-size: 0.9rem;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}

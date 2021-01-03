@@ -1,0 +1,341 @@
+.bannerPanel {
+  display: none;
+}
+
+.nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav h4 {
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.nav form input {
+  width: 5rem;
+  background-color: #D3D3D3;
+  display: block;
+  margin-left: auto;
+  border: 0px;
+  border-radius: 0px;
+}
+
+.nav form input::-webkit-input-placeholder {
+  text-align: left;
+  font-size: .7rem;
+  color: black;
+  font-weight: 900;
+}
+
+.nav form input:-ms-input-placeholder {
+  text-align: left;
+  font-size: .7rem;
+  color: black;
+  font-weight: 900;
+}
+
+.nav form input::-ms-input-placeholder {
+  text-align: left;
+  font-size: .7rem;
+  color: black;
+  font-weight: 900;
+}
+
+.nav form input::placeholder {
+  text-align: left;
+  font-size: .7rem;
+  color: black;
+  font-weight: 900;
+}
+
+.hospitalPanel {
+  padding-top: 0rem;
+}
+
+.hospitalPanel .filters {
+  display: none;
+}
+
+.hospitalPanel .hospitalList .hospital {
+  margin-bottom: 1rem;
+  border: 1px solid #999;
+}
+
+.hospitalPanel .hospitalList .hospital div {
+  text-align: left;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.hospitalPanel .hospitalList .hospital div h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  color: #0173B2;
+}
+
+.hospitalPanel .hospitalList .hospital div h3::before {
+  position: absolute;
+  background-color: #0173B2;
+  content: "";
+  height: 2px;
+  top: 50%;
+  -webkit-transform: translate(0rem, -50%);
+          transform: translate(0rem, -50%);
+  width: 1.8rem;
+  left: -2rem;
+}
+
+.hospitalPanel .hospitalList .hospital div div {
+  padding-left: 0rem;
+}
+
+.hospitalPanel .hospitalList .hospital div div h5 {
+  line-height: 120%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: .8rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 80%;
+      grid-template-columns: 20% 80%;
+}
+
+.hospitalPanel .hospitalList .hospital div div h5 i {
+  color: #0173B2;
+  font-size: 1rem;
+}
+
+.hospitalPanel .hospitalList .hospital div ul {
+  padding-left: 1.5rem;
+}
+
+.hospitalPanel .hospitalList .hospital div ul li {
+  margin-bottom: .5rem;
+  font-size: .6rem;
+  display: inline-block;
+  padding: .5rem;
+  border: 1px solid #999;
+  border-radius: 1rem;
+}
+
+.hospitalPanel .hospitalList .hospital div button {
+  display: block;
+  width: 8rem;
+  margin: 1rem auto;
+  font-size: .7rem;
+  font-weight: 100;
+}
+
+.hospitalPanel .hospitalList .hospital img {
+  width: 100%;
+  height: 350px;
+}
+
+@media only screen and (min-width: 768px) {
+  .bannerPanel {
+    text-align: left;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    display: block;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(156, 191, 218, 0.8)), to(rgba(156, 191, 218, 0.8))), url("../images/back.png");
+    background: linear-gradient(rgba(156, 191, 218, 0.8), rgba(156, 191, 218, 0.8)), url("../images/back.png");
+    background-size: cover;
+  }
+  .bannerPanel h4 {
+    font-size: 1.6rem;
+  }
+  .bannerPanel h4 span {
+    text-decoration: underline;
+  }
+  .nav h4 {
+    font-size: 1.2rem;
+  }
+  .nav form input {
+    width: 6rem;
+  }
+  .hospitalPanel {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 24% 75%;
+        grid-template-columns: 24% 75%;
+    grid-gap: 2%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+  .hospitalPanel .filters {
+    display: block;
+  }
+  .hospitalPanel .filters button {
+    color: black;
+    background-color: #D3D3D3;
+    font-weight: 900;
+    width: 100%;
+    padding: 0.75rem 7.5%;
+    text-align: left;
+  }
+  .hospitalPanel .filters .filter-list {
+    text-align: left;
+    border-bottom: 1px solid #999;
+  }
+  .hospitalPanel .filters .filter-list #filter-head {
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -ms-grid;
+    display: grid;
+    line-height: 120%;
+    -ms-grid-columns: 80% 10%;
+        grid-template-columns: 80% 10%;
+    font-size: 1rem;
+    color: #2A2D3E;
+  }
+  .hospitalPanel .filters .filter-list #filter-head i {
+    color: #0173B2;
+  }
+  .hospitalPanel .filters .filter-list #filter-head::after {
+    position: absolute;
+    content: "";
+    width: .8rem;
+    right: 0%;
+    height: 4px;
+    background-color: #D3D3D3;
+  }
+  .hospitalPanel .filters .filter-list div {
+    padding-left: 1rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 15% 85%;
+        grid-template-columns: 15% 85%;
+    grid-row-gap: 5px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hospitalPanel .filters .filter-list div input {
+    position: relative;
+    width: 1rem;
+    margin: 0%;
+    height: auto;
+  }
+  .hospitalPanel .filters .filter-list h5 {
+    font-size: .8rem;
+    font-weight: 900;
+    color: #0173B2;
+    padding: 1rem 0rem 1rem 1rem;
+  }
+  .hospitalPanel .hospitalList .hospital {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 70% 30%;
+        grid-template-columns: 70% 30%;
+  }
+  .hospitalPanel .hospitalList .hospital img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .hospitalPanel .hospitalList .hospital div div h5 {
+    font-size: .9rem;
+  }
+  .hospitalPanel .hospitalList .hospital div div h5 i {
+    font-size: 1.1rem;
+  }
+  .hospitalPanel .hospitalList .hospital div .info {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 48% 48%;
+        grid-template-columns: 48% 48%;
+    grid-column-gap: 4%;
+  }
+  .hospitalPanel .hospitalList .hospital div button {
+    margin-left: 0%;
+    width: 10rem;
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .bannerPanel {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+  .bannerPanel h4 {
+    font-size: 2rem;
+  }
+  .nav h4 {
+    font-size: 1.5rem;
+  }
+  .nav form input {
+    width: 7rem;
+  }
+  .nav form input::-webkit-input-placeholder {
+    font-size: 0.8rem;
+  }
+  .nav form input:-ms-input-placeholder {
+    font-size: 0.8rem;
+  }
+  .nav form input::-ms-input-placeholder {
+    font-size: 0.8rem;
+  }
+  .nav form input::placeholder {
+    font-size: 0.8rem;
+  }
+  .hospitalPanel {
+    -ms-grid-columns: 20% 78%;
+        grid-template-columns: 20% 78%;
+  }
+  .hospitalPanel .filters button {
+    font-size: 1rem;
+    height: 2.5rem;
+  }
+  .hospitalPanel .filters .filter-list #filter-head {
+    font-size: 1.1rem;
+  }
+  .hospitalPanel .filters .filter-list div input {
+    height: .9rem;
+  }
+  .hospitalPanel .filters .filter-list h5 {
+    font-size: .9rem;
+  }
+  .hospitalPanel .hospitalList .hospital {
+    -ms-grid-columns: 75% 25%;
+        grid-template-columns: 75% 25%;
+  }
+  .hospitalPanel .hospitalList .hospital div h3 {
+    margin-top: 2rem;
+  }
+  .hospitalPanel .hospitalList .hospital div div {
+    padding-top: 1rem;
+  }
+  .hospitalPanel .hospitalList .hospital div div h5 {
+    -ms-grid-columns: 12% 88%;
+        grid-template-columns: 12% 88%;
+    font-size: 1rem;
+  }
+  .hospitalPanel .hospitalList .hospital div div h5 i {
+    font-size: 1.2rem;
+  }
+  .hospitalPanel .hospitalList .hospital div ul li {
+    font-size: 0.8rem;
+  }
+  .hospitalPanel .hospitalList .hospital div button {
+    width: 12rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+  }
+}
+/*# sourceMappingURL=hospital.css.map */

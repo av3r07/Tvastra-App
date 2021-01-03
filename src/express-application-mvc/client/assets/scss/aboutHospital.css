@@ -1,0 +1,250 @@
+.bannerPanel {
+  height: 300px;
+  position: relative;
+}
+
+.bannerPanel img {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bannerPanel div {
+  padding-top: 120px;
+  text-align: center;
+}
+
+.bannerPanel div h1 {
+  color: white;
+}
+
+.bannerPanel div h4 {
+  color: white;
+  font-weight: 100;
+}
+
+.aboutPanel {
+  margin: 1rem;
+  border: 1px solid #999;
+  padding: 1rem;
+}
+
+.aboutPanel .book img {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.aboutPanel ul {
+  padding-top: 3rem;
+}
+
+.aboutPanel ul h2 {
+  color: #0173B2;
+  padding-bottom: 0rem;
+  text-align: left;
+  position: relative;
+  padding-left: 3rem;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0rem;
+}
+
+.aboutPanel ul h2::before {
+  position: absolute;
+  content: "";
+  width: 3.6rem;
+  background-color: #0173B2;
+  height: 2px;
+  top: 50%;
+  left: -1rem;
+  -webkit-transform: translate(0rem, -50%);
+          transform: translate(0rem, -50%);
+}
+
+.aboutPanel ul h3 {
+  color: #0173B2;
+  padding-bottom: 0rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.aboutPanel ul i {
+  color: #0173B2;
+  padding-bottom: 0rem;
+  text-align: left;
+}
+
+.aboutPanel ul p {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #999;
+  border-style: dashed;
+}
+
+.aboutPanel ul ol li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 0px;
+  padding: 0rem;
+  padding-bottom: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aboutPanel ul ol li i {
+  font-size: 1.2rem;
+  text-align: left;
+  margin-right: 1rem;
+}
+
+.aboutPanel ul ol li p {
+  background-color: white;
+  font-weight: 900;
+  padding: 0rem;
+  border-bottom: 0px;
+  text-align: left;
+  padding-bottom: 0rem;
+}
+
+.aboutPanel ul li p {
+  padding: 1rem;
+  background-color: #E5F1F7;
+  font-weight: 100;
+}
+
+.aboutPanel ul li div {
+  padding: 1rem 0rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 70% 20%;
+      grid-template-columns: 10% 70% 20%;
+  border-bottom: 1px solid #999;
+  border-style: dashed;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.aboutPanel ul li div .fas {
+  font-size: 1.2rem;
+}
+
+.aboutPanel ul li div .fa-chevron-down {
+  font-size: .6rem;
+  text-align: right;
+  padding: .4rem;
+  margin-left: auto;
+  background-color: #E5F1F7;
+  border-radius: 50%;
+}
+
+.aboutPanel ul li div .fa-chevron-up {
+  display: none;
+  font-size: .6rem;
+  text-align: right;
+  padding: .4rem;
+  margin-left: auto;
+  background-color: #E5F1F7;
+  border-radius: 50%;
+}
+
+@media only screen and (min-width: 768px) {
+  .aboutPanel {
+    margin: 2.5rem;
+    padding: 1.5rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[10];
+        grid-template-columns: repeat(10, 1fr);
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "ul ul ul ul ul ul ul book book book";
+    grid-gap: 1.5rem;
+  }
+  .aboutPanel .book {
+    -ms-grid-row: 1;
+    -ms-grid-column: 8;
+    -ms-grid-column-span: 3;
+    grid-area: book;
+  }
+  .aboutPanel ul {
+    padding-top: 0rem;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 7;
+    grid-area: ul;
+  }
+  .aboutPanel ul p {
+    text-align: left;
+  }
+  .aboutPanel ul h2 {
+    padding-left: 0rem;
+  }
+  .aboutPanel ul h2::before {
+    width: 1.2rem;
+    left: -1.5rem;
+  }
+  .aboutPanel ul ol {
+    padding-bottom: 1rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+  }
+  .aboutPanel ul ol li i {
+    font-size: 1.3rem;
+  }
+  .aboutPanel ul li div h3 {
+    font-size: 1.1rem;
+  }
+  .aboutPanel ul li div .fas {
+    font-size: 1.3rem;
+  }
+  .aboutPanel ul li div .fa-chevron-down {
+    font-size: .7rem;
+  }
+  .aboutPanel ul li div .fa-chevron-up {
+    font-size: .7rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .bannerPanel div {
+    text-align: left;
+    padding-left: 6rem;
+    padding-top: 100px;
+  }
+  .aboutPanel {
+    margin: 2.5rem 4rem;
+    padding: 2rem;
+    grid-gap: 2rem;
+  }
+  .aboutPanel ul h2::before {
+    width: 1.7rem;
+    left: -2rem;
+  }
+  .aboutPanel ul ol li i {
+    font-size: 1.5rem;
+  }
+  .aboutPanel ul li div {
+    padding: 1.5rem 0rem;
+  }
+  .aboutPanel ul li div h3 {
+    font-size: 1.3rem;
+  }
+  .aboutPanel ul li div .fas {
+    font-size: 1.5rem;
+  }
+  .aboutPanel ul li div .fa-chevron-down {
+    font-size: .8rem;
+  }
+  .aboutPanel ul li div .fa-chevron-up {
+    font-size: .8rem;
+  }
+}
+/*# sourceMappingURL=aboutHospital.css.map */

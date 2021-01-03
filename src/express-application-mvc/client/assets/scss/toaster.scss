@@ -1,0 +1,119 @@
+.container,.container_box{ 
+	position: relative;
+	#toaster-block {
+		padding: 1rem;
+		background-color: white;
+		top: 1rem;
+		right: 1rem;
+		display: none;
+		align-items: center;
+		position: absolute;
+		.msg-block {
+			padding: 0rem 3rem 0rem 1.5rem;
+			text-align: left;
+			h3{
+				font-size: 1.2rem;
+				padding-bottom: 0.5rem;
+			}
+			h4 {
+				padding: 0rem;
+				font-size: 0.8rem;
+			}
+		}
+		#close {
+			font-size: 1.5rem;
+			color: #999;
+			cursor: pointer;
+		}
+	}
+	.fail {
+		border-left: 5px solid red;
+		.fa-times-circle {
+			font-size: 2rem;
+			color: red;
+		}
+		.msg-block {
+			h3 {
+				color: red;
+			}
+			h4 {
+				color: red;
+			}
+		}
+	}
+	.pass {
+		border-left: 5px solid green;
+		.fa-check-circle {
+			font-size: 2rem;
+			color: green;
+		}
+		.msg-block {
+			h3 {
+				color: green;
+			}
+			h4 {
+				color: green;
+			}
+		}
+	}
+}
+
+.loginPanel,.otpPanel,.appointmentPanel,.signupPanel,.passwordPanel,.queryPanel,.addDoctorDetailsPanel{
+		position: relative;
+		#toaster-block {
+			padding: 1rem;
+			background-color: white;
+			top:6rem;
+			right: 1rem;
+			display: none;
+			align-items: center;
+			position: absolute;
+			.msg-block {
+				padding: 0rem 3rem 0rem 1.5rem;
+				text-align: left;
+				h3{
+					font-size: 1.2rem;
+				padding-bottom: 0.5rem;
+				}
+				h4 {
+					padding: 0rem;
+					font-size: 0.8rem;
+				}
+			}
+			#close {
+				font-size: 1.5rem;
+				color: #999;
+				cursor: pointer;
+			}
+		}
+		.fail {
+			border-left: 5px solid red;
+			.fa-times-circle {
+				font-size: 2rem;
+				color: red;
+			}
+			.msg-block {
+				h3 {
+					color: red;
+				}
+				h4 {
+					color: red;
+				}
+			}
+		}
+		.pass {
+			border-left: 5px solid green;
+			.fa-check-circle {
+				font-size: 2rem;
+				color: green;
+			}
+			.msg-block {
+				h3 {
+					color: green;
+				}
+				h4 {
+					color: green;
+				}
+			}
+		}
+	}

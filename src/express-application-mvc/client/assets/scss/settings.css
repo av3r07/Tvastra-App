@@ -1,0 +1,200 @@
+.web_dashboard {
+  display: none;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+section {
+  padding: 1rem;
+  background-color: #F5F5F5;
+}
+
+section .container_box {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+section .container_box .dashboard h1 {
+  text-align: center;
+}
+
+section .container_box .dashboard .mobile_dashboard {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section .container_box .dashboard .mobile_dashboard h3 {
+  padding-bottom: 0rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  color: #4297C9;
+}
+
+section .container_box .dashboard .mobile_dashboard h3 i {
+  padding-right: 0.5rem;
+}
+
+section .container_box .settings {
+  padding: 1rem 0.5rem;
+  border: 1px solid #dddfe2;
+}
+
+section .container_box .settings_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #dddfe2;
+}
+
+section .container_box .settings_header h1 {
+  padding: 0rem;
+}
+
+section .container_box .settings_header button {
+  width: auto;
+  padding: 0.5rem 0.25rem;
+  font-size: 0.9rem;
+  background-color: #4297C9;
+  display: block;
+  margin-left: auto;
+}
+
+section .container_box .settings .input_grid {
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid #dddfe2;
+}
+
+section .container_box .settings .input_grid div h3 {
+  padding-bottom: 0.5rem;
+}
+
+section .container_box .settings .input_grid:nth-child(3) {
+  border: 0px;
+  padding-bottom: 0rem;
+}
+
+section .container_box .settings .input_grid:nth-child(3) div .new_password_input {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+section .container_box .settings .input_grid:nth-child(3) div .new_password_input i {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #4297C9;
+  font-weight: 900;
+}
+
+section .container_box .settings .input_grid:nth-child(3) div .new_password_input .fa-eye {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  section {
+    padding: 2.5rem;
+  }
+  section .container_box {
+    padding: 2rem;
+  }
+  section .container_box .mobile_dashboard i {
+    font-size: 1.3rem;
+    text-align: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  section .container_box .settings {
+    padding: 2rem 1rem;
+  }
+  section .container_box .settings .input_grid:nth-child(3) div .new_password_input {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .web_dashboard {
+    display: block;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  section {
+    padding: 4rem;
+    background-color: white;
+    -webkit-box-shadow: inset 0rem 0.5rem 1rem -0.5rem #dddfe2;
+            box-shadow: inset 0rem 0.5rem 1rem -0.5rem #dddfe2;
+  }
+  section .container_box {
+    min-height: 66vh;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 3fr 11fr;
+        grid-template-columns: 3fr 11fr;
+    grid-gap: 3rem;
+    border-radius: 0px;
+    padding: 0rem;
+  }
+  section .container_box .dashboard .mobile_dashboard {
+    display: none;
+  }
+  section .container_box .dashboard h1 {
+    text-align: left;
+    padding-bottom: 3rem;
+  }
+  section .container_box .dashboard .web_dashboard a h4, section .container_box .dashboard .web_dashboard a h3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1rem 0rem;
+    font-size: 1.5rem;
+  }
+  section .container_box .dashboard .web_dashboard a h4 i, section .container_box .dashboard .web_dashboard a h3 i {
+    color: #4297C9;
+    padding-right: 0.5rem;
+  }
+  section .container_box .dashboard .web_dashboard a h3 {
+    color: #4297C9;
+  }
+  section .container_box .dashboard .web_dashboard a h4:hover, section .container_box .dashboard .web_dashboard a h3:hover {
+    background-color: #dddfe2;
+    padding-left: 0.5rem;
+    border-left: 4px solid #4297C9;
+    cursor: pointer;
+  }
+  section .container_box .settings {
+    border: 0px;
+    padding: 0rem;
+  }
+  section .container_box .settings_header button {
+    font-size: 1.2rem;
+    padding: 1rem 0.5rem;
+    font-weight: 900;
+    border-radius: 0.25rem;
+  }
+  section .container_box .settings .input_grid {
+    padding: 2rem 0rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 3rem;
+  }
+}
+/*# sourceMappingURL=settings.css.map */

@@ -1,0 +1,135 @@
+.loginPanel {
+	background-color: #9cbfda;
+	height: 100vh;
+		position: relative;
+		.copyright{
+			text-align: center;
+			width: 100%;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 1rem;
+				padding-bottom: 0rem;
+				font-size: 0.7rem;
+				font-weight: 900;
+				color: black;
+		}
+	#question-toaster {
+		display: none;
+	}
+	.loginForm {
+		width: 90%;
+		position: absolute;
+		top: 60%;
+		left: 50%;
+		max-width: 20rem;
+		transform: translate(-50%,-60%);
+		text-align: center;
+		box-shadow: 0px 0px 10px black;
+		background-color: white;
+		h3 {
+			padding: 1rem 0rem 0rem 0rem;
+			color: #0173b2;
+		}
+		form {
+			padding: 0rem 1rem;
+			a {
+				h3 {
+					padding: 0rem;
+					padding-bottom: 1.5rem;
+					font-size: 0.7rem;
+				}
+			}
+			.mobile {
+				margin-bottom: 1rem;
+				position: relative;
+				.fa {
+					position: absolute;
+					font-weight: 900;
+					color: #999;
+					cursor: pointer;
+					top: 50%;
+					right: 5%;
+					transform: translate(-5%, -50%);
+				}
+			}
+			.login-btn {
+				width: 100%;
+				position: relative;
+				margin-bottom: 1rem;
+				letter-spacing: 3px;
+				i {
+					position: absolute;
+					top: 50%;
+					right: 5%;
+					transform: translate(-5%, -50%);
+				}
+			}
+			h4 {
+				padding-bottom: 1rem;
+				padding-top: 0rem;
+				font-size: 0.7rem;
+				a {
+					color: #0173b2;
+					font-weight: 900;
+					font-size: 0.7rem;
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width: 768px) {
+	.loginPanel {
+		.loginForm{
+			width: 20rem;
+		}
+	}
+}
+@media only screen and (min-width: 1024px) {
+	.loginPanel {
+		.copyright{
+			font-size: 0.8rem;
+		}
+		#question-toaster {
+			display: none;
+			position: absolute;
+			top: 2rem;
+			right: 2rem;
+			background-color: white;
+			border-left: 10px solid #8a4cdb;
+			p {
+				font-size: 0.8rem;
+				font-weight: 900;
+				padding: 1rem 2rem 1rem 4rem;
+				text-align: left;
+			}
+		}
+		.loginForm {
+			width: 25rem;
+			max-width: 25rem;
+			h3{
+				padding: 1.5rem 0rem 0.5rem 0rem;
+			}
+			form {
+				padding: 0rem 2rem;
+				a {
+					h3 {
+						font-size: 0.85rem;
+						padding-bottom: 2rem;
+					}
+				}
+				.mobile {
+					.fa {
+						font-size: 1.2rem;
+					}
+				}
+				h4 {
+					font-size: 0.8rem;
+					a {
+						font-size: 0.8rem;
+					}
+				}
+			}
+		}
+	}
+}

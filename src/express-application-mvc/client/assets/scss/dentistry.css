@@ -1,0 +1,313 @@
+.bannerPanel {
+  position: relative;
+  background-image: -webkit-gradient(linear, left top, right top, from(#0173b2), to(rgba(1, 115, 178, 0.1))), url("https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/dentist_hero_image.jpg");
+  background-image: linear-gradient(to right, #0173b2, rgba(1, 115, 178, 0.1)), url("https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/dentist_hero_image.jpg");
+  height: 200px;
+  background-size: cover;
+}
+
+.bannerPanel div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.bannerPanel div h1 {
+  color: white;
+}
+
+.bannerPanel div h4 {
+  color: white;
+  font-weight: 100;
+}
+
+.aboutPanel .about-list .content .about {
+  text-align: left;
+}
+
+.aboutPanel .about-list .content .about img {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.aboutPanel .about-list .content .about div ul {
+  padding-left: 1rem;
+  list-style: disc;
+}
+
+.aboutPanel .about-list .content .about div ul li {
+  color: #0173b2;
+}
+
+.aboutPanel .about-list .content .about div ul li h4 {
+  font-weight: 100;
+}
+
+.aboutPanel .about-list .content .treatment {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.aboutPanel .about-list .content .treatment div i {
+  padding: 1rem;
+  background-color: #9CBFDA;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: .5rem;
+}
+
+.aboutPanel .about-list .content .treatment div p {
+  padding-bottom: 1.5rem;
+}
+
+.aboutPanel .about-list .content .treatment div h3 {
+  font-size: 1rem;
+}
+
+.aboutPanel .about-list .detail div {
+  padding: 1.5rem;
+  padding-bottom: .5rem;
+  border: 2px solid #dddfe2;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.aboutPanel .about-list .detail div h3 {
+  position: relative;
+  padding-bottom: 0rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.aboutPanel .about-list .detail div h3::before {
+  position: absolute;
+  left: -1.5rem;
+  width: 1.3rem;
+  top: 50%;
+  content: "";
+  height: 2px;
+  background-color: #0173b2;
+  -webkit-transform: translate(0rem, -50%);
+          transform: translate(0rem, -50%);
+}
+
+.aboutPanel .about-list .detail div ul li {
+  display: -ms-grid;
+  display: grid;
+  border-bottom: 1px solid #F2F1F0;
+  margin-bottom: 1rem;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+}
+
+.aboutPanel .about-list .detail div ul li h4 {
+  text-align: left;
+  padding-bottom: .5rem;
+}
+
+.aboutPanel .about-list .detail div ul li span {
+  text-align: right;
+  padding-bottom: .5rem;
+}
+
+.servicePanel {
+  background-color: #9CBFDA;
+}
+
+.servicePanel .headingServices h2 {
+  color: white;
+}
+
+.servicePanel .headingServices i {
+  font-size: .6rem;
+  background-color: white;
+  padding: .5rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  margin-left: .5rem;
+}
+
+.servicePanel .service div {
+  background-color: white;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.servicePanel .service div img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.servicePanel .service div h3 {
+  position: relative;
+  padding: 1.5rem;
+  padding-right: 0rem;
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+.servicePanel .service div h3::before {
+  position: absolute;
+  left: 0rem;
+  width: 1.2rem;
+  top: 50%;
+  content: "";
+  height: 2px;
+  background-color: #0173b2;
+  -webkit-transform: translate(0rem, -50%);
+          transform: translate(0rem, -50%);
+}
+
+@media only screen and (min-width: 768px) {
+  .bannerPanel div {
+    left: 6rem;
+    top: 50%;
+    -webkit-transform: translate(0rem, -50%);
+            transform: translate(0rem, -50%);
+  }
+  .aboutPanel .about-list .content .about {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 39% 59%;
+        grid-template-columns: 39% 59%;
+    grid-column-gap: 2%;
+    margin-bottom: 1rem;
+  }
+  .aboutPanel .about-list .content .about img {
+    padding-bottom: 0rem;
+    height: 100%;
+  }
+  .aboutPanel .about-list .content .treatment {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2rem;
+    padding-bottom: 0rem;
+  }
+  .aboutPanel .about-list .content .treatment div i {
+    padding: 1.2rem;
+  }
+  .aboutPanel .about-list .content .treatment div h3 {
+    font-size: 1.1rem;
+  }
+  .aboutPanel .about-list .detail {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 49% 49%;
+        grid-template-columns: 49% 49%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    grid-column-gap: 2%;
+  }
+  .aboutPanel .about-list .detail div {
+    margin-bottom: 0rem;
+  }
+  .aboutPanel .about-list .detail #schedule {
+    height: 7.7rem;
+  }
+  .servicePanel .headingServices {
+    display: -ms-grid;
+    display: grid;
+    text-align: right;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 1rem;
+  }
+  .servicePanel .headingServices h2 {
+    text-align: left;
+    padding-bottom: 0rem;
+  }
+  .servicePanel .headingServices i {
+    font-size: .7rem;
+    padding: .6rem;
+    margin-left: 0rem;
+    margin-bottom: 0rem;
+    cursor: pointer;
+  }
+  .servicePanel .service {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1rem;
+  }
+  .servicePanel .service div {
+    margin-bottom: 0rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .aboutPanel h2 {
+    text-align: left;
+  }
+  .aboutPanel .about-list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 67% 29%;
+        grid-template-columns: 67% 29%;
+    grid-column-gap: 4%;
+  }
+  .aboutPanel .about-list .content .about {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 39% 59%;
+        grid-template-columns: 39% 59%;
+    grid-column-gap: 2%;
+    margin-bottom: 1rem;
+  }
+  .aboutPanel .about-list .content .about img {
+    padding-bottom: 0rem;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .aboutPanel .about-list .content .treatment div {
+    text-align: center;
+  }
+  .aboutPanel .about-list .content .treatment div i {
+    padding: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .aboutPanel .about-list .content .treatment div h3 {
+    font-size: 1.2rem;
+  }
+  .aboutPanel .about-list .content .treatment div p {
+    padding-bottom: 0rem;
+  }
+  .aboutPanel .about-list .detail {
+    display: block;
+  }
+  .aboutPanel .about-list .detail div {
+    margin-bottom: 1rem;
+  }
+  .aboutPanel .about-list .detail #schedule {
+    height: auto;
+  }
+  .servicePanel .headingServices i {
+    font-size: .8rem;
+    padding: .7rem;
+  }
+  .servicePanel .service {
+    display: none;
+  }
+  .servicePanel .service div {
+    margin-bottom: 0rem;
+  }
+  .servicePanel .service div img {
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .servicePanel .service div h3 {
+    font-size: 1.3rem;
+  }
+}
+/*# sourceMappingURL=dentistry.css.map */

@@ -1,0 +1,142 @@
+.container, .container_box {
+  position: relative;
+}
+
+.container #toaster-block, .container_box #toaster-block {
+  padding: 1rem;
+  background-color: white;
+  top: 1rem;
+  right: 1rem;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+}
+
+.container #toaster-block .msg-block, .container_box #toaster-block .msg-block {
+  padding: 0rem 3rem 0rem 1.5rem;
+  text-align: left;
+}
+
+.container #toaster-block .msg-block h3, .container_box #toaster-block .msg-block h3 {
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+}
+
+.container #toaster-block .msg-block h4, .container_box #toaster-block .msg-block h4 {
+  padding: 0rem;
+  font-size: 0.8rem;
+}
+
+.container #toaster-block #close, .container_box #toaster-block #close {
+  font-size: 1.5rem;
+  color: #999;
+  cursor: pointer;
+}
+
+.container .fail, .container_box .fail {
+  border-left: 5px solid red;
+}
+
+.container .fail .fa-times-circle, .container_box .fail .fa-times-circle {
+  font-size: 2rem;
+  color: red;
+}
+
+.container .fail .msg-block h3, .container_box .fail .msg-block h3 {
+  color: red;
+}
+
+.container .fail .msg-block h4, .container_box .fail .msg-block h4 {
+  color: red;
+}
+
+.container .pass, .container_box .pass {
+  border-left: 5px solid green;
+}
+
+.container .pass .fa-check-circle, .container_box .pass .fa-check-circle {
+  font-size: 2rem;
+  color: green;
+}
+
+.container .pass .msg-block h3, .container_box .pass .msg-block h3 {
+  color: green;
+}
+
+.container .pass .msg-block h4, .container_box .pass .msg-block h4 {
+  color: green;
+}
+
+.loginPanel, .otpPanel, .appointmentPanel, .signupPanel, .passwordPanel, .queryPanel, .addDoctorDetailsPanel {
+  position: relative;
+}
+
+.loginPanel #toaster-block, .otpPanel #toaster-block, .appointmentPanel #toaster-block, .signupPanel #toaster-block, .passwordPanel #toaster-block, .queryPanel #toaster-block, .addDoctorDetailsPanel #toaster-block {
+  padding: 1rem;
+  background-color: white;
+  top: 6rem;
+  right: 1rem;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+}
+
+.loginPanel #toaster-block .msg-block, .otpPanel #toaster-block .msg-block, .appointmentPanel #toaster-block .msg-block, .signupPanel #toaster-block .msg-block, .passwordPanel #toaster-block .msg-block, .queryPanel #toaster-block .msg-block, .addDoctorDetailsPanel #toaster-block .msg-block {
+  padding: 0rem 3rem 0rem 1.5rem;
+  text-align: left;
+}
+
+.loginPanel #toaster-block .msg-block h3, .otpPanel #toaster-block .msg-block h3, .appointmentPanel #toaster-block .msg-block h3, .signupPanel #toaster-block .msg-block h3, .passwordPanel #toaster-block .msg-block h3, .queryPanel #toaster-block .msg-block h3, .addDoctorDetailsPanel #toaster-block .msg-block h3 {
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+}
+
+.loginPanel #toaster-block .msg-block h4, .otpPanel #toaster-block .msg-block h4, .appointmentPanel #toaster-block .msg-block h4, .signupPanel #toaster-block .msg-block h4, .passwordPanel #toaster-block .msg-block h4, .queryPanel #toaster-block .msg-block h4, .addDoctorDetailsPanel #toaster-block .msg-block h4 {
+  padding: 0rem;
+  font-size: 0.8rem;
+}
+
+.loginPanel #toaster-block #close, .otpPanel #toaster-block #close, .appointmentPanel #toaster-block #close, .signupPanel #toaster-block #close, .passwordPanel #toaster-block #close, .queryPanel #toaster-block #close, .addDoctorDetailsPanel #toaster-block #close {
+  font-size: 1.5rem;
+  color: #999;
+  cursor: pointer;
+}
+
+.loginPanel .fail, .otpPanel .fail, .appointmentPanel .fail, .signupPanel .fail, .passwordPanel .fail, .queryPanel .fail, .addDoctorDetailsPanel .fail {
+  border-left: 5px solid red;
+}
+
+.loginPanel .fail .fa-times-circle, .otpPanel .fail .fa-times-circle, .appointmentPanel .fail .fa-times-circle, .signupPanel .fail .fa-times-circle, .passwordPanel .fail .fa-times-circle, .queryPanel .fail .fa-times-circle, .addDoctorDetailsPanel .fail .fa-times-circle {
+  font-size: 2rem;
+  color: red;
+}
+
+.loginPanel .fail .msg-block h3, .otpPanel .fail .msg-block h3, .appointmentPanel .fail .msg-block h3, .signupPanel .fail .msg-block h3, .passwordPanel .fail .msg-block h3, .queryPanel .fail .msg-block h3, .addDoctorDetailsPanel .fail .msg-block h3 {
+  color: red;
+}
+
+.loginPanel .fail .msg-block h4, .otpPanel .fail .msg-block h4, .appointmentPanel .fail .msg-block h4, .signupPanel .fail .msg-block h4, .passwordPanel .fail .msg-block h4, .queryPanel .fail .msg-block h4, .addDoctorDetailsPanel .fail .msg-block h4 {
+  color: red;
+}
+
+.loginPanel .pass, .otpPanel .pass, .appointmentPanel .pass, .signupPanel .pass, .passwordPanel .pass, .queryPanel .pass, .addDoctorDetailsPanel .pass {
+  border-left: 5px solid green;
+}
+
+.loginPanel .pass .fa-check-circle, .otpPanel .pass .fa-check-circle, .appointmentPanel .pass .fa-check-circle, .signupPanel .pass .fa-check-circle, .passwordPanel .pass .fa-check-circle, .queryPanel .pass .fa-check-circle, .addDoctorDetailsPanel .pass .fa-check-circle {
+  font-size: 2rem;
+  color: green;
+}
+
+.loginPanel .pass .msg-block h3, .otpPanel .pass .msg-block h3, .appointmentPanel .pass .msg-block h3, .signupPanel .pass .msg-block h3, .passwordPanel .pass .msg-block h3, .queryPanel .pass .msg-block h3, .addDoctorDetailsPanel .pass .msg-block h3 {
+  color: green;
+}
+
+.loginPanel .pass .msg-block h4, .otpPanel .pass .msg-block h4, .appointmentPanel .pass .msg-block h4, .signupPanel .pass .msg-block h4, .passwordPanel .pass .msg-block h4, .queryPanel .pass .msg-block h4, .addDoctorDetailsPanel .pass .msg-block h4 {
+  color: green;
+}
+/*# sourceMappingURL=toaster.css.map */

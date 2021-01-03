@@ -1,0 +1,181 @@
+
+<%if(user){%>
+    <nav class="nav-mobile-user">
+        <a href="/homePage"><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" id="logo"></a>
+        <div id="user_mobile">
+            <h4><%= user.name.split(" ")[0]%></h4>
+            <i class="fas fa-chevron-down"></i>
+            <ul id="user-menu" style="list-style: none;">
+                <ul id="user-info">
+                   <li> <a href="/profile"><img src="../assets/uploads/<%= user.image %>" alt=""></a></li>
+                    <li style="padding-left: 0.5rem;">
+                        <h3><%= user.name%></h3>
+                        <h4><%= user.mobile%></h4>
+                    </li>
+                    </ul>
+                <li><a>My Appoinments<a></li>
+                <li><a>My Lab Tests</a></a>
+                <li><a>My Medicine Orders</a></li>
+                <li><a>My Payments</a></li>
+                <li style="border-bottom: 0px;"><a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" aria-hidden="true" id="bars" onclick="mobile_menu_show()"></i>
+        <i class="fas fa-times" id="close" onclick="mobile_menu_hide()"></i>
+            <div id="mobile-menu">
+                <a href="/doctor" class="nav_page_links">Doctors</a>
+                <a href="/hospital" class="nav_page_links">Hospitals</a>
+                <div id="mobile_treatment" class="nav_page_links"><h4>Treatments</h4>
+                    <i class="fas fa-chevron-down" id="treat-down"></i>
+                    <i class="fas fa-chevron-up" id="treat-up" style="display: none;"></i>
+                </div>
+                <ul id="mobile-treatment-menu">
+                    <li><a href="/dentistry">Cancer</a></li>
+                    <li><a href="/dentistry">Physiotherapy</a></li>
+                    <li><a href="/dentistry">Orthopedics</a></li>
+                    <li><a href="/dentistry">Organ Transplant</a></li>
+                    <li><a href="/dentistry">Cardiology</a></li>
+                    <li><a href="/dentistry">Neuorology</a></li>
+                    <li style="border-bottom: 0px;"><a href="/dentistry">Infertility Treatment</a></li>
+                </ul> 
+                <a href="/aboutUS" class="nav_page_links" class="nav_page_links">About</a>
+                <a href="/tvastraPlus" class="nav_page_links">Tvastra Plus</a>
+                <a href="" class="nav_page_links">Get a Quote</a>
+            </div>
+    </nav>
+    
+    <nav class="nav-user">
+        <a href="/homePage" class="logo"><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg"></a>
+   <div class="nav_links"> <a href="/doctor" class="nav_page_links">Doctors</a>
+    <a href="/hospital" class="nav_page_links">Hospitals</a>
+    <div id="treatment">
+        <a class="nav_page_links"> Treatments <i class="fas fa-chevron-down" id="treat-down-web"></i><i class="fas fa-chevron-up" id="treat-up-web" style="display: none;"></i></a>
+        <ul id="treatment-menu">
+            <li><a href="/dentistry">Cancer</a></li>
+            <li><a href="/dentistry">Physiotherapy</a></li>
+            <li><a href="/dentistry">Orthopedics</a></li>
+            <li><a href="/dentistry">Organ Transplant</a></li>
+            <li><a href="/dentistry">Cardiology</a></li>
+            <li><a href="/dentistry">Neuorology</a></li>
+            <li><a href="/dentistry">Infertility Treatment</a></li>
+        </ul> 
+        </div>
+    <a href="/aboutUs" class="nav_page_links" style="margin-right:0rem;">About</a></div>
+    <button id="tvastra-btn" onclick="location.href='/tvastraPlus'">Tvastra Plus</button>
+        <button id="quoteButton">Get a quote</button>
+        <button id="user"><h4><%= user.name.split(" ")[0]%> </h4><i class="fas fa-chevron-down" id="down"></i><i class="fas fa-chevron-up" id="up" style="display: none;"></i>
+            <ul id="user-menu-web" style="list-style: none;">
+                <ul id="user-info">
+                   <li> <a href="/profile"><img src="../assets/uploads/<%= user.image %>"></a></li>
+                    <li style="padding-left: 1rem;">
+                        <h3><%= user.name%></h3>
+                        <h4><%= user.mobile%></h4>
+                    </li>
+                    </ul>
+                <li><a>My Appoinments<a></li>
+                <li><a>My Lab Tests</a></a>
+                <li><a>My Medicine Orders</a></li>
+                <li><a>My Payments</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul></button>
+    </nav>    
+<%}else{%>
+    <nav class="nav-mobile">
+        <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" id="logo">
+        <i class="fa fa-bars" aria-hidden="true" id="bars" onclick="mobile_menu_show()"></i>
+        <i class="fas fa-times" id="close" onclick="mobile_menu_hide()"></i>
+            <div id="mobile-menu">
+                <a href="doctor" class="nav_page_links">Doctors</a>
+                <a href="hospital"class="nav_page_links">Hospitals</a>
+                <a class="nav_page_links" href="dentistry">Treatments</a>
+                <a href="contactUs" class="nav_page_links">Other Services</a>
+                <a href="aboutUS" class="nav_page_links">About</a>
+                <a href="/">Login</a>
+                <a href="" style="border-bottom:0px;">Get a Quote</a>
+            </div>
+    </nav>
+<nav class="nav-web">
+    <a href="/homePage"  class="logo"><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg"></a>
+   <div> <a href="doctor" class="nav_page_links">Doctors</a>
+    <a href="hospital"class="nav_page_links">Hospitals</a>
+    <a class="nav_page_links" href="dentistry">Treatments</a>
+    <a href="contactUs" class="nav_page_links">Other Services</a>
+    <a href="aboutUS" class="nav_page_links">About</a></div>
+   <button id="loginButton" onclick="location.href='/'">Login/Signup</button>
+    <button id="quoteButton">Get a quote</button>
+</nav>
+<%}%>
+
+<script>
+    const down = document.getElementById("down");
+    const menu = document.getElementById("user-menu");
+    const menuWeb = document.getElementById("user-menu-web");
+    const up = document.getElementById("up");
+    const tmenu = document.getElementById("treatment-menu");
+    const tup = document.getElementById("treat-up");
+    const tdown = document.getElementById("treat-down");
+    const bars = document.getElementById("bars");
+    const hide = document.getElementById("close")
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileUserMenu = document.getElementById("mobile-treatment-menu");
+    const twup = document.getElementById("treat-up-web");
+    const twdown = document.getElementById("treat-down-web");
+
+
+    down.addEventListener("click",function(){
+        menuWeb.style.display = "block";
+        up.style.display = "block";
+        down.style.display = "none";
+    });
+
+    up.addEventListener("click",function(){
+        menuWeb.style.display = "none";
+        up.style.display = "none";
+        down.style.display = "block";
+    });
+
+    twdown.addEventListener("click",function(){
+        tmenu.style.display = "block";
+        twup.style.display = "block";
+        twdown.style.display = "none";
+    });
+
+    twup.addEventListener("click",function(){
+        tmenu.style.display = "none";
+        twup.style.display = "none";
+        twdown.style.display = "block";
+    });
+
+    function mobile_menu_show(){
+        bars.style.display ="none";
+        hide.style.display= "block";
+        mobileMenu.style.display ="flex";
+    }
+    function mobile_menu_hide(){
+        hide.style.display ="none";
+        bars.style.display= "block";
+        mobileMenu.style.display ="none";
+    }
+
+    document.getElementById("mobile_treatment").addEventListener("click",()=>{
+        menu.style.display = "none";
+        if(mobileUserMenu.style.display == "block"){
+            mobileUserMenu.style.display = "none";
+            tdown.style.display = "block";
+            tup.style.display = "none";
+        }
+        else{
+            mobileUserMenu.style.display = "block";
+            tdown.style.display = "none";
+            tup.style.display = "block";
+        }
+    });
+    
+    document.getElementById("user_mobile").addEventListener("click",()=>{
+        mobileUserMenu.style.display = "none";
+        if(menu.style.display == "none")
+        {menu.style.display = "block";}
+        else{
+        menu.style.display ="none";}
+    })
+</script>

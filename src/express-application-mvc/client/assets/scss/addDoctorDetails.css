@@ -1,0 +1,211 @@
+.addDoctorDetailsPanel {
+  background-color: #9cbfda;
+  height: 230vh;
+  position: relative;
+}
+
+.addDoctorDetailsPanel .copyright {
+  position: absolute;
+  padding-bottom: 0rem;
+  font-size: 0.7rem;
+  width: 100%;
+  text-align: center;
+  bottom: 1rem;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm {
+  position: absolute;
+  top: 60%;
+  width: 90%;
+  max-width: 25rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, -60%);
+          transform: translate(-50%, -60%);
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 10px black;
+          box-shadow: 0px 0px 10px black;
+  background-color: white;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm h3 {
+  padding: 1rem 0rem 0rem 0rem;
+  color: #4297C9;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm p {
+  text-align: center;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm form {
+  text-align: left;
+  padding: 0rem 1rem;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm form h2 {
+  font-size: 1rem;
+  font-weight: 100;
+  padding-top: 1rem;
+  padding-bottom: 0.3rem;
+  color: #4297C9;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm form #hospital_tag_container {
+  border: 1px solid #dddfe2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem 7.5%;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm form #hospital_tag_container .tag {
+  margin: 0rem 0.25rem 0.25rem 0rem;
+  background-color: #9cf7b0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.25rem 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 0.5rem;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm form #hospital_tag_container .tag span {
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm form #hospital_tag_container .tag i {
+  font-size: .7rem;
+  padding-left: 0.25rem;
+  color: white;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm form #hospital_tag_container .tag:hover {
+  cursor: pointer;
+  background-color: #c2ecf7;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm form #hospital_tag_container .tag:hover span, .addDoctorDetailsPanel .addDoctorDetailsForm form #hospital_tag_container .tag:hover i {
+  color: red;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm form #hospital_tag_container input {
+  width: auto;
+  border: 0px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0rem;
+  margin: 0rem;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm form #hospital_tag_container input:focus {
+  outline: none;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm form textarea {
+  width: 90%;
+  padding: 1rem 5%;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm form textarea:focus {
+  outline-color: #9cbfda;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm form #doctorImage {
+  border: 0px;
+  padding: 0rem;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm form #doctorImage input[value] {
+  font-size: 0.8rem;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm form #radio div {
+  display: inline-flexbox;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0rem;
+  margin-bottom: 0.5rem;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm form #radio div input {
+  width: auto;
+  height: auto;
+  background-color: #4297C9;
+  padding: 0%;
+  margin: 0px;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm form #radio div label {
+  padding-left: 0.5rem;
+  font-weight: 900;
+  font-size: 0.8rem;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm form .submit-btn {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+.addDoctorDetailsPanel .addDoctorDetailsForm form .submit-btn i {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  -webkit-transform: translate(-5%, -50%);
+          transform: translate(-5%, -50%);
+}
+
+.addDoctorDetailsPanel h4 {
+  padding-top: 7rem;
+  font-weight: 900;
+  color: black;
+}
+
+@media only screen and (min-width: 768px) {
+  .addDoctorDetailsPanel .addDoctorDetailsForm {
+    width: 25rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .addDoctorDetailsPanel .copyright {
+    font-size: 0.8rem;
+  }
+  .addDoctorDetailsPanel .addDoctorDetailsForm {
+    max-width: 30rem;
+    width: 30rem;
+  }
+  .addDoctorDetailsPanel .addDoctorDetailsForm form {
+    padding: 0rem 1rem;
+  }
+  .addDoctorDetailsPanel .addDoctorDetailsForm form h2 {
+    font-size: 1.1rem;
+  }
+  .addDoctorDetailsPanel .addDoctorDetailsForm form #hospital_tag_container {
+    padding: 0.75rem 5%;
+  }
+  .addDoctorDetailsPanel .addDoctorDetailsForm form #hospital_tag_container span {
+    font-size: 0.8rem;
+  }
+  .addDoctorDetailsPanel .addDoctorDetailsForm form #doctorImage input[value] {
+    font-size: 0.9rem;
+  }
+  .addDoctorDetailsPanel .addDoctorDetailsForm h3 {
+    padding: 1.5rem 0rem 0.5rem 0rem;
+  }
+}
+/*# sourceMappingURL=addDoctorDetails.css.map */

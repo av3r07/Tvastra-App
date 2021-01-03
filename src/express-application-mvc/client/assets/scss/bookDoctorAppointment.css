@@ -1,0 +1,189 @@
+.appointmentPanel {
+  background-color: #F2F2F8;
+}
+
+.appointmentPanel .scheduleBox {
+  background-color: #fff;
+  padding: 1rem;
+  text-align: left;
+}
+
+.appointmentPanel .scheduleBox_header {
+  border-bottom: 1px solid #999;
+}
+
+.appointmentPanel .scheduleBox_header h3 {
+  padding-bottom: 0.8rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.appointmentPanel .scheduleBox_info {
+  padding-top: 0.5rem;
+}
+
+.appointmentPanel .scheduleBox_info h4 {
+  font-weight: 100;
+}
+
+.appointmentPanel .scheduleBox_info h4 i {
+  color: #167ddd;
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+}
+
+.appointmentPanel .scheduleBox_info a {
+  text-align: center;
+  color: #167ddd;
+  font-size: 1rem;
+  text-decoration: underline;
+}
+
+.appointmentPanel .scheduleBox_info .hospital_logo {
+  padding-top: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.appointmentPanel .scheduleBox_info .hospital_logo span {
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.appointmentPanel .scheduleBox_info .hospital_logo img {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.appointmentPanel .scheduleBox_info .doctorInfo {
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.appointmentPanel .scheduleBox_info .doctorInfo .doctorImage {
+  height: 5rem;
+  width: 5rem;
+}
+
+.appointmentPanel .scheduleBox_info .doctorInfo .doctorImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.appointmentPanel .scheduleBox_info .doctorInfo .doctorDetails {
+  margin-left: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.appointmentPanel .scheduleBox_info .doctorInfo .doctorDetails span {
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.appointmentPanel .patientBox {
+  margin-top: 1rem;
+  padding: 1rem 0rem 0rem 0rem;
+  text-align: left;
+}
+
+.appointmentPanel .patientBox_header {
+  border-bottom: 1px solid #999999;
+}
+
+.appointmentPanel .patientBox_header h2 {
+  padding-bottom: 0.8rem;
+  text-align: center;
+}
+
+.appointmentPanel .patientBox h3 {
+  padding: 1rem 0rem 0.5rem 0rem;
+  font-size: 1.2rem;
+}
+
+.appointmentPanel .patientBox_select {
+  background-color: #fff;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.appointmentPanel .patientBox_select input {
+  width: auto;
+  padding: 0rem;
+  margin: 0rem;
+  margin-right: 0.3rem;
+}
+
+.appointmentPanel .patientBox_select label {
+  font-size: 1rem;
+  font-weight: 900;
+  color: #167ddd;
+}
+
+.appointmentPanel .patientBox form h5 {
+  padding-bottom: 0rem;
+  color: #167ddd;
+  font-size: 1rem;
+}
+
+.appointmentPanel .patientBox form input {
+  margin-bottom: 0.5rem;
+}
+
+.appointmentPanel .patientBox form button {
+  margin-top: 0.5rem;
+  background-color: #167ddd;
+  margin-bottom: 0rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .appointmentPanel {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-column-gap: 4rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .appointmentPanel .scheduleBox {
+    margin-bottom: 0%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .appointmentPanel {
+    padding: 4rem 6rem;
+    grid-column-gap: 6rem;
+  }
+  .appointmentPanel .patientBox {
+    margin-top: 0rem;
+    padding-top: 0%;
+  }
+}
+/*# sourceMappingURL=bookDoctorAppointment.css.map */

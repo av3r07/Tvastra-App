@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/scss/theme.css">
+    <link rel="stylesheet" href="../assets/scss/doctorProfile.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <%- include("headerMain") %>
+    <div class="bannerPanel">
+        <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/contactUs.png" alt="">
+        <div><h1><%= user.doctorProfile.name %></h1>
+        <h4>Home/Doctor Profile</h4></div>
+    </div>
+        <div class="aboutPanel">
+                <div class="book">
+                    <img src="../assets/uploads/<%= user.doctorProfile.image %>" alt="">
+            <button>Book an appoinment</button>
+                </div>
+            <ul>
+                <h2><%= user.doctorProfile.name %></h2>
+            <p><%= user.doctorProfile.doctorData.description %></p>
+                <li class="list">
+                   <div> <i class="fas fa-award"></i>
+                    <h3>Specialization</h3>
+                    <i class="fas fa-chevron-down info-down" onclick="showInfo(1)" style="display:none;"></i>
+                    <i class="fas fa-chevron-up info-up" onclick="hideInfo(1)" style="display: block;"></i></div>
+                    <p id="slide1" style="display: block;"><%= user.doctorProfile.doctorData.specializations %></p>
+                </li>
+                <li class="list">
+                   <div> <i class="fas fa-stethoscope"></i>
+                    <h3>List Of Treatments</h3>
+                    <i class="fas fa-chevron-down info-down" onclick="showInfo(2)"></i>
+                    <i class="fas fa-chevron-up info-up" onclick="hideInfo(2)"></i></div>
+                    <p id="slide2"><%= user.doctorProfile.doctorData.treatments %></p>
+                </li>
+                <li class="list">
+                   <div> <i class="fas fa-hospital"></i>
+                    <h3>Work Experience</h3>
+                    <i class="fas fa-chevron-down info-down" onclick="showInfo(3)"></i>
+                    <i class="fas fa-chevron-up info-up" onclick="hideInfo(3)"></i></div>
+                    <p id="slide3"><%= user.doctorProfile.doctorData.experience %>+ years of experience</p>
+                </li>
+                <li class="list">
+                    <div><i class="fas fa-star"></i>
+                    <h3>Qualification</h3>
+                    <i class="fas fa-chevron-down info-down" onclick="showInfo(4)"></i>
+                    <i class="fas fa-chevron-up info-up" onclick="hideInfo(4)"></i></div>
+                    <p id="slide4"><%= user.doctorProfile.doctorData.qualifications %></p>
+                </li>
+                <li class="list">
+                   <div><i class="fas fa-trophy"></i>
+                    <h3>Awards</h3>
+                    <i class="fas fa-chevron-down info-down" onclick="showInfo(5)"></i>
+                    <i class="fas fa-chevron-up info-up" onclick="hideInfo(5)"></i></div>
+                    <p id="slide5"><%= user.doctorProfile.doctorData.awards %></p>
+                </li>
+                <li class="list">
+                    <div><i class="fas fa-map-marker-alt"></i>
+                    <h3>Location</h3>
+                    <i class="fas fa-chevron-down info-down" onclick="showInfo(6)"></i>
+                    <i class="fas fa-chevron-up info-up" onclick="hideInfo(6)"></i></div>
+                    <p id="slide6"><%= user.doctorProfile.city %>, <%= user.doctorProfile.state %></p>
+                </li>
+                <li class="list">
+                   <div><i class="fas fa-rupee-sign"></i>
+                    <h3>Avg Fees</h3>
+                    <i class="fas fa-chevron-down info-down" onclick="showInfo(7)"></i>
+                    <i class="fas fa-chevron-up info-up" onclick="hideInfo(7)"></i></div>
+                    <p id="slide7"><%= user.doctorProfile.doctorData.fees %></p>
+                </li>
+            </ul></div>
+            <script>
+                function showInfo(n){
+                    var slide = document.getElementById("slide"+n);
+                    var down = document.getElementsByClassName("info-down");
+                    var up = document.getElementsByClassName("info-up");
+                    
+                    down[n-1].style.display = "none";
+                    up[n-1].style.display = "block";
+                    slide.style.display = "block";
+
+}
+
+function hideInfo(n){
+    var slide = document.getElementById("slide"+n);
+    var down = document.getElementsByClassName("info-down");
+    var up = document.getElementsByClassName("info-up");
+    
+    up[n-1].style.display = "none";
+    down[n-1].style.display = "block"
+    slide.style.display = "none";
+}
+            </script>
+    <div class="container footerHead">
+        <div><h2>Need Help?</h2>
+        <p>Just let us know. We will be happy to assist you.</p></div>
+        <Button onclick="location.href='/query'">Submit your query</Button>
+    </div>
+    <%- include("footer") %>
+    </div> 
+</body>
+</html>

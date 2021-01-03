@@ -1,0 +1,109 @@
+.appointmentPanel {
+  background-color: #9cbfda;
+  text-align: center;
+  padding: 7rem 2rem 1rem 2rem;
+}
+
+.appointmentPanel .appointmentForm {
+  -webkit-box-shadow: 0px 0px 10px black;
+          box-shadow: 0px 0px 10px black;
+  background-color: white;
+}
+
+.appointmentPanel .appointmentForm h3 {
+  padding: 1rem 0rem 0rem 0rem;
+  color: #0173b2;
+}
+
+.appointmentPanel .appointmentForm form {
+  text-align: left;
+  padding: 0rem 1rem;
+}
+
+.appointmentPanel .appointmentForm form div {
+  margin-bottom: 1.5rem;
+}
+
+.appointmentPanel .appointmentForm form div h2 {
+  font-size: 1.1rem;
+  font-weight: 100;
+  padding-bottom: 0.5rem;
+}
+
+.appointmentPanel .appointmentForm form textarea {
+  width: 90%;
+  padding: 1rem 5%;
+}
+
+.appointmentPanel .appointmentForm form textarea:focus {
+  outline-color: #9cbfda;
+}
+
+.appointmentPanel .appointmentForm form #radio div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0rem;
+  margin-bottom: 0.5rem;
+}
+
+.appointmentPanel .appointmentForm form #radio div input {
+  width: auto;
+  height: auto;
+  background-color: #0173b2;
+  padding: 0%;
+}
+
+.appointmentPanel .appointmentForm form #radio div label {
+  padding-left: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.appointmentPanel .appointmentForm form .book-btn {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+  letter-spacing: 3px;
+}
+
+.appointmentPanel .appointmentForm form .book-btn i {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  -webkit-transform: translate(-5%, -50%);
+          transform: translate(-5%, -50%);
+}
+
+.appointmentPanel h4 {
+  padding-top: 7rem;
+  font-weight: 900;
+  color: black;
+}
+
+@media only screen and (min-width: 768px) {
+  .appointmentPanel {
+    padding: 7rem 15rem 1.5rem 15rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .appointmentPanel {
+    padding: 7rem 30rem 2rem 30rem;
+  }
+  .appointmentPanel .appointmentForm form {
+    padding: 0rem 2rem;
+  }
+  .appointmentPanel .appointmentForm form div h2 {
+    font-size: 1.3rem;
+  }
+  .appointmentPanel .appointmentForm form #radio label {
+    font-size: 1rem;
+  }
+  .appointmentPanel .appointmentForm h3 {
+    padding: 2rem 0rem 1rem 0rem;
+  }
+}
+/*# sourceMappingURL=appointment.css.map */

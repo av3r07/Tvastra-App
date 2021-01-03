@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('links') %>
+        <link rel="stylesheet" href="../assets/scss/appointmentConfirmation.css">
+    </head>
+    <body>
+        <%- include('headerMain') %>
+        <div class="container appointmentPanel">
+            <div class="scheduleBox">
+                <div class="scheduleBox_header">
+                    <h3>In Clinic Appointment</h3>
+                </div>
+                <div class="scheduleBox_info">
+                    <h4><i class="far fa-calendar-plus"></i><%= user.appointmentDate %></h4>
+                    <h4><i class="far fa-clock"></i><%= user.appointmentTime %></h4>
+                    <a href="/doctor">Change Date and Time</a>
+                    <div class="doctorInfo">
+                        <div class="doctorImage"><img src="../assets/uploads/<%= user.appointmentDoctor.image %>" alt=""></div>
+                        <div class="doctorDetails">
+                            <span><%= user.appointmentDoctor.name %></span>
+                            <span><%= user.appointmentHospital %></span>
+                            <span><%= user.appointmentDoctor.doctorData.specializations %></span>
+                            <span><%= user.appointmentDoctor.doctorData.qualifications %></span>
+                        </div>
+                    </div>                    
+                    <div class="hospital_logo">
+                        <img src="../assets/images/Hospital-512 (1).webp" alt="">
+                        <span><%= user.appointmentHospital %></span>
+                    </div>
+                </div>
+            </div>
+            <div class="patientBox">
+                <div class="patientBox_header">
+                    <h3><i class="fas fa-check-circle"></i>Appointment Confirmed</h3>
+                </div>
+                <h3>We have sent you sms with details</h3>
+                <div class="patientBox_info">
+                    <h5>Patient's Name</h5>
+                    <h4><%= user.name %></h4>
+                    <h5>Mobile Number</h5>
+                    <h4><%= user.mobile %></h4>
+                </div>
+                <div class="patientBox_confirm">
+                   <form action="/cancelAppointment/<%= user.appointmentId %>/<%= user.appointmentSubSchedule %>" method="POST"><button>Cancel Appointment</button></form>
+                    <button id="reschedule_btn" onclick="location.href='/rescheduleAppointment/<%= user.appointmentId %>'">Reschedule Appointment</button>
+                </div>
+            </div>
+        </div>
+        <%- include('footer') %>
+    </body>
+</html>

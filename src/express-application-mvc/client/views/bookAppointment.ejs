@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/css/reset.css">
+        <link rel="stylesheet" href="../assets/scss/theme.css">
+        <link rel="stylesheet" href="../assets/scss/bookAppointment.css" type="text/css">      
+    </head>
+<body> 
+
+    <div class="appointmentPanel">
+        <%- include("headerMain") %>
+        <%- include("toaster") %>
+    <div class="appointmentForm">
+        <h3>Book an Appoinment</h3> 
+        <hr>
+        <form action="/appointment">
+            <div>
+            <h2>Select Appointment Date*</h2>
+        <input type="date" id="date" value="dd-mm-yyyy" id="date"></div>
+        <div id="radio">
+        <h2>Time Interval*</h2>
+        <div><input type="radio" id="morning" name="time">
+        <label for="morning">Morning</label></div>
+        <div><input type="radio" id="afternoon" name="time">
+        <label for="afternoon">Afternoon</label></div>
+        <div style="margin-bottom: 0rem;"><input type="radio" id="evening" name="time">
+        <label for="evening">Evening</label></div></div>
+        <div id="radio">
+        <h2>Appoinment Status/Urgency*</h2>
+       <div> <input type="radio" id="routine" name="appoinment">
+        <label for="routine">Routine Check-up</label></div>
+        <div><input type="radio" id="non-urgent" name="appoinment">
+        <label for="non-urgent">Non Urgent Check-up</label></div>
+        <div><input type="radio" id="urgent" name="appoinment">
+        <label for="urgent">Urgent Check-up</label></div>
+        <div style="margin-bottom: 0rem;"><input type="radio" id="surgiacal" name="appoinment">
+        <label for="surgical">Surgical Appoinment</label></div>
+        </div>
+        <div id="file">
+        <h2>Upload Previous Health Record*</h2>
+        <input type="file" value="Choose File" style="border: 0px; padding: 0rem;">
+        </div>
+        <div>        
+        <h2>Appoinment Details</h2>
+        <textarea name="" id="" cols="40" rows="4"></textarea></div>
+        <button class="book-btn">BOOK APPOINMENT<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+        </form>
+    </div>
+    <h4 class="copyright">All Rights Reserved. &copy; tvastra 2018</h4>
+</div>
+    
+</body>
+</html>

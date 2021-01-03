@@ -1,0 +1,144 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/scss/theme.css">
+    <link rel="stylesheet" href="../assets/scss/hospital.css">
+</head>
+<body>
+    <%- include("headerMain") %>
+    <div class="container bannerPanel">
+       <div><h4>Hospitals in
+        <span>Delhi</span></h4></div> </div>    
+        <div class="container nav">
+            <h4>Home / Doctor List</h4>
+            <form>
+                <select name="sort" id="sort">
+                    <option value="sort" disabled selected>Sort by</option>
+                    <option value="experience">Experience</option>
+                  <option value="department">Department</option>
+                  <option value="location">Location</option>
+                  <option value="specialist in">Specialist in</option>
+                </select>
+            </form>
+        </div>
+        <div class="container hospitalPanel">
+            <div class="filters">
+                <button>Filter By</button>
+                <ul id="selected-filters"></ul>
+                <div class="filter-list">
+                    
+                    <h4 class="filter-head">Location<i class="fa fa-search" aria-hidden="true"></i></h4>
+                  <ul> 
+                    <li><input type="checkbox" id="location1" onclick="input_show(1)"><label for="location1">DLF Cyber City</label></li>
+                    <li><input type="checkbox" id="location2" onclick="input_show(2)"><label for="location2">Dwarka</label></li>                    
+                    <li><input type="checkbox" id="location3" onclick="input_show(3)"><label for="location3">Lajpat Nagar</label></li>                    
+                    <li><input type="checkbox" id="location4" onclick="input_show(4)"><label for="location4">Palam Vihar</label></li>                    
+                    <li><input type="checkbox" id="location5" onclick="input_show(5)"><label for="location5">Punjabi Bagh</label></li>
+                    <li><input type="checkbox" id="location6" onclick="input_show(6)"><label for="location6">Pusa Road</label></li> </ul>
+                    <span>+ Show More</span>
+            </div>
+                <div class="filter-list">
+                    
+                  <h4 class="filter-head">Treatment <i class="fa fa-search" aria-hidden="true"></i></h4>
+                  <ul>  
+                    <li><input type="checkbox" id="treat1" onclick="input_show(7)"><label for="treat1">Multi Organ Transplant</label></li>
+                    <li><input type="checkbox" id="treat2" onclick="input_show(8)"><label for="treat2">Orthopadic Surgery</label></li>
+                    <li><input type="checkbox" id="treat3" onclick="input_show(9)"><label for="treat3">Infertility Treatment</label></li>
+                    <li><input type="checkbox" id="treat4" onclick="input_show(10)"><label for="treat4">Dentisry</label></li>
+                    <li><input type="checkbox" id="treat5" onclick="input_show(11)"><label for="treat5">Cardiology</label></li>
+                    <li><input type="checkbox" id="treat6" onclick="input_show(12)"><label for="treat6"">Cancer</label></li></ul>
+                    <span>+ Show More</span>
+                </div>
+                <div class="filter-list">
+                    
+                    <h4 class="filter-head">Department <i class="fa fa-search" aria-hidden="true"></i></h4>
+                       <ul>
+                    <li><input type="checkbox" id="dept1" onclick="input_show(13)"><label for="dept1">Neurology</label> </li>                 
+                    <li><input type="checkbox" id="dept2" onclick="input_show(14)"><label for="dept2">Cardiology</label></li>               
+                    <li><input type="checkbox" id="dept3" onclick="input_show(15)"><label for="dept3">Orhthopedics</label></li>                    
+                    <li><input type="checkbox" id="dept4" onclick="input_show(16)"><label for="dept4">Cancer</label></li>                    
+                    <li><input type="checkbox" id="dept5" onclick="input_show(17)"><label for="dept5">Psycology</label></li>                   
+                    <li><input type="checkbox" id="dept6" onclick="input_show(18)"><label for="dept6">Physiotherapy</label></li>
+                    </ul>
+                    <span>+ Show More</span>
+                </div>
+                </div>
+                <script src="../assets/scripts/filter.js"></script>
+        <div class="hospitalList">
+            <div class="hospital">
+           <div class="hospital-info"> <h3>Apollo hospital</h3>
+           <ul> <li><i class="fa fa-map-marker" aria-hidden="true"></i>Delhi Mathura Road, Sarita Vihar, Delhi-110076</li>
+            <li><i class="fa fa-bed" aria-hidden="true"></i> 100 beds</li>
+            <li><i class="fa fa-stethoscope" aria-hidden="true"></i>Famous Treatments</li></ul>
+            <ol>
+                <li>Multi Organ Transplant</li>
+                <li>orhthopedic Surgery</li>
+                <li>Infertility Treatment</li>
+                <li>Dentistry</li>
+                <li>Cardiology</li>
+                <li>Cancer</li>
+                <li>+40 more</li></ol>
+            <button>Call Now</button></div>
+             <div class="hospital-image"><img src="../assets/images/indraprastha-apollo-hospitals-sarita-vihar-delhi-multispeciality-hospitals-i9a1q.jpg" alt=""></div>
+        </div>
+        <div class="hospital">
+            <div class="hospital-info"><h3>Rockland Hospital</h3>
+            <ul><li><i class="fa fa-map-marker" aria-hidden="true"></i>273, Maharaja Agrasen Marg, Naharpur, Naharpur Village, Rohini, Delhi, 110085</li>
+            <li><i class="fa fa-bed" aria-hidden="true"></i> 50 beds</li>
+            <li><i class="fa fa-stethoscope" aria-hidden="true"></i>Famous Treatments</li></ul>
+            <ol>
+                <li>Multi Organ Transplant</li>
+                <li>orhthopedic Surgery</li>
+                <li>Infertility Treatment</li>
+                <li>Dentistry</li>
+                <li>Cardiology</li>
+                <li>Cancer</li>
+                <li>+10 more</li></ol>
+            <button>Call Now</button></div>
+             <div class="hospital-image"><img src="../assets/images/rockland.jpg" alt=""></div>
+        </div>
+        <div class="hospital">
+           <div class="hospital-info"> <h3>Fortis Hospital</h3>
+           <ul><li><i class="fa fa-map-marker" aria-hidden="true"></i>B-22, Vishwakarma Rd, Rasoolpur, Nawada, Industrial Area, Sector 62, Noida, Uttar Pradesh 2013016</li>
+            <li><i class="fa fa-bed" aria-hidden="true"></i> 200 beds</li>
+            <li><i class="fa fa-stethoscope" aria-hidden="true"></i>Famous Treatments</li></ul>
+            <ol>
+            <li>Multi Organ Transplant</li>
+            <li>orhthopedic Surgery</li>
+            <li>Infertility Treatment</li>
+            <li>Dentistry</li>
+            <li>Cardiology</li>
+            <li>Cancer</li>
+            <li>+40 more</li></0l>
+            <button>Call Now</button></div>
+             <div class="hospital-image"><img src="../assets/images/fortis.jpg" alt=""></div>
+        </div>
+        <div class="hospital">
+            <div class="hospital-info"><h3>Primus Super Speciality Hospital</h3>
+            <ul><li><i class="fa fa-map-marker" aria-hidden="true"></i>2, Chandragupta Marg, Chanakyapuri, New Delhi, Delhi 110021 </li>
+            <li><i class="fa fa-bed" aria-hidden="true"></i> 100 beds</h5>
+            <li><i class="fa fa-stethoscope" aria-hidden="true"></i>Famous Treatments</li></ul>
+                <ol>
+                    <li>Multi Organ Transplant</li>
+                    <li>orhthopedic Surgery</li>
+                    <li>Infertility Treatment</li>
+                    <li>Dentistry</li>
+                    <li>Cardiology</li>
+                    <li>Cancer</li>
+                    <li>+40 more</li></ol>
+            <button>Call Now</button></div>
+             <div class="hospital-image"><img src="../assets/images/primus.jpg" alt=""></div>
+        </div>
+    </div></div>
+        <div class="container footerHead">
+            <div><h2>Need Help?</h2>
+            <p>Just let us know, we will be happy to assist you</p></div>
+            <button onclick="location.href='/query'">Submit your enquiry</button>
+        </div>
+        <%- include("footer") %>
+</body>
+</html> 

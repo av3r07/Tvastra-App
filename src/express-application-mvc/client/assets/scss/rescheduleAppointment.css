@@ -1,0 +1,226 @@
+@media only screen and (min-width: 1024px) {
+  .appointmentSection {
+    -webkit-box-shadow: inset 0rem 0.5rem 1rem -0.5rem #dddfe2;
+            box-shadow: inset 0rem 0.5rem 1rem -0.5rem #dddfe2;
+  }
+  .appointmentSection .appointmentBox {
+    margin: 0% auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    border: 1px solid #999;
+    padding: 2rem;
+    padding-bottom: 0rem;
+  }
+  .appointmentSection .appointmentBox .doctorInfo h3 {
+    position: relative;
+    padding: 0rem;
+    color: #4297C9;
+  }
+  .appointmentSection .appointmentBox .doctorInfo h3::before {
+    content: "";
+    width: 1.8rem;
+    height: 2px;
+    background-color: #4297C9;
+    position: absolute;
+    top: 50%;
+    left: -2rem;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .appointmentSection .appointmentBox .doctorInfo ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 1.5rem 0rem;
+  }
+  .appointmentSection .appointmentBox .doctorInfo ul li {
+    font-size: 0.9rem;
+    margin-right: 3rem;
+  }
+  .appointmentSection .appointmentBox .doctorInfo ul li i {
+    color: #4297C9;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+  }
+  .appointmentSection .appointmentBox .doctorInfo ul li:nth-child(3) {
+    margin-right: 0%;
+  }
+  .appointmentSection .appointmentBox .reschedul-btn {
+    margin-bottom: 2rem;
+  }
+  .appointmentSection .appointmentBox .reschedul-btn button {
+    width: auto;
+    padding: 0.5rem 1rem;
+    margin: 0rem auto;
+    display: block;
+    font-size: 0.8rem;
+  }
+  .appointmentSection .appointmentBox .scheduleBox {
+    display: none;
+    margin: 0rem 0rem 1.5rem 0rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .appointmentSection .appointmentBox .scheduleBox i {
+    font-size: .7rem;
+    color: #4297C9;
+    background-color: #D3D3D3;
+    padding: 0.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .appointmentSection .appointmentBox .scheduleBox ul {
+    margin: 0rem 1rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .appointmentSection .appointmentBox .scheduleBox ul li {
+    padding-bottom: 0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .appointmentSection .appointmentBox .scheduleBox ul li h3, .appointmentSection .appointmentBox .scheduleBox ul li h5 {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0%;
+  }
+  .appointmentSection .appointmentBox .scheduleBox ul li h5 {
+    color: #4297C9;
+  }
+  .appointmentSection .appointmentBox .scheduleBox ul li h3 {
+    color: #999;
+  }
+  .appointmentSection .appointmentBox .scheduleBox ul li:hover {
+    border-bottom: 1px solid #999;
+    cursor: pointer;
+  }
+  .appointmentSection .appointmentBox .scheduleBox ul li:nth-child(4), .appointmentSection .appointmentBox .scheduleBox ul li:nth-child(5), .appointmentSection .appointmentBox .scheduleBox ul li:nth-child(6), .appointmentSection .appointmentBox .scheduleBox ul li:nth-child(7) {
+    display: none;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox {
+    display: none;
+    margin: 0rem -2rem;
+    max-width: 40rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .shift {
+    display: -ms-grid;
+    display: grid;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #999;
+    -ms-grid-columns: 2.5fr 8fr;
+        grid-template-columns: 2.5fr 8fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .shift h4 {
+    padding: 0%;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .shift h4 i {
+    padding-right: 0.5rem;
+    color: #2A2D3E;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .shift button {
+    width: auto;
+    background-color: #4297C9;
+    margin: 0rem auto;
+    display: block;
+    font-size: 0.9rem;
+    padding: 0.75rem;
+    border-radius: 6px;
+    -webkit-box-shadow: 5px 5px 5px #D3D3D3;
+            box-shadow: 5px 5px 5px #D3D3D3;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .shift ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .shift ul li {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .shift ul .violet {
+    color: purple;
+    border: 1px solid purple;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .shift ul .indigo {
+    color: indigo;
+    border: 1px solid indigo;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .shift ul .blue {
+    color: blue;
+    border: 1px solid blue;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .shift ul .green {
+    color: green;
+    border: 1px solid green;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .shift ul .yellow {
+    color: #b4b433;
+    border: 1px solid #b4b433;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .shift ul .orange {
+    color: orange;
+    border: 1px solid orange;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .shift ul .red {
+    color: red;
+    border: 1px solid red;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .hospitals {
+    padding-top: 0.5rem;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .hospitals h5 {
+    color: green;
+    font-size: 1rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .hospitals .violet {
+    color: purple;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .hospitals .indigo {
+    color: indigo;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .hospitals .blue {
+    color: blue;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .hospitals .green {
+    color: green;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .hospitals .yellow {
+    color: #b4b433;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .hospitals .orange {
+    color: orange;
+  }
+  .appointmentSection .appointmentBox .subScheduleBox .hospitals .red {
+    color: red;
+  }
+}
+/*# sourceMappingURL=rescheduleAppointment.css.map */

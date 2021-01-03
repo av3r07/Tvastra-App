@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/scss/theme.css">
+    <link rel="stylesheet" href="../assets/scss/FAQ.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <%- include("headerMain") %>
+    <div class="bannerPanel">
+        <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/contactUs.png" alt="">
+        <div><h1>FAQ</h1>
+        <h5>Home/FAQ</h5></div>
+    </div>
+        <div class="container aboutPanel">
+            <ul>
+                <li class="list">
+                    <div><h3>How do I make Payments?</h3>
+                    <i class="fas fa-chevron-down info-down" onclick="showInfo(1)"></i>
+                    <i class="fas fa-chevron-up info-up" onclick="hideInfo(1)"></i>
+                </div>
+                </li>
+               <li class="list">
+                    <div><h3>There is not enoughh money in my Portea Wallet for making a payment. What do I do?</h3>
+                        <i class="fas fa-chevron-down info-down" onclick="showInfo(2)"></i>
+                        <i class="fas fa-chevron-up info-up" onclick="hideInfo(2)"></i></div>
+                </li>
+                <li class="list">
+                    <div><h3>Can I transfer balance in Portea Wallet balance to another use?</h3>
+                        <i class="fas fa-chevron-down info-down" onclick="showInfo(3)"></i>
+                        <i class="fas fa-chevron-up info-up" onclick="hideInfo(3)"></i></div>
+                </li>
+                <li class="list">
+                   <div> <h3>Is Portea Money same as Portea Wallet?</h3>
+                    <i class="fas fa-chevron-down info-down" onclick="showInfo(4)"></i>
+                    <i class="fas fa-chevron-up info-up" onclick="hideInfo(4)"></i></div>
+                </li>
+                <li class="list">
+                    <div><h3>Refund</h3>
+                        <i class="fas fa-chevron-down info-down" onclick="showInfo(5)"></i>
+                        <i class="fas fa-chevron-up info-up" onclick="hideInfo(5)"></i></div>
+                </li>
+                <li class="list">
+                    <div><h3>What is a Family ID?</h3>
+                        <i class="fas fa-chevron-down info-down" onclick="showInfo(6)"></i>
+                        <i class="fas fa-chevron-up info-up" onclick="hideInfo(6)"></i></div>
+                </li>
+                <li class="list">
+                    <div><h3>Who can be added as Family?</h3>
+                        <i class="fas fa-chevron-down info-down" onclick="showInfo(7)"></i>
+                        <i class="fas fa-chevron-up info-up" onclick="hideInfo(7)"></i></div>
+                </li>
+            </ul>
+        </div>
+        <script src="../assets/scripts/questionInfo.js"></script>
+        <div class="container footerHead">
+            <div><h2>Need Help?</h2>
+            <p>Just let us know. We will be happy to assist you.</p></div>
+            <Button onclick="location.href='/query'">Submit your query</Button>
+        </div>
+    <%- include("footer") %>
+</body>
+</html>

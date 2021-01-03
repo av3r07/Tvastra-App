@@ -1,0 +1,910 @@
+.plan_section {
+	position: relative;
+	background-image: linear-gradient(#9ac5dd, rgba(154, 197, 221, 0));
+	#background_img {
+		position: absolute;
+		width: 100%;
+		height: 400px;
+		object-fit: cover;
+		left: 0%;
+		top: 0%;
+	}
+	.plan_section_plus {
+		position: relative;
+		z-index: 1;
+		background-color:#4297C9;
+		color: white;
+		letter-spacing: 2px;
+		padding: 0.5rem;
+		font-size: .7rem;
+		border-radius: 4px;
+	}
+	h1 {
+		position: relative;
+		z-index: 1;
+		padding-top: 1rem;
+	}
+	p {
+		position: relative;
+		z-index: 1;
+		padding-bottom: 1.5rem;
+	}
+	.plans {
+		position: relative;
+		z-index: 1;
+		background-color: white;
+		padding: 2rem .5rem;
+		padding-bottom: 0rem;
+		border-radius: 10px;
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+		.plansList {
+			border-top: 1px solid #D3D3D3;
+			#advanced {
+				background-image: linear-gradient(#9ac5dd, rgba(154, 197, 221, 0));
+				position: relative;
+				margin-top: 1rem;
+				padding-bottom: 1rem;
+				#popular {
+					position: absolute;
+					color: white;
+					font-size: .7rem;
+					font-weight: 100;
+					border-radius: .7rem;
+					padding: .3rem 0.5rem;
+					background-color: #008000;
+					top: -0.7rem;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+				h3 {
+					padding: 1.5rem 0rem;
+				}
+				.plansBenefits {
+					margin: 0rem 3rem;
+					padding: 1.5rem .5rem;
+					border-top: 1px solid #999;
+				}
+				.buy_plan {
+					h2 {
+						i {
+							font-weight: 100;
+						}
+						span {
+							font-size: 1rem;
+						}
+					}
+					h4 {
+						color: #4297C9;
+					}
+					button {
+						background-color:#4297C9;
+						width: auto;
+						padding: 0.5rem;
+						border-radius: 4px;
+						margin-top: .5rem;
+					}
+				}
+			}
+			#basic {
+				padding-bottom: 1rem;
+				h3 {
+					padding: 1.5rem 0rem;
+				}
+				.plansBenefits {
+					margin: 0rem 3rem;
+					padding: 1.5rem .5rem;
+					border-top: 1px solid #999;
+				}
+				.buy_plan {
+					h2 {
+						i {
+							font-weight: 100;
+						}
+						span {
+							font-size: 1rem;
+						}
+					}
+					h4 {
+						color:#4297C9;
+					}
+					button {
+						background-color: #4297C9;
+						width: auto;
+						padding: 0.5rem;
+						border-radius: 4px;
+						margin-top: .5rem;
+					}
+				}
+			}
+			#comprehensive {
+				padding-bottom: 1rem;
+				h3 {
+					padding: 1.5rem 0rem;
+				}
+				.plansBenefits {
+					margin: 0rem 3rem;
+					padding: 1.5rem .5rem;
+					border-top: 1px solid #999;
+				}
+				.buy_plan {
+					h2 {
+						i {
+							font-weight: 100;
+						}
+						span {
+							font-size: 1rem;
+						}
+					}
+					h4 {
+						color: #4297C9;
+					}
+					button {
+						background-color:#4297C9;
+						width: auto;
+						padding: 0.5rem;
+						border-radius: 4px;
+						margin-top: .5rem;
+					}
+				}
+			}
+		}
+	}
+}
+.review_section {
+	#rating_section {
+		#review_per_star {
+			padding: 1rem 20%;
+			text-align: left;
+			h3 {
+				position: relative;
+				color: #4297C9;
+				font-size: 0.8rem;
+				&::before {
+					position: absolute;
+					content: "";
+					width: 90%;
+					left: 10%;
+					height: 0.8rem;
+					border-radius: 0.8rem;
+					background-color: #CCCCCC;
+				}
+			}
+			#review5 {
+				&::after {
+					z-index: 1;
+					position: absolute;
+					content: "";
+					width: 70%;
+					left: 10%;
+					height: 0.8rem;
+					border-radius: 0.8rem;
+					background-color: #4297C9;
+				}
+			}
+			#review4 {
+				&::after {
+					z-index: 1;
+					position: absolute;
+					content: "";
+					width: 40%;
+					left: 10%;
+					height: 0.8rem;
+					border-radius: 0.8rem;
+					background-color: #4297C9;
+				}
+			}
+			#review3 {
+				&::after {
+					z-index: 1;
+					position: absolute;
+					content: "";
+					width: 25%;
+					left: 10%;
+					height: 0.8rem;
+					border-radius: 0.8rem;
+					background-color: #4297C9;
+				}
+			}
+			#review2 {
+				&::after {
+					z-index: 1;
+					position: absolute;
+					content: "";
+					width: 25%;
+					left: 10%;
+					height: 0.8rem;
+					border-radius: 0.8rem;
+					background-color: #4297C9;
+				}
+			}
+			#review1 {
+				&::after {
+					z-index: 1;
+					position: absolute;
+					content: "";
+					width: 10%;
+					left: 10%;
+					height: 0.8rem;
+					border-radius: 0.8rem;
+					background-color: #4297C9;
+				}
+			}
+		}
+		#stars {
+			color: #4297C9;
+			h4 {
+				color: #4297C9;
+			}
+			h1 {
+				padding-top: 1rem;
+				padding-bottom: 0.5rem;
+				font-size: 3.5rem;
+			}
+			div {
+				padding-bottom: 0.5rem;
+				i {
+					font-size: 0.8rem;
+					padding-right: 0.2rem;
+				}
+			}
+		}
+	}
+	#features_section {
+		padding-top: 1rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1rem;
+		li {
+			padding-bottom: 1rem;
+		}
+		i {
+			color: #4297C9;
+			padding-bottom: 0.5rem;
+			font-size: 2rem;
+		}
+		h3 {
+			color: #4297C9;
+			padding-bottom: 0.5rem;
+		}
+		h4 {
+			color: #4297C9;
+			padding-bottom: 0.5rem;
+			font-weight: 100;
+			padding-bottom: 0rem;
+		}
+	}
+}
+.benefits_section {
+	h4 {
+		position: relative;
+		padding-bottom: 2.5rem;
+		&::before {
+			position: absolute;
+			content: "";
+			height: 0.25rem;
+			border-radius: 0.25rem;
+			width: 14rem;
+			background-color: #CCE3F0;
+			left: 50%;
+			top: 1.5rem;
+			transform: translateX(-50%);
+		}
+	}
+	.benefitsList {
+		.consultation {
+			padding-bottom: 1rem;
+			li {
+				display: flex;
+				text-align: left;
+				i {
+					padding-right: 0.5rem;
+					color: #80B9D8;
+					font-size: 1rem;
+				}
+			}
+		}
+		.hospitals {
+			ul {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				li {
+					padding: 1rem;
+					height: 4.5rem;
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: contain;
+					}
+				}
+			}
+			h4 {
+				padding-top: 1rem;
+				padding-bottom: 1rem;
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+}
+.advantages_section {
+	div {
+		padding-bottom: 2rem;
+		ol {
+			li {
+				display: flex;
+				text-align: left;
+				i {
+					padding-right: 0.5rem;
+					color: #80B9D8;
+					font-size: 1rem;
+				}
+			}
+		}
+		img {
+			width: 100%;
+			height: 250px;
+			border-radius: 1rem;
+			box-shadow: 0px 0px 10px #999;
+		}
+		&:nth-child(3) {
+			padding-bottom: 0rem;
+		}
+	}
+}
+.tests_section {
+	h3 {
+		padding-bottom: 2rem;
+	}
+	ol {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 10px;
+		li {
+			padding: 2rem 1rem 0.5rem 1rem;
+			align-items: center;
+			box-shadow: 0px 0px 10px #999;
+			display: grid;
+			grid-template-rows: 1fr 1fr 1fr;
+			img {
+				width: 3rem;
+				height: 3rem;
+			}
+			h3 {
+				padding-bottom: 0rem;
+
+				font-size: 0.9rem;
+			}
+			h4 {
+				padding-bottom: 0rem;
+			}
+		}
+	}
+	#dots {
+		padding-top: 1.5rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 0.5rem;
+		i {
+			font-size: 0.6rem;
+		}
+	}
+}
+.customer_review_section {
+	.customer_review_section_header{
+		display: flex;
+		align-items: center;
+		margin-bottom: 1rem;
+		h2{
+			padding-bottom: 0rem;
+			padding-right: 0.5rem;
+		}
+		span {
+			font-weight: 100;
+			padding: 0.25rem;
+			border-radius: 4px;
+			background-color: #4297C9;
+			letter-spacing: 2px;
+			color: white;
+			font-size: 0.7rem;
+		}
+	}
+	.customerReview {
+		div {
+			margin-bottom: 1rem;
+			padding: 1rem;
+			box-shadow: 0px 0px 10px #999;
+			p {
+				font-weight: 900;
+				text-align: left;
+			}
+			ul {
+				display: flex;
+				flex-direction: row;
+				li {
+					text-align: left;
+					img {
+						width: 4rem;
+						height: 4rem;
+						border-radius: 4rem;
+					}
+					h3 {
+						padding-left: 1rem;
+						font-size: 1rem;
+					}
+					h4 {
+						margin-left: 1rem;
+						background-color: #CCE3F0;
+						border-radius: 0.5rem;
+						font-size: 0.6rem;
+						color: #0173B2;
+						padding: 0.5rem;
+					}
+				}
+			}
+			&:nth-child(3) {
+				margin-bottom: 0rem;
+			}
+		}
+	}
+}
+.faq_section {
+	ul{
+		h3 {
+			color: #4297C9;
+			padding-bottom: 0rem;
+			text-align: left;
+			font-size: 1rem;
+		}
+		i {
+			color: #4297C9;
+			padding-bottom: 0rem;
+			text-align: left;
+		}
+		li {
+			p{
+				padding: 1rem;
+				background-color: #E5F1F7;
+				font-weight: 100;
+				border-top: 1px dashed #2a2d3e;
+				border-bottom: 1px dashed #2a2d3e;
+			}
+			div{
+			padding: 1rem 0rem;
+			display: grid;
+			grid-template-columns: 90% 10%;
+			align-items: center;
+			.fa-chevron-down {
+				font-size: .6rem;
+				text-align: right;
+				padding: .4rem;
+				margin-left: auto;
+				cursor: pointer;
+				background-color: #E5F1F7;
+				border-radius: 50%;
+			}
+			.fa-chevron-up {
+				display: none;
+				cursor: pointer;
+				font-size: .6rem;
+				text-align: right;
+				padding: .4rem;
+				margin-left: auto;
+				background-color: #E5F1F7;
+				border-radius: 50%;
+			}
+		}}
+	}
+}
+@media only screen and (min-width: 768px) {
+	.plan_section {
+		text-align: left;
+		.plan_section_plus{
+			font-size: 0.8rem;
+		}
+		p {
+			padding-bottom: 4rem;
+		}
+		.plans {
+			text-align: center;
+			p {
+				padding-bottom: 2rem;
+			}
+			.plansList {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				#advanced {
+					margin-top: 0rem;
+					padding: 0rem;
+					padding-bottom: 1rem;
+					.plansBenefits {
+						margin: 0rem 1rem;
+					}
+				}
+				#basic {
+					margin-top: 0rem;
+					padding: 0rem;
+					padding-bottom: 1rem;
+					.plansBenefits {
+						margin: 0rem 1rem;
+					}
+				}
+				#comprehensive {
+					margin-top: 0rem;
+					padding: 0rem;
+					padding-bottom: 1rem;
+					.plansBenefits {
+						margin: 0rem 1rem;
+					}
+				}
+			}
+		}
+	}
+	.review_section {
+		#rating_section {
+			margin: 0rem 20%;
+			display: grid;
+			grid-template-columns: 40% 60%;
+			#review_per_star {
+				padding: 0rem;
+			}
+		}
+		#features_section {
+			margin-top: 2rem;
+			padding-top: 0rem;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			li {
+				padding: 0rem;
+				margin: 0rem;
+			}
+		}
+	}
+	.benefits_section {
+		h4 {
+			&:before {
+				width: 16rem;
+			}
+		}
+		.benefitsList {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-areas: "consult hosp";
+			grid-column-gap: 2rem;
+			.consultation {
+				text-align: left;
+				grid-area: consult;
+				padding-bottom: 0rem;
+			}
+			.hospitals {
+				grid-area: hosp;
+				h2 {
+					text-align: center;
+				}
+				h4 {
+					padding-bottom: 0rem;
+				}
+			}
+		}
+	}
+	.advantages_section {
+		.advantage_1 {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-areas: "img1 ol1";
+			grid-column-gap: 1rem;
+			ol {
+				grid-area: ol1;
+				text-align: left;
+			}
+			img {
+				grid-area: img1;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.advantage_3 {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-areas: "img3 ol3";
+			grid-column-gap: 1rem;
+			ol {
+				grid-area: ol3;
+				text-align: left;
+			}
+			img {
+				grid-area: img3;
+				height: 100%;
+				width: 100%;
+			}
+		}
+		.advantage_2 {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-areas: "ol2 img2";
+			grid-column-gap: 1rem;
+			ol {
+				grid-area: ol2;
+				text-align: left;
+			}
+			img {
+				grid-area: img2;
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+	.tests_section {
+		ol {
+			li {
+				img {
+					width: 4rem;
+					height: 4rem;
+				}
+				h3 {
+					font-size: 1rem;
+				}
+			}
+		}
+		#dots {
+			i {
+				font-size: 0.7rem;
+			}
+		}
+	}
+	.customer_review_section {
+		text-align: left;
+		.customerReview {
+			display: grid;
+			grid-gap: 1rem;
+			div {
+				margin-bottom: 0rem;
+			}
+		}
+	}
+	.faq_section {
+		text-align: left;
+		ul {
+			h3 {
+				font-size: 1.1rem;
+			}
+			li {
+				.fa-chevron-down {
+					font-size: .7rem;
+				}
+				.fa-chevron-up {
+					font-size: .7rem;
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width: 1024px) {
+	.plan_section { 
+		.plan_section_plus{
+			font-size: 1rem;
+			padding: 0.5rem 0.75rem;
+		}
+		h1{
+			padding-top: 2rem;
+		}
+		#background_img{
+			height: 470px;
+		}
+		.plans {
+			div {
+				.buy_plan {
+					margin-top: 2rem;
+				}
+			}
+			.plansList{
+				#basic,#advanced,#comprehensive{
+					.plansBenefits{
+						padding: 2rem 3rem;
+						h4{
+							padding-bottom: 1.5rem;
+						}
+					}
+				}
+			}
+		}
+	}
+	.review_section {
+		h2 {
+			text-align: center;
+		}
+		p {
+			text-align: center;
+			padding-left: 15%;
+			padding-right: 15%;
+		}
+		#rating_section {
+			margin: 2rem 25% 4rem 25%;
+			align-items: center;
+			li {
+				text-align: center;
+			}
+			#stars {
+				h1 {
+					font-size: 5rem;
+					padding-top: 0rem;
+				}
+				div {
+					i {
+						font-size: 1rem;
+					}
+				}
+			}
+			#review_per_star {
+				h3{
+					&::before {
+						height: 1rem;
+					}
+					font-size: 1rem;
+				}
+				#review1 {
+					&::after {
+						height: 1rem;
+					}
+				}
+				#review2 {
+					&::after {
+						height: 1rem;
+					}
+				}
+				#review3 {
+					&::after {
+						height: 1rem;
+					}
+				}
+				#review4 {
+					&::after {
+						height: 1rem;
+					}
+				}
+				#review5 {
+					&::after {
+						height: 1rem;
+					}
+				}
+			}
+		}
+		#features_section {
+			text-align: center;
+		}
+	}
+	.benefits_section {
+		h4 {
+			text-align: center;
+			font-size: 1.2rem;
+			padding-bottom: 4rem;
+			&:before {
+				width: 22rem;
+				top: 2rem;
+			}
+		}
+		.benefitsList {
+			grid-template-columns: repeat(5, 1fr);
+			grid-template-areas: "consult consult consult hosp hosp";
+			grid-gap: 4rem;
+			.consultation {
+				grid-area: consult;
+				li {
+					i {
+						font-size: 1.5rem;
+					}
+				}
+			}
+			.hospitals {
+				grid-area: hosp;
+			}
+		}
+	}
+	.advantages_section {
+		.advantage_1 {
+			margin-bottom: 2rem;
+			grid-template-columns: repeat(10, 1fr);
+			grid-template-areas: "img1 img1 img1 img1 ol1 ol1 ol1 ol1 ol1 ol1";
+			grid-column-gap: 5rem;
+			ol {
+				grid-area: ol1;
+				li {
+					i {
+						font-size: 1.5rem;
+					}
+				}
+			}
+			img {
+				grid-area: img1;
+			}
+		}
+		.advantage_3 {
+			grid-template-columns: repeat(10, 1fr);
+			grid-template-areas: "img3 img3 img3 img3 ol3 ol3 ol3 ol3 ol3 ol3";
+			grid-column-gap: 5rem;
+			ol {
+				grid-area: ol3;
+				li {
+					i {
+						font-size: 1.5rem;
+					}
+				}
+			}
+			img {
+				grid-area: img3;
+			}
+		}
+		.advantage_2 {
+			margin-bottom: 2rem;
+			grid-template-columns: repeat(10, 1fr);
+			grid-template-areas: "ol2 ol2 ol2 ol2 ol2 ol2 img2 img2 img2 img2";
+			grid-column-gap: 5rem;
+			ol {
+				grid-area: ol2;
+				li {
+					i {
+						font-size: 1.5rem;
+					}
+				}
+			}
+			img {
+				grid-area: img2;
+			}
+		}
+	}
+	.tests_section {
+		ol {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-gap: 1rem;
+		}
+		#dots {
+			text-align: center;
+			i {
+				font-size: 0.8rem;
+			}
+		}
+	}
+	.customer_review_section {
+		text-align: left;
+		.customer_review_section_header{
+			margin-bottom: 2rem;
+			span {
+				font-size: 1rem;
+				padding: 0.5rem;
+			}
+		}
+		.customerReview {
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-gap: 1rem;
+			div {
+				ul {
+					li {
+						h3 {
+							font-size: 1.2rem;
+						}
+						h4 {
+							font-size: 0.7rem;
+						}
+					}
+				}
+			}
+		}
+	}
+	.faq_section {
+		text-align: left;
+		ul {
+			h3 {
+				font-size: 1.3rem;
+			}
+			li {
+				.fa-chevron-down {
+					font-size: .7rem;
+				}
+				.fa-chevron-up {
+					font-size: .7rem;
+				}
+			}
+		}
+	}
+}

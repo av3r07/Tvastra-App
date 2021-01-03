@@ -1,0 +1,359 @@
+.web_dashboard {
+  display: none;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+section {
+  padding: 1rem;
+  background-color: #F5F5F5;
+}
+
+section .container_box {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+section .container_box .dashboard h1 {
+  text-align: center;
+}
+
+section .container_box .dashboard .mobile_dashboard {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section .container_box .dashboard .mobile_dashboard h3 {
+  padding-bottom: 0rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  color: #4297C9;
+}
+
+section .container_box .dashboard .mobile_dashboard h3 i {
+  padding-right: 0.5rem;
+}
+
+section .container_box .record {
+  padding: 1rem 0.5rem;
+  border: 1px solid #dddfe2;
+}
+
+section .container_box .record_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #dddfe2;
+}
+
+section .container_box .record_header h1 {
+  padding: 0rem;
+}
+
+section .container_box .record_header button {
+  width: auto;
+  padding: 0.5rem 0.25rem;
+  font-size: 0.9rem;
+  background-color: #4297C9;
+  display: block;
+  margin-left: auto;
+}
+
+section .container_box .record_list {
+  margin: 0rem 1rem;
+  margin-top: 4rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem 3rem;
+}
+
+section .container_box .record_list_item {
+  padding-bottom: 2rem;
+  background-color: #D3D3D3;
+  width: 100%;
+}
+
+section .container_box .record_list_item_header {
+  position: relative;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .container_box .record_list_item_header .delete_item {
+  position: absolute;
+  right: 0rem;
+  top: 100%;
+  display: none;
+}
+
+section .container_box .record_list_item_header .delete_item button {
+  background: transparent;
+  padding: 0rem;
+}
+
+section .container_box .record_list_item_header .delete_item h5 {
+  font-size: 1rem;
+  color: #4297C9;
+  cursor: pointer;
+}
+
+section .container_box .record_list_item_header .delete_item h5:hover {
+  color: #7D7E18;
+}
+
+section .container_box .record_list_item_header i {
+  text-align: right;
+  font-size: 0.6rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 50%;
+}
+
+section .container_box .record_list_item_header h3 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0rem;
+  color: #4297C9;
+  text-align: left;
+}
+
+section .container_box .record_list_item img {
+  width: 100%;
+  height: 10rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media only screen and (min-width: 768px) {
+  section {
+    padding: 2.5rem;
+  }
+  section .container_box {
+    padding: 2rem;
+  }
+  section .container_box .mobile_dashboard i {
+    font-size: 1.3rem;
+    text-align: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  section .container_box .record {
+    padding: 2rem 1rem;
+  }
+  section .container_box .record .input_grid:nth-child(3) div .new_password_input {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .web_dashboard {
+    display: block;
+  }
+  body {
+    position: relative;
+  }
+  body #add_report_section {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    position: fixed;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  body #add_report_section .add_report_box {
+    background-color: white;
+    padding: 1rem;
+    width: 30rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  body #add_report_section .add_report_box .add_report_photo {
+    width: 28rem;
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+  }
+  body #add_report_section .add_report_box .add_report_photo {
+    padding: 1rem 0.5rem;
+    background-color: #D3D3D3;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body #add_report_section .add_report_box .add_report_photo ul {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body #add_report_section .add_report_box .add_report_photo ul li {
+    margin: 0rem 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 6rem;
+    height: 6rem;
+  }
+  body #add_report_section .add_report_box .add_report_photo ul li img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  body #add_report_section .add_report_box .add_report_photo div {
+    margin: 0rem 0.5rem;
+    width: 6rem;
+    height: 6rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #404040;
+  }
+  body #add_report_section .add_report_box .add_report_photo div label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body #add_report_section .add_report_box .add_report_photo div label input {
+    display: none;
+  }
+  body #add_report_section .add_report_box .add_report_photo div label i {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    text-align: center;
+    color: white;
+  }
+  body #add_report_section .add_report_box .add_report_photo div label h4 {
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    font-weight: 100;
+  }
+  body #add_report_section .add_report_box .submit_section {
+    margin-top: 1rem;
+    padding: 0rem 0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body #add_report_section .add_report_box .submit_section div {
+    display: block;
+    width: 33.33%;
+  }
+  body #add_report_section .add_report_box .submit_section button {
+    width: auto;
+    padding: 0.65rem 0.5rem;
+    border-radius: 4px;
+  }
+  body #add_report_section .add_report_box .submit_section #cancel_btn {
+    background-color: #FF6347;
+    color: white;
+    display: block;
+    margin: 0rem auto;
+  }
+  body #add_report_section .add_report_box .submit_section #done_btn {
+    background-color: #4297C9;
+    color: white;
+    display: block;
+    margin-left: auto;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  section {
+    padding: 4rem;
+    background-color: white;
+    -webkit-box-shadow: inset 0rem 0.5rem 1rem -0.5rem #dddfe2;
+            box-shadow: inset 0rem 0.5rem 1rem -0.5rem #dddfe2;
+  }
+  section .container_box {
+    min-height: 66vh;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 3fr 11fr;
+        grid-template-columns: 3fr 11fr;
+    grid-gap: 3rem;
+    border-radius: 0px;
+    padding: 0rem;
+  }
+  section .container_box .dashboard .mobile_dashboard {
+    display: none;
+  }
+  section .container_box .dashboard h1 {
+    text-align: left;
+    padding-bottom: 3rem;
+  }
+  section .container_box .dashboard .web_dashboard a h4, section .container_box .dashboard .web_dashboard a h3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1rem 0rem;
+    font-size: 1.5rem;
+  }
+  section .container_box .dashboard .web_dashboard a h4 i, section .container_box .dashboard .web_dashboard a h3 i {
+    color: #4297C9;
+    padding-right: 0.5rem;
+  }
+  section .container_box .dashboard .web_dashboard a h3 {
+    color: #4297C9;
+  }
+  section .container_box .dashboard .web_dashboard a h4:hover, section .container_box .dashboard .web_dashboard a h3:hover {
+    background-color: #dddfe2;
+    padding-left: 0.5rem;
+    border-left: 4px solid #4297C9;
+    cursor: pointer;
+  }
+  section .container_box .record {
+    border: 0px;
+    padding: 0rem;
+  }
+  section .container_box .record_header button {
+    font-size: 1.2rem;
+    padding: 1rem 0.5rem;
+    font-weight: 900;
+    border-radius: 0.25rem;
+  }
+  section .container_box .record .input_grid {
+    padding: 2rem 0rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 3rem;
+  }
+}
+/*# sourceMappingURL=record.css.map */

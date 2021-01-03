@@ -1,0 +1,198 @@
+@media only screen and (min-width:1024px){
+    .appointmentSection{  
+        box-shadow: inset 0rem 0.5rem 1rem -0.5rem #dddfe2;
+        .appointmentBox{ 
+            margin: 0% auto;
+            box-sizing: border-box;
+            width: max-content;
+            border: 1px solid #999;
+            padding: 2rem;
+            padding-bottom: 0rem;
+            .doctorInfo{
+                h3{
+                    position: relative;
+                    padding: 0rem;
+                    color: #4297C9;
+                    &::before{
+                        content: "";
+                        width: 1.8rem;
+                        height: 2px;
+                        background-color: #4297C9;
+                        position: absolute;
+                        top: 50%;
+                        left: -2rem;
+                        transform:translateY(-50%);
+                    }
+                }
+                ul{
+                    display: flex;
+                    margin: 1.5rem 0rem;
+                    li{
+                        font-size: 0.9rem;
+                        i{
+                            color: #4297C9;
+                            margin-right: 0.5rem;
+                            font-size: 1rem;
+                        }
+                        margin-right: 3rem;
+                    }
+                    li:nth-child(3){
+                        margin-right: 0%;
+                    }
+                }
+            }
+            .reschedul-btn{
+                margin-bottom: 2rem;
+                button{
+                    width: auto;
+                    padding: 0.5rem 1rem;
+                    margin: 0rem auto;
+                    display: block;
+                    font-size: 0.8rem;
+                }
+            }
+            .scheduleBox{
+                display: none;
+                margin: 0rem 0rem 1.5rem 0rem;
+                align-items: center;
+                justify-content: center;
+                i{
+                    font-size: .7rem;
+                    color: #4297C9;
+                    background-color: #D3D3D3;
+                    padding: 0.4rem;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+                ul{
+                    margin: 0rem 1rem;
+                    flex: 1;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    li{
+                        padding-bottom: 0.5rem;
+                        display: flex;
+                        flex-direction: column;
+                        h3,h5{
+                            text-align: center;
+                            font-size: 1rem;
+                            padding: 0%;
+                        }
+                        h5{
+                            color: #4297C9
+                        }
+                        h3{
+                            color: #999;
+                        }
+                        &:hover{
+                            border-bottom: 1px solid #999;
+                            cursor: pointer;
+                    }
+                    }
+                    li:nth-child(4),li:nth-child(5),li:nth-child(6),li:nth-child(7){
+                        display: none;
+                    }
+                }
+            }
+            .subScheduleBox{
+                display: none;
+                margin: 0rem -2rem;
+                max-width: 40rem;
+                box-sizing: border-box;
+                .shift{
+                    display: grid;
+                    padding: 1rem 2rem;
+                    border-bottom: 1px solid #999;
+                    grid-template-columns: 2.5fr 8fr;
+                    align-items: center;
+                    h4{
+                        padding: 0%;
+                        i{
+                            padding-right: 0.5rem;
+                            color: #2A2D3E;
+                        }
+                    }
+                    button{
+                        width: auto;
+                        background-color: #4297C9;
+                        margin: 0rem auto;
+                        display: block;
+                        font-size: 0.9rem;
+                        padding: 0.75rem;
+                        border-radius: 6px;
+                        box-shadow: 5px 5px 5px #D3D3D3;
+                    }
+                    ul{
+                        display: flex;
+                        flex-wrap: wrap;
+                        li{
+                            padding: 0.5rem;
+                            margin-right: 0.5rem;
+                            margin-bottom: 0.5rem;
+                            font-size: 0.8rem;
+                            cursor: pointer;
+                        }
+                        .violet{
+                            color: purple;
+                            border: 1px solid purple;
+                        }
+                        .indigo{
+                            color: indigo;
+                            border: 1px solid indigo;
+                        }
+                        .blue{
+                            color: blue;
+                            border: 1px solid blue;
+                        }
+                        .green{
+                            color: green;
+                            border: 1px solid green;
+                        }
+                        .yellow{
+                            color: rgb(180, 180, 51);
+                            border: 1px solid rgb(180, 180, 51);
+                        }
+                        .orange{
+                            color: orange;
+                            border: 1px solid orange;
+                        }
+                        .red{
+                            color: red;
+                            border: 1px solid red;
+                        }
+                    }
+                }
+                .hospitals{
+                    padding-top: 0.5rem;
+                    h5{
+                        color: green;
+                        font-size: 1rem;
+                        text-align: center;
+                        padding-bottom: 0.5rem;
+                    }
+                    .violet{
+                        color: purple;
+                    }
+                    .indigo{
+                        color: indigo;
+                    }
+                    .blue{
+                        color: blue;
+                    }
+                    .green{
+                        color: green;
+                    }
+                    .yellow{
+                        color: rgb(180, 180, 51);
+                    }
+                    .orange{
+                        color: orange;
+                    }
+                    .red{
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}

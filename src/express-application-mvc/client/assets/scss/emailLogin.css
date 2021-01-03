@@ -1,0 +1,172 @@
+.loginPanel {
+  background-color: #9cbfda;
+  height: 100vh;
+  position: relative;
+}
+
+.loginPanel .copyright {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 1rem;
+}
+
+.loginPanel .copyright h4 {
+  padding-bottom: 0rem;
+  font-size: 0.7rem;
+  font-weight: 900;
+  color: black;
+}
+
+.loginPanel .loginForm {
+  width: 90%;
+  position: absolute;
+  max-width: 20rem;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -60%);
+          transform: translate(-50%, -60%);
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 10px black;
+          box-shadow: 0px 0px 10px black;
+  background-color: white;
+}
+
+.loginPanel .loginForm h3 {
+  padding: 1rem 0rem 0rem 0rem;
+  color: #4297C9;
+}
+
+.loginPanel .loginForm form {
+  padding: 0rem 1rem;
+}
+
+.loginPanel .loginForm form #email {
+  margin-bottom: 0.5rem;
+}
+
+.loginPanel .loginForm form .password_input {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.loginPanel .loginForm form .password_input .far {
+  position: absolute;
+  cursor: pointer;
+  right: 5%;
+  top: 50%;
+  -webkit-transform: translate(-5%, -50%);
+          transform: translate(-5%, -50%);
+  color: #4297C9;
+}
+
+.loginPanel .loginForm form .password_input .fa-eye-slash {
+  display: block;
+  font-weight: 900;
+}
+
+.loginPanel .loginForm form .password_input .fa-eye {
+  display: none;
+}
+
+.loginPanel .loginForm form .login_way {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 1rem;
+}
+
+.loginPanel .loginForm form .login_way a {
+  font-size: 0.7rem;
+  color: #4297C9;
+}
+
+.loginPanel .loginForm form .login_way #forgot {
+  margin-left: auto;
+  background: transparent;
+  color: #4297C9;
+  font-weight: 900;
+  font-size: 0.7rem;
+  cursor: pointer;
+  padding: 0rem;
+  height: auto;
+  text-align: left;
+  width: auto;
+}
+
+.loginPanel .loginForm form .login-btn {
+  width: 100%;
+  position: relative;
+  margin-bottom: 1rem;
+  letter-spacing: 3px;
+}
+
+.loginPanel .loginForm form .login-btn i {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  -webkit-transform: translate(-5%, -50%);
+          transform: translate(-5%, -50%);
+}
+
+.loginPanel .loginForm form h4 {
+  font-size: 0.7rem;
+  padding-bottom: 1rem;
+  padding-top: 0rem;
+}
+
+.loginPanel .loginForm form h4 a {
+  color: #4297C9;
+  font-weight: 900;
+  font-size: 0.7rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .loginPanel .loginForm {
+    width: 20rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .loginPanel .copyright h4 {
+    padding: 0rem;
+    font-size: 0.8rem;
+  }
+  .loginPanel .loginForm {
+    max-width: 25rem;
+    width: 25rem;
+  }
+  .loginPanel .loginForm h3 {
+    padding: 1.5rem 0rem 0.5rem 0rem;
+  }
+  .loginPanel .loginForm form {
+    padding: 0rem 1rem;
+  }
+  .loginPanel .loginForm form .login_way {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .loginPanel .loginForm form .login_way a {
+    font-size: 0.8rem;
+  }
+  .loginPanel .loginForm form .login_way #forgot {
+    font-size: 0.8rem;
+  }
+  .loginPanel .loginForm form .password_input .far {
+    font-size: 1.2rem;
+  }
+  .loginPanel .loginForm form h4 {
+    font-size: 0.8rem;
+  }
+  .loginPanel .loginForm form h4 a {
+    font-size: 0.8rem;
+  }
+}
+/*# sourceMappingURL=emailLogin.css.map */

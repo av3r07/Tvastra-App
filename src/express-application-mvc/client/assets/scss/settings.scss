@@ -1,0 +1,181 @@
+.web_dashboard{
+    display: none;
+}
+h3{
+    font-size: 1.1rem;
+}
+section{
+    padding: 1rem;
+    background-color: #F5F5F5;
+    .container_box{
+        background-color: white;
+        border-radius: 1rem;
+        padding: 1rem;
+        .dashboard{
+            h1{
+                text-align: center;
+            }
+            .mobile_dashboard{
+                align-items: center;
+                margin-bottom: 1rem;
+                display: flex;
+                h3{
+                    padding-bottom: 0rem;
+                    flex:1;
+                    text-align: center;
+                    color: #4297C9;
+                    i{
+                        padding-right: 0.5rem;
+                    }
+                }
+            }
+        }
+        .settings{
+            padding: 1rem 0.5rem;
+            border: 1px solid #dddfe2;
+            &_header{
+                display: flex;
+                align-items: center;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #dddfe2;
+                h1{
+                    padding: 0rem;
+                }
+                button{
+                    width: auto;
+                    padding: 0.5rem 0.25rem;
+                    font-size: 0.9rem;
+                    background-color: #4297C9;
+                    display: block;
+                    margin-left: auto;
+                }
+            }
+            .input_grid{
+                padding: 1rem 0.5rem;
+                border-bottom: 1px solid #dddfe2;
+                div{
+                    
+                    h3{
+                        padding-bottom: 0.5rem;
+                    }
+                }
+            }
+            .input_grid:nth-child(3){
+                border: 0px;
+                padding-bottom: 0rem;
+                div{
+                    .new_password_input{
+                        margin-bottom: 1rem;
+                        position: relative;
+                        i{
+                            position: absolute;
+                            top: 50%;
+                            right: 1rem;
+                            transform: translateY(-50%);
+                            color: #4297C9;
+                            font-weight: 900;
+                        }
+                        .fa-eye{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:768px)
+{
+    section{
+        padding: 2.5rem;
+        .container_box{
+            padding: 2rem;
+            .mobile_dashboard{
+                    i{
+                        font-size: 1.3rem;
+                        text-align: center;
+                        flex: 1;
+                    }
+            }
+            .settings {padding: 2rem 1rem;
+                .input_grid:nth-child(3){
+                    div{
+                        .new_password_input{
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1024px){
+    .web_dashboard{display: block;}
+    h3{
+        font-size: 1.2rem;
+    }
+    section{
+        padding: 4rem;
+        background-color: white;
+        box-shadow: inset 0rem 0.5rem 1rem -0.5rem #dddfe2;
+        .container_box{
+            min-height: 66vh;
+            display: grid;
+            grid-template-columns: 3fr 11fr;
+            grid-gap: 3rem;
+            border-radius: 0px;
+            padding: 0rem;
+            .dashboard{
+                .mobile_dashboard{
+                    display: none;
+                }
+                h1{
+                    text-align: left;
+                    padding-bottom: 3rem;
+                }
+                .web_dashboard{
+                    a{
+                        h4,h3{
+                            display: flex;
+                            padding: 1rem 0rem;
+                            font-size: 1.5rem;
+                            i{
+                                color: #4297C9;
+                                padding-right: 0.5rem;
+                            }
+                        }
+                        h3{
+                            color: #4297C9;
+                        }
+                        h4:hover,h3:hover{
+                            background-color: #dddfe2;
+                            padding-left: 0.5rem;
+                            border-left: 4px solid #4297C9;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .settings{
+                border: 0px;
+                padding: 0rem;
+                &_header{
+                    button{
+                        font-size: 1.2rem;
+                        padding:1rem 0.5rem;
+                        font-weight: 900;
+                        border-radius: 0.25rem;
+                    }
+                }
+                .input_grid{
+                    padding: 2rem 0rem;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-column-gap: 3rem;
+                }
+            }
+        }
+    }
+}

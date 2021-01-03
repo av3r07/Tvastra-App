@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('links') %>   
+        <link rel="stylesheet" href="../assets/scss/createSchedule.css">
+    </head>
+    <body>
+        <%- include('headerMain') %>
+        <div id="schedule_form">
+            <form action="/createSchedule" method="POST">
+                <h3>Create Schedule</h3>
+                <div class="schedule_form_inputs">
+                    <h3>Select Available Days</h3>
+                <select name="days[]" id="days" multiple required>
+                    <option value="monday"><h4>Monday</h4></option>
+                    <option value="tuesday"><h4>Tuesday</h4></option>
+                    <option value="wednesday"><h4>Wednesday</h4></option>
+                    <option value="thursday"><h4>Thursday</h4></option>
+                    <option value="friday"><h4>Friday</h4></option>
+                    <option value="saturday"><h4>Saturday</h4></option>
+                    <option value="sunday"><h4>Sunday</h4></option>
+                </select>
+                <h3>Select The Hospital</h3>
+                <select name="hospitals"  id="hospitals" required>
+                    <% for(var i =0; i < user.doctorData.hospitals.length; i++){ %>
+                        <option value="<%= user.doctorData.hospitals[i] %>"><%= user.doctorData.hospitals[i] %></option>
+                        <% } %>
+                </select>
+                <h3>From(time)</h3>
+                <input type="time" name="startTime" value="08:00" min="08:00" max="22:00" required>
+                <h3>To(time)</h3>
+                <input type="time" name="endTime" value="08:00"  min="08:00" max="22:00" required>
+                <h3>Intervals</h3>
+                <input type="number" step="15" name="interval" min="15" value="15" max="60" required>
+               </div>
+               <div class="buttons">
+                   <button id="cancel" onclick="showForm()">Cancel</button>
+                   <button id="create">Create Schedule</button>
+               </div>
+            </form>
+        </div>
+        <section>
+            <div class="container_box">
+                <%- include('toaster') %>
+            <div class="dashboard">
+                <h2>Dashboard</h2> 
+                <% if(user.isDoctor == "user"){ %> 
+                    <div class="mobile_dashboard">
+                        <i class="fas fa-chevron-left"></i>
+                        <h3><i class="fas fa-users-cog"></i>Settings</h3>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="web_dashboard">
+                        <a href="/profile"><h4><i class="fas fa-user-edit"></i>Profile</h4></a>
+                        <a href="/appointment"><h4><i class="fas fa-list"></i>Appoinments</h4></a>
+                        <a href="/medicalReports"><h4><i class="fas fa-file-alt"></i>Medical Reports</h4></a>
+                        <a href="/settings"><h3><i class="fas fa-users-cog"></i>Settings</h3></a>
+                    </div>
+                    <% }else{ %>
+                        <div class="mobile_dashboard">
+                            <i class="fas fa-chevron-left"></i>
+                            <h3><i class="fas fa-pen-fancy"></i>Create/Edit Schedule</h3>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="web_dashboard">
+                            <a href="/profile"><h4><i class="fas fa-user-edit"></i>Profile</h4></a>
+                            <a href="/appointment"><h4><i class="fas fa-list"></i>Appoinments</h4></a>
+                            <a href="/createSchedule"><h3><i class="fas fa-pen-fancy"></i>Create/Edit Schedule</h3></a>
+                            <a href="/medicalReports"><h4><i class="fas fa-file-alt"></i>Medical Reports</h4></a>
+                            <a href="/settings"><h4><i class="fas fa-users-cog"></i>Settings</h4></a>
+                            <button id="new_schedule_btn" onclick="showForm()">Create<br>new<br>schedule</button>
+                        </div>  
+                        <% } %>
+            </div>
+            <div class="schedulePanel">
+                <% if(user.scheduleData.length > 0){ %>
+                    <h2>All Schedule</h2>
+                    <% for(var i=0;i< user.scheduleData.length; i++){ %>
+                        <% if(user.scheduleData[i].isDisabled){ %>
+                            <div class="schedulePanel_items" id="disabled">
+                                <% }else{ %>
+                                    <div class="schedulePanel_items">
+                                        <% } %>
+                            <div class="schedulePanel_list">
+                                <h3><%= user.scheduleData[i].day.toUpperCase() %></h3>
+                                <div class="schedulePanel_list_info">
+                                    <h3><%= user.scheduleData[i].hospital.toUpperCase() %></h3>
+                                    <span><%= user.scheduleData[i].startTime %> - <%= user.scheduleData[i].endTime %></span>
+                                </div>
+                                <div class="schedulePanel_list_action">
+                                    <div class="remove_btn">
+                                <form action="/deleteSchedule/<%= user.scheduleData[i]._id %>" method="POST">
+                                <button>Remove Slots</button>
+                                </form></div>
+                                <button type="button" onclick="showSubSchedule('slot<%= user.scheduleData[i]._id %>')" id="view_btn">View Slots</button>
+                                <% if(user.scheduleData[i].isDisabled){ %>
+                                    <form action="/disableSchedule/<%= user.scheduleData[i]._id %>" method="POST" id="disable<%= user.scheduleData[i]._id %>">
+                                        <input type="checkbox" name="isDisabled" checked onchange="submitForm('disable<%= user.scheduleData[i]._id %>')">
+                                    </form>
+                                    <% }else{ %>
+                                      <form action="/disableSchedule/<%= user.scheduleData[i]._id %>" method="POST" id="disable<%= user.scheduleData[i]._id %>">
+                                            <input type="checkbox" name="isDisabled" onchange="submitForm('disable<%= user.scheduleData[i]._id %>')">
+                                        </form>
+                                        <% } %>
+                                </div>
+                                </div>
+                                <div class="sub_schedule_panel" id="slot<%= user.scheduleData[i]._id %>">
+                                    <% for(var j=0;j < user.scheduleData[i].subScheduleData.length; j++){ %>
+                                        <% if(user.scheduleData[i].subScheduleData[j].disabled){ %>
+                                            <div class="sub_schedule_panel_booked">
+                                                <form action="/disable/<%= user.scheduleData[i].subScheduleData[j]._id %>" method="POST" id="<%= user.scheduleData[i].subScheduleData[j]._id %>">
+                                                    <label><%= user.scheduleData[i].subScheduleData[j].startTime %> - <%= user.scheduleData[i].subScheduleData[j].endTime %><input type="checkbox" name="book" onchange="submitForm('<%= user.scheduleData[i].subScheduleData[j]._id %>')"  checked></label>
+                                                </form>
+                                            </div>
+                                            <% }else{ %>
+                                            <div class="sub_schedule_panel_notbooked">
+                                                <form action="/disable/<%= user.scheduleData[i].subScheduleData[j]._id %>" method="POST" id="<%= user.scheduleData[i].subScheduleData[j]._id %>">
+                                                    <label><%= user.scheduleData[i].subScheduleData[j].startTime %> - <%= user.scheduleData[i].subScheduleData[j].endTime %><input type="checkbox" name="book" onchange="submitForm('<%= user.scheduleData[i].subScheduleData[j]._id %>')"></label>
+                                                </form>
+                                            </div>
+                                            <% } %>
+                                        <% } %>
+                                </div>
+                        </div>
+                        <% }}else{ %>
+                            <h2>No Schedule yet. Create One Now By Clicking Create New Button</h2>
+                            <%}%>
+            </div>
+    </div>
+        </section>
+        <%- include('footer') %>
+        <script>
+            function submitForm(param)
+            {
+                var form = document.getElementById(param);
+                form.submit();
+            }
+            function showSubSchedule(param)
+            {
+                const subSchedule = document.getElementById(param);
+                if(subSchedule.style.display == "inline-flex")
+                subSchedule.style.display = "none";
+                else
+                subSchedule.style.display = "inline-flex";
+            }
+            const form = document.getElementById("schedule_form");
+            function showForm(){
+                if(form.style.display == "none")
+                form.style.display = "block";
+                else
+                form.style.display = "none";
+            }
+        </script>
+    </body>
+    </html>
+    
